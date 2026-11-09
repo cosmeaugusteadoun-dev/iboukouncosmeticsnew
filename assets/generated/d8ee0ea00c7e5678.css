@@ -1,0 +1,393 @@
+
+/* ============================================================
+   PAGE HERO PROMOTIONS
+============================================================ */
+.promo-hero{
+  background:linear-gradient(135deg,#050E2E 0%,#0D1A5E 50%,#0a1850 100%);
+  padding:100px 5% 80px;
+  text-align:center;color:#fff;
+  position:relative;overflow:hidden;
+}
+.ph-deco{position:absolute;border-radius:50%;pointer-events:none;}
+.ph-deco-1{
+  width:500px;height:500px;top:-200px;right:-100px;
+  background:radial-gradient(circle,rgba(201,146,10,.12) 0%,transparent 70%);
+}
+.ph-deco-2{
+  width:350px;height:350px;bottom:-120px;left:-80px;
+  background:radial-gradient(circle,rgba(45,158,53,.08) 0%,transparent 70%);
+}
+.ph-deco-3{
+  width:180px;height:180px;top:25%;left:8%;
+  border:1px solid rgba(201,146,10,.06);
+}
+.page-hero-content{position:relative;z-index:1;max-width:580px;margin:0 auto;}
+
+.promo-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(201,146,10,.18);border:1px solid rgba(201,146,10,.4);
+  color:var(--gold-mid);padding:8px 18px;border-radius:var(--radius-pill);
+  font-size:12px;font-weight:600;letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:24px;
+}
+.promo-hero-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--gold-mid);
+  animation:pulse 1.5s ease-in-out infinite;
+  flex-shrink:0;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.6;transform:scale(.8);}}
+
+.page-hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,5.5vw,72px);font-weight:700;
+  color:#fff;margin-bottom:18px;line-height:1.04;
+  letter-spacing:-1px;
+}
+.page-hero-accent-gold{
+  display:block;
+  background:linear-gradient(90deg,var(--gold-mid),#FFC44D,var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.page-hero-sub{
+  font-size:15px;color:rgba(255,255,255,.65);
+  max-width:460px;margin:0 auto 32px;line-height:1.75;
+}
+
+/* Compteur d'offres */
+.promo-hero-count{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(45,158,53,.15);border:1px solid rgba(45,158,53,.3);
+  border-radius:var(--radius-pill);padding:10px 20px;
+}
+.phc-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:700;color:var(--green-mid);line-height:1;
+}
+.phc-label{font-size:12px;color:rgba(255,255,255,.6);}
+
+/* ============================================================
+   SECTION PROMOS
+============================================================ */
+.section-promos{
+  background:linear-gradient(160deg,var(--cream) 0%,#F0EBE3 100%);
+  padding:80px clamp(16px,5%,64px) 96px;
+}
+
+/* ============================================================
+   CARTE PROMO
+============================================================ */
+.promo-card{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  box-shadow:0 20px 64px rgba(13,26,94,.12);
+  margin-bottom:40px;
+  border:1px solid rgba(0,0,0,.06);
+}
+.promo-card:last-child{margin-bottom:0;}
+
+/* GAUCHE — visual navy */
+.promo-visual{
+  background:linear-gradient(160deg,#050E2E 0%,#0D1A5E 60%,#0f2070 100%);
+  padding:48px 44px;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.pv-deco{position:absolute;border-radius:50%;pointer-events:none;}
+.pv-deco-1{
+  width:320px;height:320px;top:-100px;right:-100px;
+  background:radial-gradient(circle,rgba(45,158,53,.08) 0%,transparent 70%);
+}
+.pv-deco-2{
+  width:200px;height:200px;bottom:-60px;left:-60px;
+  background:radial-gradient(circle,rgba(201,146,10,.06) 0%,transparent 70%);
+}
+
+/* Badge actif */
+.pv-active-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(45,158,53,.2);border:1px solid rgba(45,158,53,.4);
+  color:var(--green-mid);padding:6px 14px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;margin-bottom:16px;width:fit-content;
+  position:relative;z-index:1;
+}
+.pv-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--green-mid);
+  animation:pulse 1.5s ease-in-out infinite;flex-shrink:0;
+}
+
+/* Badge réduction */
+.pv-reduction{
+  position:absolute;top:44px;right:44px;
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#E8A800);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;color:#fff;
+  box-shadow:0 6px 24px rgba(201,146,10,.4),0 0 0 4px rgba(201,146,10,.15);
+  z-index:1;
+}
+
+.pv-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,3vw,42px);font-weight:700;
+  color:#fff;line-height:1.1;
+  margin-bottom:12px;
+  position:relative;z-index:1;
+  padding-right:80px;/* espace badge réduction */
+}
+.pv-desc{
+  font-size:14px;color:rgba(255,255,255,.65);
+  line-height:1.72;margin-bottom:28px;
+  position:relative;z-index:1;
+}
+
+/* Prix */
+.pv-prices{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:16px;
+  position:relative;z-index:1;
+  padding:20px 22px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);
+}
+.pv-price-new{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4vw,52px);font-weight:700;
+  color:var(--gold-mid);line-height:1;
+}
+.pv-price-old{
+  font-size:20px;color:rgba(255,255,255,.35);
+  text-decoration:line-through;font-weight:400;
+}
+.pv-price-per{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px;}
+.pv-price-arrow{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.pv-price-arrow i{font-size:18px;color:rgba(255,255,255,.4);}
+
+/* Économie */
+.pv-saving{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;color:var(--green-mid);font-weight:600;
+  margin-bottom:24px;
+  position:relative;z-index:1;
+}
+.pv-saving i{font-size:16px;}
+.pv-saving strong{color:#7CFF7C;}
+
+/* Timer */
+.pv-timer-wrap{
+  margin-bottom:28px;
+  position:relative;z-index:1;
+}
+.pv-timer-label{
+  display:flex;align-items:center;gap:6px;
+  font-size:11px;color:rgba(255,255,255,.5);
+  text-transform:uppercase;letter-spacing:.8px;
+  margin-bottom:10px;
+}
+.pv-timer-label i{font-size:13px;}
+.pv-timer{display:flex;align-items:center;gap:8px;}
+.pv-timer-unit{
+  text-align:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius-sm);
+  padding:10px 14px;min-width:56px;
+}
+.pv-timer-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:700;color:#fff;
+  display:block;line-height:1;
+}
+.pv-timer-lbl{font-size:9px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+.pv-timer-sep{font-size:24px;font-weight:700;color:rgba(255,255,255,.3);margin-bottom:14px;}
+
+/* CTA */
+.pv-cta{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  width:100%;padding:16px;
+  background:linear-gradient(135deg,var(--green),#25a330);
+  color:#fff;border-radius:var(--radius-pill);
+  font-size:15px;font-weight:700;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+  transition:all .25s;
+  box-shadow:0 6px 24px rgba(45,158,53,.45);
+  position:relative;z-index:1;
+}
+.pv-cta:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(45,158,53,.55);}
+.pv-cta i{font-size:20px;}
+.pv-cta.outline{
+  background:rgba(255,255,255,.08);
+  border:1.5px solid rgba(255,255,255,.2);
+  box-shadow:none;margin-top:16px;
+  backdrop-filter:blur(8px);
+}
+.pv-cta.outline:hover{background:rgba(255,255,255,.15);box-shadow:none;border-color:rgba(255,255,255,.4);}
+
+/* DROITE — détails */
+.promo-details{
+  background:#fff;
+  padding:44px 40px;
+  display:flex;flex-direction:column;
+}
+
+/* Image produit */
+.pd-img-wrap{
+  position:relative;
+  margin-bottom:24px;
+  border-radius:var(--radius-lg);overflow:hidden;
+  background:var(--cream);
+  height:200px;
+}
+.pd-img{width:100%;height:100%;object-fit:contain;padding:12px;}
+.pd-img-badge{
+  position:absolute;top:12px;right:12px;
+  background:var(--navy);color:#fff;
+  padding:4px 12px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:600;
+}
+
+/* Nom produit */
+.pd-product-name{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:600;color:var(--green);
+  background:var(--green-light);
+  padding:6px 14px;border-radius:var(--radius-pill);
+  margin-bottom:24px;width:fit-content;
+}
+.pd-product-name i{font-size:14px;}
+
+/* Titre section */
+.pd-section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:700;color:var(--navy);
+  margin-bottom:18px;
+}
+
+/* Bénéfices */
+.pd-benefits{
+  display:flex;flex-direction:column;gap:16px;
+  margin-bottom:28px;
+}
+.pd-benefit{display:flex;align-items:flex-start;gap:14px;}
+.pd-benefit-icon{
+  width:36px;height:36px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.pd-benefit-icon i{font-size:17px;}
+.pd-benefit-icon.green{background:rgba(45,158,53,.12);}
+.pd-benefit-icon.green i{color:var(--green);}
+.pd-benefit-icon.blue{background:rgba(80,100,255,.1);}
+.pd-benefit-icon.blue i{color:#5566FF;}
+.pd-benefit-icon.gold{background:rgba(201,146,10,.12);}
+.pd-benefit-icon.gold i{color:var(--gold);}
+.pd-benefit-icon.purple{background:rgba(130,80,220,.1);}
+.pd-benefit-icon.purple i{color:#8855CC;}
+.pd-benefit-text{flex:1;}
+.pd-benefit-text strong{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px;}
+.pd-benefit-text span{font-size:12px;color:var(--text3);}
+
+/* Conditions */
+.pd-conditions{
+  background:linear-gradient(135deg,rgba(201,146,10,.08),rgba(201,146,10,.04));
+  border:1px solid rgba(201,146,10,.2);
+  border-radius:var(--radius);padding:18px 20px;
+  margin-bottom:0;flex:1;
+}
+.pd-cond-header{
+  display:flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:700;color:var(--gold-dark);
+  margin-bottom:14px;
+}
+.pd-cond-header i{font-size:15px;}
+.pd-cond-list{display:flex;flex-direction:column;gap:8px;list-style:none;padding:0;margin:0;}
+.pd-cond-list li{
+  display:flex;align-items:flex-start;gap:8px;
+  font-size:13px;color:var(--text2);line-height:1.5;
+}
+.pd-cond-list li i{font-size:15px;color:var(--green);flex-shrink:0;margin-top:1px;}
+
+/* État vide */
+.no-promo-state{
+  text-align:center;padding:96px 20px;
+  background:#fff;border-radius:var(--radius-xl);
+  border:2px dashed rgba(0,0,0,.08);
+}
+.nps-icon{
+  width:88px;height:88px;border-radius:50%;
+  background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+}
+.nps-icon i{font-size:40px;color:var(--text3);}
+.no-promo-state h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;font-weight:700;color:var(--navy);margin-bottom:12px;
+}
+.no-promo-state p{
+  font-size:14px;color:var(--text2);
+  max-width:400px;margin:0 auto 32px;line-height:1.75;
+}
+.nps-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.nps-wa{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(37,211,102,.1);border:1.5px solid rgba(37,211,102,.3);
+  color:#128C7E;padding:13px 22px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;text-decoration:none;transition:.2s;
+}
+.nps-wa:hover{background:rgba(37,211,102,.18);}
+.nps-wa i{font-size:17px;color:#25D366;}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:1100px){
+  .promo-visual{padding:40px 36px;}
+  .promo-details{padding:36px 32px;}
+  .pv-reduction{top:36px;right:36px;width:64px;height:64px;font-size:15px;}
+  .pv-title{padding-right:72px;}
+}
+@media(max-width:900px){
+  .promo-card{grid-template-columns:1fr;}
+  .pv-reduction{top:24px;right:24px;}
+  .pv-title{padding-right:80px;}
+}
+@media(max-width:768px){
+  .promo-hero{padding:72px 5% 60px;}
+  .section-promos{padding:60px clamp(16px,4%,32px) 72px;}
+  .promo-visual{padding:32px 24px;}
+  .promo-details{padding:28px 24px;}
+  .pv-price-new{font-size:clamp(32px,8vw,44px);}
+  .pv-timer-unit{padding:8px 10px;min-width:48px;}
+  .pv-timer-num{font-size:22px;}
+}
+@media(max-width:480px){
+  .promo-hero{padding:60px 5% 48px;}
+  .page-hero-title{font-size:clamp(34px,10vw,52px);}
+  .promo-visual{padding:28px 20px;}
+  .promo-details{padding:24px 18px;}
+  .pv-prices{padding:14px 16px;gap:10px;}
+  .pv-price-new{font-size:clamp(28px,9vw,38px);}
+  .pv-price-old{font-size:16px;}
+  .pv-timer{gap:6px;}
+  .pv-timer-unit{padding:7px 8px;min-width:42px;}
+  .pv-timer-num{font-size:18px;}
+  .pv-timer-sep{font-size:18px;}
+  .pv-cta{padding:15px;font-size:14px;}
+  .nps-actions{flex-direction:column;width:100%;}
+  .nps-wa,.no-promo-state .btn-primary{width:100%;justify-content:center;}
+}
+@media(max-width:360px){
+  .pv-reduction{width:56px;height:56px;font-size:13px;top:18px;right:18px;}
+  .pv-title{font-size:clamp(22px,7vw,30px);}
+  .pv-timer-num{font-size:16px;}
+}

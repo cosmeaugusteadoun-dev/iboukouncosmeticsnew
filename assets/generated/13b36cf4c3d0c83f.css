@@ -1,0 +1,108 @@
+
+/* ============================================================
+   HISTOIRE — Styles
+============================================================ */
+
+/* HERO */
+.hist-hero{
+  background:linear-gradient(135deg,#050E2E 0%,#0D1A5E 55%,#0f2070 100%);
+  padding:100px 5% 80px;color:#fff;
+  position:relative;overflow:hidden;
+}
+.hist-hero-deco-1{position:absolute;width:500px;height:500px;top:-180px;right:-100px;border-radius:50%;background:radial-gradient(circle,rgba(45,158,53,.1) 0%,transparent 70%);pointer-events:none;}
+.hist-hero-deco-2{position:absolute;width:300px;height:300px;bottom:-80px;left:-60px;border-radius:50%;background:radial-gradient(circle,rgba(201,146,10,.08) 0%,transparent 70%);pointer-events:none;}
+.hist-hero-inner{max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;position:relative;z-index:1;}
+.hist-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(45,158,53,.15);border:1px solid rgba(45,158,53,.3);color:var(--green-mid);padding:7px 16px;border-radius:var(--radius-pill);font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:24px;}
+.hist-eyebrow i{font-size:13px;}
+.hist-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:700;color:#fff;margin-bottom:18px;line-height:1.06;letter-spacing:-1px;}
+.hist-hero-accent{display:block;background:linear-gradient(90deg,#6DDB6D,var(--green-mid),#A8F0A8);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hist-hero-sub{font-size:16px;color:rgba(255,255,255,.65);line-height:1.78;max-width:480px;margin-bottom:36px;}
+.hist-hero-stats{display:flex;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:18px 24px;width:fit-content;gap:0;}
+.hhs-item{text-align:center;padding:0 20px;}
+.hhs-item:first-child{padding-left:0;}
+.hhs-item:last-child{padding-right:0;}
+.hhs-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff;line-height:1;}
+.hhs-label{font-size:10px;color:rgba(255,255,255,.45);margin-top:4px;letter-spacing:.3px;}
+.hhs-sep{width:1px;height:36px;background:rgba(255,255,255,.1);}
+/* Image fondateur hero */
+.hist-hero-img-wrap{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:3/4;background:var(--cream-dark);}
+.hist-hero-img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;}
+.hist-hero-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.hist-hero-img-placeholder i{font-size:80px;color:rgba(255,255,255,.15);}
+.hist-hero-img-badge{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(201,146,10,.9);color:#fff;padding:7px 18px;border-radius:var(--radius-pill);font-size:12px;font-weight:700;white-space:nowrap;}
+.hist-hero-img-badge i{font-size:15px;}
+
+/* TIMELINE */
+.hist-timeline-section{background:var(--white);}
+.hist-timeline{max-width:720px;margin:0 auto;position:relative;}
+.hist-timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--green),var(--navy),var(--gold));opacity:.2;}
+.hist-tl-item{display:grid;grid-template-columns:56px auto 1fr;gap:0 20px;margin-bottom:48px;align-items:start;position:relative;}
+.hist-tl-dot{width:14px;height:14px;border-radius:50%;background:var(--green);border:3px solid #fff;box-shadow:0 0 0 3px var(--green);margin-top:6px;flex-shrink:0;position:relative;z-index:1;}
+.hist-tl-future .hist-tl-dot{background:var(--gold);box-shadow:0 0 0 3px var(--gold);}
+.hist-tl-date{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:var(--text3);white-space:nowrap;padding-top:2px;}
+.hist-tl-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-xl);padding:24px 26px;transition:box-shadow .25s;}
+.hist-tl-card:hover{box-shadow:var(--shadow);}
+.hist-tl-icon{width:44px;height:44px;border-radius:12px;background:var(--green-light);display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+.hist-tl-icon i{font-size:20px;color:var(--green);}
+.hist-tl-future .hist-tl-icon{background:var(--gold-light);}
+.hist-tl-future .hist-tl-icon i{color:var(--gold);}
+.hist-tl-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.hist-tl-desc{font-size:14px;color:var(--text2);line-height:1.72;}
+
+/* VALEURS */
+.hist-valeurs-section{background:var(--cream);}
+.hist-valeurs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;}
+.hist-valeur-card{background:#fff;border-radius:var(--radius-xl);padding:32px 28px;border:1px solid rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;}
+.hist-valeur-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity .3s;}
+.hist-valeur-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(13,26,94,.1);}
+.hist-valeur-card:hover::before{opacity:1;background:linear-gradient(90deg,var(--green),var(--navy));}
+.hvc-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.hvc-icon i{font-size:24px;}
+.hvc-icon.green{background:rgba(45,158,53,.12);}
+.hvc-icon.green i{color:var(--green);}
+.hvc-icon.navy{background:rgba(13,26,94,.08);}
+.hvc-icon.navy i{color:var(--navy);}
+.hvc-icon.gold{background:rgba(201,146,10,.12);}
+.hvc-icon.gold i{color:var(--gold);}
+.hvc-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:12px;}
+.hvc-desc{font-size:14px;color:var(--text2);line-height:1.72;}
+
+/* CTA FINAL */
+.hist-cta-section{background:linear-gradient(135deg,#050E2E 0%,var(--navy) 55%,#0f2070 100%);padding:88px clamp(16px,5%,64px);position:relative;overflow:hidden;}
+.hist-cta-deco-1{position:absolute;width:500px;height:500px;top:-150px;right:-100px;border-radius:50%;background:radial-gradient(circle,rgba(45,158,53,.1) 0%,transparent 70%);pointer-events:none;}
+.hist-cta-deco-2{position:absolute;width:300px;height:300px;bottom:-80px;left:-60px;border-radius:50%;background:radial-gradient(circle,rgba(201,146,10,.08) 0%,transparent 70%);pointer-events:none;}
+.hist-cta-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;position:relative;z-index:1;}
+.hist-cta-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(201,146,10,.18);border:1px solid rgba(201,146,10,.35);color:var(--gold-mid);padding:6px 14px;border-radius:var(--radius-pill);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.hist-cta-eyebrow i{font-size:13px;}
+.hist-cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,40px);font-weight:700;color:#fff;line-height:1.15;margin-bottom:12px;}
+.hist-cta-sub{font-size:14px;color:rgba(255,255,255,.58);line-height:1.72;max-width:400px;}
+.hist-cta-right{display:flex;flex-direction:column;gap:12px;align-items:flex-start;flex-shrink:0;}
+.btn-primary.large{padding:17px 36px;font-size:15px;}
+.hist-cta-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:15px 28px;border-radius:var(--radius-pill);font-size:14px;font-weight:600;text-decoration:none;transition:all .25s;width:100%;justify-content:center;}
+.hist-cta-secondary:hover{background:rgba(255,255,255,.15);}
+.hist-cta-secondary i{font-size:17px;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hist-hero-inner{grid-template-columns:1fr;gap:48px;}
+  .hist-hero-img-wrap{max-width:320px;margin:0 auto;width:100%;}
+  .hist-hero-stats{flex-wrap:wrap;}
+}
+@media(max-width:768px){
+  .hist-hero{padding:72px 5% 60px;}
+  .hist-timeline::before{left:16px;}
+  .hist-tl-item{grid-template-columns:40px auto 1fr;}
+  .hist-cta-inner{flex-direction:column;text-align:center;}
+  .hist-cta-sub{max-width:100%;}
+  .hist-cta-right{align-items:center;width:100%;}
+  .btn-primary.large,.hist-cta-secondary{width:100%;justify-content:center;}
+  .hist-valeurs-grid{grid-template-columns:1fr;}
+  .hhs-item{padding:0 12px;}
+}
+@media(max-width:480px){
+  .hist-hero{padding:60px 5% 48px;}
+  .hist-tl-item{grid-template-columns:36px auto 1fr;gap:0 12px;}
+  .hist-tl-card{padding:18px 16px;}
+  .hist-hero-stats{flex-direction:column;gap:12px;padding:16px;}
+  .hhs-sep{width:40px;height:1px;}
+}

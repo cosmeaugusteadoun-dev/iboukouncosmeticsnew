@@ -1,0 +1,7 @@
+[hidden]{display:none!important}
+#skeletonLoader{display:none!important}
+:focus-visible{outline:3px solid #C9920A!important;outline-offset:4px}
+.iboukoun-captcha{margin:16px 0;max-width:100%;overflow:hidden}
+.site-notice{background:#fff8e1;color:#603e00;text-align:center;padding:16px;position:relative;z-index:100000}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
+noscript .reveal{opacity:1;transform:none}

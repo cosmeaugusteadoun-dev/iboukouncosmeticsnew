@@ -1,0 +1,93 @@
+
+/* ============================================================
+   VIDEOS.PHP — Styles
+============================================================ */
+.page-hero {
+    background:linear-gradient(135deg,var(--navy) 0%,#111f72 100%);
+    padding:64px 5% 56px; text-align:center; color:#fff;
+    position:relative; overflow:hidden;
+}
+.page-hero::before {
+    content:''; position:absolute; top:-80px; right:-80px;
+    width:350px; height:350px; border-radius:50%;
+    background:radial-gradient(circle,rgba(45,158,53,.1) 0%,transparent 70%);
+}
+.page-hero-content { position:relative; z-index:1; }
+.page-hero-title {
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(36px,4vw,56px); font-weight:700;
+    color:#fff; margin-bottom:14px;
+}
+.page-hero-sub { font-size:15px;color:rgba(255,255,255,.68);max-width:480px;margin:0 auto;line-height:1.7; }
+
+.videos-grid {
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px;
+}
+.video-card {
+    background:#fff; border-radius:var(--radius-xl);
+    overflow:hidden; border:1px solid rgba(0,0,0,.06);
+    transition:transform .25s,box-shadow .25s;
+}
+.video-card:hover { transform:translateY(-4px);box-shadow:var(--shadow); }
+.video-thumb {
+    height:190px; position:relative;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; overflow:hidden;
+}
+.video-overlay {
+    position:absolute; inset:0;
+    background:rgba(13,26,94,.3); transition:background .25s;
+}
+.video-thumb:hover .video-overlay { background:rgba(13,26,94,.5); }
+.play-btn {
+    position:relative; z-index:1;
+    width:56px; height:56px; border-radius:50%;
+    background:rgba(255,255,255,.92);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .2s,background .2s;
+    box-shadow:0 4px 16px rgba(0,0,0,.25);
+}
+.video-thumb:hover .play-btn { transform:scale(1.1);background:#fff; }
+.play-btn i { font-size:22px;color:var(--navy);margin-left:3px; }
+.video-info { padding:16px 18px 20px; }
+.video-title { font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.4; }
+.video-meta { font-size:12px;color:var(--text3);display:flex;align-items:center;gap:5px; }
+.video-meta i { font-size:12px; }
+
+/* Modal vidéo */
+.video-modal {
+    display:none; position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,.85);
+    align-items:center; justify-content:center;
+    padding:20px;
+}
+.video-modal.open { display:flex; }
+.video-modal-inner {
+    width:100%; max-width:860px;
+    background:#fff; border-radius:var(--radius-xl); overflow:hidden;
+    position:relative;
+}
+.video-modal-close {
+    position:absolute; top:12px; right:12px; z-index:10;
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(0,0,0,.1); border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+}
+.video-modal-close i { font-size:20px;color:var(--navy); }
+.video-modal-title {
+    padding:16px 20px 0;
+    font-size:16px;font-weight:600;color:var(--navy);
+}
+.video-iframe-wrap {
+    position:relative; padding-bottom:56.25%;
+    height:0; overflow:hidden;
+    margin-top:12px;
+}
+.video-iframe-wrap iframe {
+    position:absolute; top:0; left:0; width:100%; height:100%;
+}
+
+.empty-state { text-align:center;padding:80px 20px;color:var(--text3);font-size:14px; }
+.empty-state i { font-size:52px;display:block;margin-bottom:14px;opacity:.3; }
+
+@media(max-width:768px) { .videos-grid { grid-template-columns:1fr; } }

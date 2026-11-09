@@ -1,0 +1,371 @@
+{
+    "accueil_sections":  [
+
+                         ],
+    "categories":  [
+                       {
+                           "slug":  "corps",
+                           "nom":  "Soin corps",
+                           "id":  1
+                       },
+                       {
+                           "slug":  "visage",
+                           "nom":  "Soin visage",
+                           "id":  2
+                       },
+                       {
+                           "slug":  "deodorant",
+                           "nom":  "DÃ©odorant naturel",
+                           "id":  3
+                       }
+                   ],
+    "produits":  [
+                     {
+                         "categorie_id":  3,
+                         "nom":  "Aisselles Chic",
+                         "slug":  "aisselles-chic",
+                         "description":  "DÃ©odorant naturel combat les odeurs, rÃ©duit la transpiration. Sans parfum ni sels d\u0027aluminium.",
+                         "prix":  2000,
+                         "stock":  100,
+                         "id":  1,
+                         "actif":  1,
+                         "image":  "aiselle-chic.png",
+                         "benefices":  "100% naturel\nSans sels d\u0027aluminium\nEfficacitÃ© 24h"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Savon Gommant",
+                         "slug":  "savon-gommant",
+                         "description":  "DÃ©barrasse la peau des cellules mortes et ravive le teint sans le dÃ©caper. PrÃ©sentÃ© en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).",
+                         "prix":  6000,
+                         "stock":  80,
+                         "id":  2,
+                         "actif":  1,
+                         "image":  "savon-gommant.png",
+                         "benefices":  "Exfoliation naturelle douce\nÃ‰limine les cellules mortes\nRavive le teint sans dÃ©caper\nDeux formats : Grand pot \u0026 Petit pot"
+                     },
+                     {
+                         "categorie_id":  2,
+                         "nom":  "SÃ©rum Anti-taches \u0026 Ã‰clat",
+                         "slug":  "serum-anti-tache",
+                         "description":  "SÃ©rum unifiant, formulÃ© pour rÃ©duire les taches pigmentaires et prÃ©venir l\u0027hyperpigmentation.",
+                         "prix":  5000,
+                         "stock":  50,
+                         "id":  3,
+                         "actif":  1,
+                         "image":  "serum-anti-tache.png",
+                         "benefices":  "RÃ©duit les taches pigmentaires\nUniformise le grain de peau\nTexture lÃ©gÃ¨re et fluide\nPÃ©nÃ©tration rapide"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Huile Ã‰clat",
+                         "slug":  "huile-eclat",
+                         "description":  "Huile prÃ©cieuse pour nourrir et illuminer la peau. Absorption rapide.",
+                         "prix":  4500,
+                         "stock":  60,
+                         "id":  4,
+                         "actif":  1,
+                         "image":  "huile-eclat.png",
+                         "benefices":  "Nutrition intense\nFini satinÃ© non gras\nIllumine le teint"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Savon Gommant Premium",
+                         "slug":  "savon-gommant-premium",
+                         "description":  "Donne de l\u0027Ã©clat et uniformise votre teint. Formule enrichie au collagÃ¨ne, miel et huile d\u0027amande douce.",
+                         "prix":  7000,
+                         "stock":  50,
+                         "id":  5,
+                         "actif":  1,
+                         "image":  "savon-gommant-premium.png",
+                         "benefices":  "Formule enrichie au collagÃ¨ne\nDonne de l\u0027Ã©clat et uniformise\nAdoucit et hydrate en profondeur"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Gel Clarifiant +",
+                         "slug":  "gel-clarifiant-plus",
+                         "description":  "Clarifie et uniformise le teint en lui redonnant son Ã©clat normal.",
+                         "prix":  5000,
+                         "stock":  50,
+                         "id":  6,
+                         "actif":  1,
+                         "image":  "gel-clarifiant+.png",
+                         "benefices":  "Clarifie et uniformise\nRedonne l\u0027Ã©clat naturel\nNettoyage doux pour le bain"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Savon Antiseptique",
+                         "slug":  "savon-antiseptique",
+                         "description":  "Fait Ã  base de racines et de plantes. Traite les dÃ©mangeaisons, teignes, acnÃ©s, bourbouilles et dartres.",
+                         "prix":  3000,
+                         "stock":  50,
+                         "id":  7,
+                         "actif":  1,
+                         "image":  "savon-antiseptique-creme.png",
+                         "benefices":  "Base de racines et plantes mÃ©dicinales\nTraite dÃ©mangeaisons et dartres\nLutte contre acnÃ©s et bourbouilles"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Duo Ã‰clat",
+                         "slug":  "duo-eclat",
+                         "description":  "Le duo parfait : Gel Clarifiant+ et Savon Gommant pour une peau nette, bien gommÃ©e et Ã©clatante.",
+                         "prix":  10000,
+                         "stock":  30,
+                         "id":  8,
+                         "actif":  1,
+                         "image":  "duo-eclat.png",
+                         "benefices":  "Pack Ã©conomique 2 soins complÃ©mentaires\nExfoliation et nettoyage clarifiant\nRÃ©sultats optimaux et durables"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Lotion Anti Quinto",
+                         "slug":  "lotion-anti-quinto",
+                         "description":  "Solution ciblÃ©e pour estomper les quintos, phalanges sombres, jointures, coudes et genoux rebelles.",
+                         "prix":  4000,
+                         "stock":  50,
+                         "id":  9,
+                         "actif":  1,
+                         "image":  "lotion-anti-quinto.png",
+                         "benefices":  "Ã‰claircit les jointures sombres\nAction ciblÃ©e anti-quintos\nApplication locale facile"
+                     },
+                     {
+                         "categorie_id":  2,
+                         "nom":  "CrÃ¨me de Visage",
+                         "slug":  "creme-visage",
+                         "description":  "Soin hydratant, nourrissant et unifiant spÃ©cialement formulÃ© pour la peau dÃ©licate du visage.",
+                         "prix":  4000,
+                         "stock":  50,
+                         "id":  10,
+                         "actif":  1,
+                         "image":  "creme-visage.png",
+                         "benefices":  "Hydratation quotidienne intense\nProtÃ¨ge la peau dÃ©licate du visage\nIllumine et unifie le teint"
+                     }
+                 ],
+    "promotions":  [
+
+                   ],
+    "temoignages":  [
+                        {
+                            "id":  101,
+                            "nom_client":  "Leonardo ALLAVO",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  4,
+                            "message":  "IBOUKOUN COSMÉTICS m\u0027a été recommandé par une amie à moi et aujourd\u0027hui je peux vous dire que c\u0027était la meilleure recommandation qu\u0027on m\u0027a faites jusqu\u0027à là. Non seulement ils ont d\u0027excellents produits mais aussi ils sont professionnels !!! Je recommande vraiment",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  1,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  102,
+                            "nom_client":  "Grace Nyg",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "La référence qu\u0027il vous faut pour tout ce qui concerne votre peau 🥰🥰🥰",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  2,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  103,
+                            "nom_client":  "Kora Dafia",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Les produits IBOUKOUN COSMETICS sont une adaptés à tous types de peau et de teint . Moi j\u0027en utilise et je peux vous assurer que je suis satisfait des résultats jusqu\u0027à présent.",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  3,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  104,
+                            "nom_client":  "Reno Samani",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Accueil chaleureux, accompagnement adéquat, produit de qualité. La référence en terme dd produit cosmétique au Bénin",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  4,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  105,
+                            "nom_client":  "Mélodie Yokossi",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  1,
+                            "message":  "Iboukoun cosmétiques c\u0027est la meilleure recommandation que je puisse faire à mon entourage pour finir avec les imperfections corporelles 😍 😍 et aujourd\u0027hui j\u0027ai un joli teint sans aucune imperfections 🥰 😍 😘 c\u0027est la référence aufaite ❤️ ❤️",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  5,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  106,
+                            "nom_client":  "Juliana ADELOUI",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Ces produits sont les meilleurs que j\u0027ai eu à utiliser sans être déçu et je recommande vivement surtout le savon gommant 😍 ❤️",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  6,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  107,
+                            "nom_client":  "Juste Honorat Zannou",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Tout simplement les meilleurs dans leur domaine 🎊🚀",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  7,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  108,
+                            "nom_client":  "Saja Gnon Chimène GUEGOU BATA",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "En matière de cosmétiques naturels corporelle, Iboukoun est la meilleure 🥰 ❤️",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  8,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  109,
+                            "nom_client":  "Fleur Dagui",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Je recommande Iboukoun Cosmétiques pour vos soins naturels cosmétiques : l\u0027une des meilleures. 🥰",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  9,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  110,
+                            "nom_client":  "Grâce",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "J’ai testé les produits IBOUKOUN et j’ai vraiment aimé le résultat sur ma peau. Mon teint est plus propre, plus doux et lumineux. C’est tout simplement waoh❤️",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  10,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  111,
+                            "nom_client":  "Linus Anagonou",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Le leader de la cosmétique dans le septentrion.",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  11,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  112,
+                            "nom_client":  "Jude Avognon",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "Iboukoun cosmétiques fait les meilleurs produits de soins de visage et corporel que j\u0027ai eu à utiliser. Je recommande vivement",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  12,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  113,
+                            "nom_client":  "Diane Sasse",
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  5,
+                            "message":  "IBOUKOUN COSMÉTICS c’est la meilleure marque . Je l’utilise depuis quelques années et je vous la recommande vivement 🥰",
+                            "type":  "texte",
+                            "screenshot":  null,
+                            "visible":  true,
+                            "ordre":  13,
+                            "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        }
+                    ],
+    "parametres":  [
+                       {
+                           "cle":  "whatsapp_number",
+                           "valeur":  "22901695300"
+                       },
+                       {
+                           "cle":  "facebook_url",
+                           "valeur":  ""
+                       },
+                       {
+                           "cle":  "instagram_url",
+                           "valeur":  ""
+                       },
+                       {
+                           "cle":  "tiktok_url",
+                           "valeur":  ""
+                       },
+                       {
+                           "cle":  "adresse",
+                           "valeur":  "Parakou, BÃ©nin"
+                       },
+                       {
+                           "cle":  "email_contact",
+                           "valeur":  ""
+                       },
+                       {
+                           "cle":  "horaires",
+                           "valeur":  "Lunâ€“Sam : 8hâ€“20h"
+                       },
+                       {
+                           "cle":  "site_nom",
+                           "valeur":  "Iboukoun Cosmetics"
+                       },
+                       {
+                           "cle":  "site_slogan",
+                           "valeur":  "Naturellement vous"
+                       }
+                   ],
+    "equipe":  [
+
+               ],
+    "pages_contenu":  [
+
+                      ],
+    "produit_photos":  [
+
+                       ],
+    "egeries":  [
+
+                ],
+    "videos":  [
+
+               ]
+}

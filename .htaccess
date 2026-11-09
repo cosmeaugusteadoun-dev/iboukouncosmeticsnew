@@ -1,0 +1,64 @@
+Options -Indexes
+DirectoryIndex index.html
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^id=1$
+RewriteRule ^produit\.php$ /produit/aisselles-chic/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id=2$
+RewriteRule ^produit\.php$ /produit/savon-gommant/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id=3$
+RewriteRule ^produit\.php$ /produit/serum-eclat/? [R=301,L]
+RewriteCond %{QUERY_STRING} ^id=4$
+RewriteRule ^produit\.php$ /produit/huile-eclat/? [R=301,L]
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteRule ^produits\.php$ /produits.html [R=301,L]
+RewriteRule ^produits/?$ /produits.html [R=301,L]
+RewriteRule ^contact\.php$ /contact.html [R=301,L]
+RewriteRule ^contact/?$ /contact.html [R=301,L]
+RewriteRule ^histoire\.php$ /histoire.html [R=301,L]
+RewriteRule ^histoire/?$ /histoire.html [R=301,L]
+RewriteRule ^bio\.php$ /bio.html [R=301,L]
+RewriteRule ^bio/?$ /bio.html [R=301,L]
+RewriteRule ^temoignages\.php$ /temoignages.html [R=301,L]
+RewriteRule ^temoignages/?$ /temoignages.html [R=301,L]
+RewriteRule ^egeries\.php$ /egeries.html [R=301,L]
+RewriteRule ^egeries/?$ /egeries.html [R=301,L]
+RewriteRule ^videos\.php$ /videos.html [R=301,L]
+RewriteRule ^videos/?$ /videos.html [R=301,L]
+RewriteRule ^promotions\.php$ /promotions.html [R=301,L]
+RewriteRule ^promotions/?$ /promotions.html [R=301,L]
+RewriteRule ^revendeurs\.php$ /revendeurs.html [R=301,L]
+RewriteRule ^revendeurs/?$ /revendeurs.html [R=301,L]
+RewriteRule ^admin/index\.php$ /admin/#dashboard [R=301,L,NE]
+RewriteRule ^admin/login\.php$ /admin/#dashboard [R=301,L,NE]
+RewriteRule ^admin/logout\.php$ /admin/#dashboard [R=301,L,NE]
+RewriteRule ^admin/produits\.php$ /admin/#produits [R=301,L,NE]
+RewriteRule ^admin/produit_photos\.php$ /admin/#produit_photos [R=301,L,NE]
+RewriteRule ^admin/promotions\.php$ /admin/#promotions [R=301,L,NE]
+RewriteRule ^admin/commandes\.php$ /admin/#commandes_formulaire [R=301,L,NE]
+RewriteRule ^admin/revendeurs\.php$ /admin/#revendeurs [R=301,L,NE]
+RewriteRule ^admin/messages\.php$ /admin/#messages [R=301,L,NE]
+RewriteRule ^admin/temoignages\.php$ /admin/#temoignages [R=301,L,NE]
+RewriteRule ^admin/egeries\.php$ /admin/#egeries [R=301,L,NE]
+RewriteRule ^admin/videos\.php$ /admin/#videos [R=301,L,NE]
+RewriteRule ^admin/parametres\.php$ /admin/#parametres [R=301,L,NE]
+RewriteRule ^notre-histoire/?$ /histoire.html [R=301,L]
+RewriteRule ^bio-fondateur/?$ /bio.html [R=301,L]
+RewriteRule ^sitemap\.php$ /sitemap.xml [R=301,L]
+RewriteRule ^produit/savont-gommant-premium/?$ /produit/savon-gommant-premium/ [R=301,L]
+RewriteRule ^produit/savon-gommant-premium/?$ /produit/savon-gommant-premium/index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^produit/[^/]+/?$ /produit.html [L]
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "DENY"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https://*.supabase.co https://img.youtube.com https://i.ytimg.com; connect-src 'self' https://*.supabase.co https://challenges.cloudflare.com; frame-src https://www.youtube-nocookie.com https://www.youtube.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"
+</IfModule>
+ErrorDocument 404 /404.html
+
+<IfModule mod_mime.c>
+AddType application/javascript .js .mjs
+</IfModule>

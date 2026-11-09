@@ -1,0 +1,33 @@
+/index.php / 301
+/sitemap.php /sitemap.xml 301
+/produits.php /produits.html 301
+/contact.php /contact.html 301
+/histoire.php /histoire.html 301
+/bio.php /bio.html 301
+/temoignages.php /temoignages.html 301
+/egeries.php /egeries.html 301
+/videos.php /videos.html 301
+/promotions.php /promotions.html 301
+/revendeurs.php /revendeurs.html 301
+/notre-histoire /histoire.html 301
+/bio-fondateur /bio.html 301
+/produit.php id=1 /produit/aisselles-chic/ 301
+/produit.php id=2 /produit/savon-gommant/ 301
+/produit.php id=3 /produit/serum-eclat/ 301
+/produit.php id=4 /produit/huile-eclat/ 301
+/admin/index.php /admin/#dashboard 301
+/admin/login.php /admin/#dashboard 301
+/admin/logout.php /admin/#dashboard 301
+/admin/produits.php /admin/#produits 301
+/admin/produit_photos.php /admin/#produit_photos 301
+/admin/promotions.php /admin/#promotions 301
+/admin/commandes.php /admin/#commandes_formulaire 301
+/admin/revendeurs.php /admin/#revendeurs 301
+/admin/messages.php /admin/#messages 301
+/admin/temoignages.php /admin/#temoignages 301
+/admin/egeries.php /admin/#egeries 301
+/admin/videos.php /admin/#videos 301
+/admin/parametres.php /admin/#parametres 301
+/produit/savont-gommant-premium/ /produit/savon-gommant-premium/ 301
+/produit/savon-gommant-premium/ /produit/savon-gommant-premium/index.html 200
+/produit/* /produit.html 200

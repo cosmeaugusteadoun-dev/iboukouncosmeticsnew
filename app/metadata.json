@@ -1,0 +1,55 @@
+{
+  "bio": {
+    "page_title": "Fidèle BARRA — Fondateur & PDG — Iboukoun Cosmetics",
+    "meta_desc": "Découvrez la biographie de Fidèle BARRA, fondateur et PDG d'Iboukoun Cosmetics, marque de soins naturels made in Bénin.",
+    "page_active": "egeries"
+  },
+  "contact": {
+    "page_title": "Contactez Iboukoun Cosmetics — Cosmétiques naturels à Parakou, Bénin",
+    "meta_desc": "Contactez Iboukoun Cosmetics à Parakou, Bénin. Commander par WhatsApp, poser vos questions sur nos soins naturels. Livraison à Cotonou, Porto-Novo et partout au Bénin.",
+    "page_active": "contact"
+  },
+  "egeries": {
+    "page_title": "Nos Égéries & Notre Équipe — Iboukoun Cosmetics",
+    "meta_desc": "Découvrez les ambassadeurs et l'équipe Iboukoun Cosmetics — les visages de la beauté naturelle.",
+    "page_active": "egeries"
+  },
+  "histoire": {
+    "page_title": "Histoire d'Iboukoun Cosmetics — Marque de soins naturels fondée à Parakou, Bénin",
+    "meta_desc": "Iboukoun Cosmetics, marque béninoise de soins naturels fondée à Parakou en 2019 par Fidèle BARRA. Savon gommant, déodorant naturel, sérum visage. Livraison partout au Bénin.",
+    "page_active": "histoire"
+  },
+  "index": {
+    "page_title": "Iboukoun Cosmetics — Soins naturels, Naturellement vous",
+    "meta_desc": "Découvrez les soins cosmétiques naturels Iboukoun, fabriqués à Parakou au Bénin. Savon gommant, sérum visage, déodorant naturel. Livraison partout au Bénin.",
+    "page_active": "accueil"
+  },
+  "produit": {
+    "page_active": "produits"
+  },
+  "produits": {
+    "page_title": "Cosmétiques naturels au Bénin — Savon, Sérum, Déodorant | Iboukoun Cosmetics Parakou",
+    "meta_desc": "Achetez les soins naturels Iboukoun Cosmetics fabriqués à Parakou : savon gommant, sérum éclat, déodorant Aisselles Chic. Livraison à Cotonou, Porto-Novo et partout au Bénin.",
+    "page_active": "produits"
+  },
+  "promotions": {
+    "page_title": "Promotions en cours — Iboukoun Cosmetics",
+    "meta_desc": "Profitez des offres et promotions en cours sur les produits cosmétiques naturels Iboukoun Cosmetics.",
+    "page_active": "promotions"
+  },
+  "revendeurs": {
+    "page_title": "Devenir Revendeur de cosmétiques naturels au Bénin — Iboukoun Cosmetics Parakou",
+    "meta_desc": "Rejoignez le réseau revendeurs Iboukoun Cosmetics au Bénin. Achetez à 1.000f, revendez à 2.000f. Ouvert à Cotonou, Parakou, Porto-Novo et partout au Bénin. 100% de bénéfice.",
+    "page_active": "revendeurs"
+  },
+  "temoignages": {
+    "page_title": "Avis clients — Témoignages Iboukoun Cosmetics Parakou, Bénin",
+    "meta_desc": "Avis et témoignages de clientes satisfaites d'Iboukoun Cosmetics à Parakou et partout au Bénin. Résultats visibles sur le savon gommant, déodorant naturel et sérum visage.",
+    "page_active": "temoignages"
+  },
+  "videos": {
+    "page_title": "Vidéos — Iboukoun Cosmetics",
+    "meta_desc": "Regardez nos vidéos publicitaires et découvrez nos produits cosmétiques naturels en action.",
+    "page_active": "videos"
+  }
+}

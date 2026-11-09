@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Produit — Iboukoun Cosmetics</title>
+  <link rel="stylesheet" href="/assets/accessibility.css">
+  <style>
+    .product-loader{min-height:100vh;display:grid;place-items:center}
+    .product-loader::before{content:"";width:34px;height:34px;border:3px solid #e7e9ef;border-top-color:#10205d;border-radius:50%;animation:product-loader-spin .8s linear infinite}
+    @keyframes product-loader-spin{to{transform:rotate(360deg)}}
+  </style>
+  <script src="/assets/forms.js" defer></script>
+  <script type="module" src="/assets/public.js"></script>
+</head>
+<body>
+  <main id="productLoader" class="product-loader" aria-busy="true" aria-label="Chargement de la fiche produit"></main>
+</body>
+</html>
