@@ -11,10 +11,10 @@
 /revendeurs.php /revendeurs.html 301
 /notre-histoire /histoire.html 301
 /bio-fondateur /bio.html 301
-/produit.php id=1 /produit/aisselles-chic/ 301
-/produit.php id=2 /produit/savon-gommant/ 301
-/produit.php id=3 /produit/serum-eclat/ 301
-/produit.php id=4 /produit/huile-eclat/ 301
+/produit.php?id=1 /produit/aisselles-chic/ 301
+/produit.php?id=2 /produit/savon-gommant/ 301
+/produit.php?id=3 /produit/serum-eclat/ 301
+/produit.php?id=4 /produit/huile-eclat/ 301
 /admin/index.php /admin/#dashboard 301
 /admin/login.php /admin/#dashboard 301
 /admin/logout.php /admin/#dashboard 301
