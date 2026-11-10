@@ -1,0 +1,241 @@
+.home-mission {
+  padding: 90px 0;
+  background: #fff;
+}
+
+.home-mission-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+  gap: 9%;
+  align-items: center;
+}
+
+.home-mission-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+  height: 510px;
+}
+
+.home-mission-photo {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+}
+
+.home-mission-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-mission-photo-1 {
+  height: 90%;
+  transform: rotate(-4deg);
+}
+
+.home-mission-photo-2 {
+  height: 90%;
+  transform: rotate(-2deg);
+}
+
+.home-mission-photo-3 {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  height: 100%;
+  transform: rotate(1deg);
+}
+
+.home-mission-copy .section-eyebrow {
+  color: var(--navy, #10205d);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.home-mission-copy h2 {
+  margin: 14px 0 20px;
+  color: var(--navy, #10205d);
+  font-family: var(--font-heading, "Cormorant Garamond", serif);
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.08;
+}
+
+.home-mission-copy p {
+  color: var(--text2, #353b49);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.home-mission-copy strong {
+  display: block;
+  margin-top: 30px;
+  color: var(--navy, #10205d);
+  font-size: 17px;
+}
+
+.home-results {
+  overflow: hidden;
+  padding: 88px 0;
+  background: #fff;
+}
+
+.home-results-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+  gap: 8%;
+  align-items: center;
+  min-height: 560px;
+}
+
+.home-results-copy h2 {
+  margin: 14px 0 20px;
+  color: var(--navy, #10205d);
+  font-family: var(--font-heading, "Cormorant Garamond", serif);
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1.08;
+}
+
+.home-results-copy p {
+  color: var(--text2, #353b49);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.home-results-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 28px;
+  padding: 16px 22px;
+  background: var(--navy, #10205d);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.home-results-cta:hover {
+  background: var(--green, #2d9e35);
+  transform: translateY(-2px);
+}
+
+.home-results-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  height: 560px;
+  overflow: hidden;
+}
+
+.home-results-track {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+  animation: home-results-scroll 32s linear infinite;
+}
+
+.home-results-track-2 {
+  animation-duration: 38s;
+  animation-direction: reverse;
+}
+
+.home-results-gallery:hover .home-results-track {
+  animation-play-state: paused;
+}
+
+.home-results-photo {
+  height: 210px;
+  min-height: 210px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #edf2f2;
+}
+
+.home-results-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes home-results-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@media (max-width: 850px) {
+  .home-mission-layout {
+    gap: 5%;
+  }
+
+  .home-mission-gallery {
+    height: 420px;
+  }
+
+  .home-results-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 5%;
+  }
+
+  .home-results-gallery {
+    height: 440px;
+  }
+
+  .home-results-photo {
+    height: 170px;
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-mission {
+    padding: 54px 0;
+  }
+
+  .home-results {
+    padding: 54px 0;
+  }
+
+  .home-mission-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .home-mission-gallery {
+    height: 390px;
+  }
+
+  .home-results-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home-mission-copy p,
+  .home-results-copy p {
+    font-size: 16px;
+  }
+
+  .home-results-gallery {
+    height: 420px;
+  }
+
+  .home-results-photo {
+    height: 160px;
+    min-height: 160px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-results-track {
+    animation: none;
+  }
+}
