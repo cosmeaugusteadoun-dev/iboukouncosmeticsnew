@@ -62,6 +62,7 @@ out += (BASE_URL) ?? "";
 out += "produits.php\" class=\"";
 out += (nav_active("produits",page_active)) ?? "";
 out += "\">Produits</a>\n      <a href=\"";
+if (promo_nav) {
 out += (BASE_URL) ?? "";
 out += "promotions.php\" class=\"nav-promo ";
 out += (nav_active("promotions",page_active)) ?? "";
@@ -70,6 +71,7 @@ if (promo_nav) {
 out += "<span class=\"promo-dot\"></span>";
 }
 out += "\n      </a>\n      <a href=\"";
+}
 out += (BASE_URL) ?? "";
 out += "histoire.php\" class=\"";
 out += (nav_active("histoire",page_active)) ?? "";
@@ -104,6 +106,7 @@ out += (BASE_URL) ?? "";
 out += "produits.php\" class=\"mobile-nav-item ";
 out += (nav_active("produits",page_active)) ?? "";
 out += "\" onclick=\"menuClose()\">\n      <div class=\"mobile-nav-item-left\">\n        <div class=\"mobile-nav-icon\"><i class=\"ri-sparkling-line\"></i></div>\n        <div class=\"mobile-nav-label\">\n          <span class=\"nav-label-main\">Produits</span>\n          <span class=\"nav-label-sub\">Notre gamme complète</span>\n        </div>\n      </div>\n      <i class=\"ri-arrow-right-s-line mobile-nav-arrow\"></i>\n    </a>\n    <a href=\"";
+if (promo_nav) {
 out += (BASE_URL) ?? "";
 out += "promotions.php\" class=\"mobile-nav-item ";
 out += (nav_active("promotions",page_active)) ?? "";
@@ -114,6 +117,7 @@ out += "\n          <span class=\"mobile-promo-badge\"><i class=\"ri-fire-line\"
 out += "\n          <span class=\"nav-label-sub\">Offres spéciales</span>\n          ";
 }
 out += "\n        </div>\n      </div>\n      <i class=\"ri-arrow-right-s-line mobile-nav-arrow\"></i>\n    </a>\n\n    <a href=\"";
+}
 out += (BASE_URL) ?? "";
 out += "histoire.php\" class=\"mobile-nav-item ";
 out += (nav_active("histoire",page_active)) ?? "";

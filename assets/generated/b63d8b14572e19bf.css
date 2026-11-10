@@ -540,6 +540,7 @@ nav.main-nav.scrolled{
 }
 @media(max-width:768px){
   :root{--section-py:64px;--nav-h:64px;--ticker-h:32px;}
+  .mobile-nav-item[href="/videos.html"]{display:none;}
   .nav-links,.nav-wa-btn{display:none;}
   .hamburger{display:flex;}
   .wa-float{bottom:24px;right:20px;}

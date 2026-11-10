@@ -49,7 +49,7 @@
     <div class="nav-links">
       <a href="/index.html">Accueil</a>
       <a href="/produits.html" class="active">Produits</a>
-      <a href="/promotions.html" class="nav-promo"><i class="ri-flashlight-line"></i>Promotions</a>
+      
       <a href="/histoire.html">Notre histoire</a>
       <a href="/temoignages.html">Témoignages</a>
       <a href="/contact.html">Contact</a>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="fp-price-wrap">
-          <span class="fp-price" id="fpPriceDisplay">Prix à renseigner</span>
+          <span class="fp-price" id="fpPriceDisplay">3.000 FCFA</span>
         </div>
 
         <div class="fp-description">
@@ -118,7 +118,7 @@
           </div>
           <div class="fp-total-row">
             <span class="fp-total-label">Total estimé</span>
-            <span class="fp-total-val" id="fpTotal">Prix à renseigner</span>
+            <span class="fp-total-val" id="fpTotal">3.000 FCFA</span>
           </div>
 
           <form id="fpOrderForm" class="fp-form" onsubmit="showRecap(event)">
@@ -347,7 +347,7 @@
 </style>
 
 <script>
-var FP_PRIX = 0;
+var FP_PRIX = 3000;
 var FP_NOM  = 'Lotion Anti Quinto';
 
 function changeQty(delta){
@@ -367,6 +367,7 @@ function updateTotal(){
   }
   document.getElementById('fpFormQty').value = qty;
 }
+updateTotal();
 
 function switchSheetTab(tabId, btn){
   document.querySelectorAll('.fp-sheet-tab').forEach(function(b){b.classList.remove('active');});
@@ -457,4 +458,3 @@ function submitCommande(){
 </script>
 </body>
 </html>
-

@@ -4,6 +4,7 @@ function imageUrl(image, supabaseUrl) {
   if (!image) return '';
   if (/^https:\/\//i.test(image)) return image;
   if (image.startsWith('/')) return image;
+  if (/^temoignage\d*\.webp$/i.test(image)) return '/assets/images/' + encodeURIComponent(image);
   const siteImage = ['equipe-iboukoun-cosmetics.png', 'aiselle-chic-application.png', 'resultat-sérums-clatants.png'];
   if (siteImage.includes(image)) return '/assets/images/' + encodeURIComponent(image);
   if (/^sb_[a-z0-9_.-]+$/i.test(image)) {

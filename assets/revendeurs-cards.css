@@ -1,0 +1,72 @@
+.section-steps .step-card:nth-child(1) {
+  background: #87ceeb;
+  border-color: #75bddb;
+}
+
+.section-steps .step-card:nth-child(2) {
+  background: #b6e65a;
+  border-color: #a4d34e;
+}
+
+.section-steps .step-card:nth-child(3) {
+  background: #fff;
+  border-color: #e7e9ef;
+}
+
+.section-steps .step-card:nth-child(4) {
+  background: #0d1a5e;
+  border-color: #0d1a5e;
+}
+
+.section-steps .step-card:nth-child(4) .step-num {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .62), rgba(255, 255, 255, .9));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.section-steps .step-card:nth-child(4) .step-title {
+  color: #fff;
+}
+
+.section-steps .step-card:nth-child(4) .step-desc {
+  color: rgba(255, 255, 255, .82);
+}
+
+.section-steps .step-card:nth-child(4) .step-icon-wrap {
+  background: rgba(255, 255, 255, .12);
+  box-shadow: none;
+}
+
+.section-avantages .avantage-card {
+  --avantage-accent: #2d9e35;
+}
+
+.section-avantages .avantage-card:nth-child(2),
+.section-avantages .avantage-card:nth-child(6) {
+  --avantage-accent: #596cff;
+}
+
+.section-avantages .avantage-card:nth-child(3) {
+  --avantage-accent: #c9920a;
+}
+
+.section-avantages .avantage-card:nth-child(4) {
+  --avantage-accent: #8b5cf6;
+}
+
+.section-avantages .avantage-card::before {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: auto;
+  background: var(--avantage-accent);
+  opacity: 1;
+  transition: none;
+}
+
+.section-avantages .avantage-card:hover::before {
+  opacity: 1;
+  background: var(--avantage-accent);
+}

@@ -1,6 +1,218 @@
 {
     "accueil_sections":  [
-
+                         {
+                             "id":  16,
+                             "section":  "packs",
+                             "item_type":  "pack",
+                             "titre":  "Duo Éclaircissant+",
+                             "description":  "Découvrez le duo de soins éclaircissants Iboukoun.",
+                             "produit_id":  8,
+                             "image":  "duo-eclat.png",
+                             "ordre":  1,
+                             "actif":  true
+                         },
+                         {
+                             "id":  17,
+                             "section":  "packs",
+                             "item_type":  "pack",
+                             "titre":  "Savon Antiseptique + Crème de Visage",
+                             "description":  "Deux soins réunis dans un même pack. Contactez-nous pour connaître le prix.",
+                             "image":  "savon-antiseptique-creme.png",
+                             "ordre":  2,
+                             "actif":  true
+                         },
+                         {
+                             "id":  18,
+                             "section":  "packs",
+                             "item_type":  "pack",
+                             "titre":  "Savon Gommant + Crème de Visage",
+                             "description":  "Une association de soins pour le corps et le visage. Contactez-nous pour connaître le prix.",
+                             "image":  "offre-special-gommant-creme.png",
+                             "ordre":  3,
+                             "actif":  true
+                         },
+                         {
+                             "id":  19,
+                             "section":  "mission",
+                             "item_type":  "texte",
+                             "titre":  "Notre mission",
+                             "description":  "Chez Iboukoun Cosmetics, nous croyons qu’une belle peau commence par des soins adaptés, nourrissants et inspirés par la nature. Nos formules sont pensées pour accompagner chaque peau dans sa routine beauté.",
+                             "surtitre":  "Nous avons à cœur",
+                             "texte_final":  "Iboukoun Cosmetics, prendre soin de votre peau naturellement.",
+                             "ordre":  1,
+                             "actif":  true
+                         },
+                         {
+                             "id":  20,
+                             "section":  "mission",
+                             "item_type":  "image",
+                             "titre":  "Image de mission 1",
+                             "image":  "equipe-iboukoun-cosmetics.png",
+                             "ordre":  1,
+                             "actif":  true
+                         },
+                         {
+                             "id":  21,
+                             "section":  "mission",
+                             "item_type":  "image",
+                             "titre":  "Image de mission 2",
+                             "image":  "aiselle-chic-application.png",
+                             "ordre":  2,
+                             "actif":  true
+                         },
+                         {
+                             "id":  22,
+                             "section":  "mission",
+                             "item_type":  "image",
+                             "titre":  "Image de mission 3",
+                             "image":  "resultat-sérums-clatants.png",
+                             "ordre":  3,
+                             "actif":  true
+                         },
+                         {
+                             "id":  23,
+                             "section":  "resultats",
+                             "item_type":  "texte",
+                             "titre":  "Nos résultats parlent d’eux-mêmes",
+                             "description":  "Découvrez les images et les expériences partagées par notre communauté.",
+                             "ordre":  1,
+                             "actif":  true
+                         },
+                         {
+                             "id":  1,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 1",
+                             "image":  "temoignage.webp",
+                             "ordre":  1,
+                             "actif":  true
+                         },
+                         {
+                             "id":  2,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 2",
+                             "image":  "temoignage1.webp",
+                             "ordre":  2,
+                             "actif":  true
+                         },
+                         {
+                             "id":  3,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 3",
+                             "image":  "temoignage2.webp",
+                             "ordre":  3,
+                             "actif":  true
+                         },
+                         {
+                             "id":  4,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 4",
+                             "image":  "temoignage3.webp",
+                             "ordre":  4,
+                             "actif":  true
+                         },
+                         {
+                             "id":  5,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 5",
+                             "image":  "temoignage4.webp",
+                             "ordre":  5,
+                             "actif":  true
+                         },
+                         {
+                             "id":  6,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 6",
+                             "image":  "temoignage5.webp",
+                             "ordre":  6,
+                             "actif":  true
+                         },
+                         {
+                             "id":  7,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 7",
+                             "image":  "temoignage6.webp",
+                             "ordre":  7,
+                             "actif":  true
+                         },
+                         {
+                             "id":  8,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 8",
+                             "image":  "temoignage7.webp",
+                             "ordre":  8,
+                             "actif":  true
+                         },
+                         {
+                             "id":  9,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 9",
+                             "image":  "temoignage8.webp",
+                             "ordre":  9,
+                             "actif":  true
+                         },
+                         {
+                             "id":  10,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 10",
+                             "image":  "temoignage9.webp",
+                             "ordre":  10,
+                             "actif":  true
+                         },
+                         {
+                             "id":  11,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 11",
+                             "image":  "temoignage10.webp",
+                             "ordre":  11,
+                             "actif":  true
+                         },
+                         {
+                             "id":  12,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 12",
+                             "image":  "temoignage11.webp",
+                             "ordre":  12,
+                             "actif":  true
+                         },
+                         {
+                             "id":  13,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 13",
+                             "image":  "temoignage12.webp",
+                             "ordre":  13,
+                             "actif":  true
+                         },
+                         {
+                             "id":  14,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 14",
+                             "image":  "temoignage13.webp",
+                             "ordre":  14,
+                             "actif":  true
+                         },
+                         {
+                             "id":  15,
+                             "section":  "resultats",
+                             "item_type":  "image",
+                             "titre":  "Témoignage visuel 15",
+                             "image":  "temoignage14.webp",
+                             "ordre":  15,
+                             "actif":  true
+                         }
                          ],
     "categories":  [
                        {
@@ -101,7 +313,7 @@
                          "stock":  50,
                          "id":  7,
                          "actif":  1,
-                         "image":  "savon-antiseptique-creme.png",
+                         "image":  "savon-antiseptique.png",
                          "benefices":  "Base de racines et plantes mÃ©dicinales\nTraite dÃ©mangeaisons et dartres\nLutte contre acnÃ©s et bourbouilles"
                      },
                      {
@@ -121,7 +333,7 @@
                          "nom":  "Lotion Anti Quinto",
                          "slug":  "lotion-anti-quinto",
                          "description":  "Solution ciblÃ©e pour estomper les quintos, phalanges sombres, jointures, coudes et genoux rebelles.",
-                         "prix":  4000,
+                         "prix":  3000,
                          "stock":  50,
                          "id":  9,
                          "actif":  1,
@@ -313,6 +525,162 @@
                             "visible":  true,
                             "ordre":  13,
                             "created_at":  "2026-04-27T16:01:07.5444201Z"
+                        },
+                        {
+                            "id":  114,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage15.webp",
+                            "visible":  true,
+                            "ordre":  14
+                        },
+                        {
+                            "id":  115,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage16.webp",
+                            "visible":  true,
+                            "ordre":  15
+                        },
+                        {
+                            "id":  116,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage17.webp",
+                            "visible":  true,
+                            "ordre":  16
+                        },
+                        {
+                            "id":  117,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage18.webp",
+                            "visible":  true,
+                            "ordre":  17
+                        },
+                        {
+                            "id":  118,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage19.webp",
+                            "visible":  true,
+                            "ordre":  18
+                        },
+                        {
+                            "id":  119,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage20.webp",
+                            "visible":  true,
+                            "ordre":  19
+                        },
+                        {
+                            "id":  120,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage21.webp",
+                            "visible":  true,
+                            "ordre":  20
+                        },
+                        {
+                            "id":  121,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage22.webp",
+                            "visible":  true,
+                            "ordre":  21
+                        },
+                        {
+                            "id":  122,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage23.webp",
+                            "visible":  true,
+                            "ordre":  22
+                        },
+                        {
+                            "id":  123,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage24.webp",
+                            "visible":  true,
+                            "ordre":  23
+                        },
+                        {
+                            "id":  124,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage25.webp",
+                            "visible":  true,
+                            "ordre":  24
+                        },
+                        {
+                            "id":  125,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage26.webp",
+                            "visible":  true,
+                            "ordre":  25
+                        },
+                        {
+                            "id":  126,
+                            "nom_client":  null,
+                            "ville":  null,
+                            "produit_id":  null,
+                            "note":  null,
+                            "message":  null,
+                            "type":  "screenshot",
+                            "screenshot":  "temoignage27.webp",
+                            "visible":  true,
+                            "ordre":  26
                         }
                     ],
     "parametres":  [

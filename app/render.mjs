@@ -26,6 +26,15 @@ function productImageUrl(image, supabaseUrl) {
   if (value.startsWith('/')&&!/^\/uploads\/produits\//i.test(value)) return value;
   return '/produit/'+encodeURIComponent(filename);
 }
+function testimonialImageUrl(image) {
+  if (!image) return null;
+  const value=String(image).trim();
+  if (/^(?:https?:)?\/\//i.test(value)||value.startsWith('/')) return value;
+  if (/^assets\/images\/[a-z0-9_.-]+$/i.test(value)) return '/'+value;
+  const filename=value.split(/[\\/]/).pop();
+  if (/^temoignage\d*\.webp$/i.test(filename)) return '/assets/images/'+encodeURIComponent(filename);
+  return '/uploads/temoignages/'+encodeURIComponent(filename);
+}
 export function prepare(data, config, name, meta, productId) {
   data=sanitizeData(data);
   const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Porto-Novo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -43,7 +52,7 @@ export function prepare(data, config, name, meta, productId) {
     4:'huile-eclat.png',
     5:'savon-gommant-premium.png',
     6:'gel-clarifiant+.png',
-    7:'savon-antiseptique-creme.png',
+    7:'savon-antiseptique.png',
     8:'duo-eclat.png',
     9:'lotion-anti-quinto.png',
     10:'creme-visage.png'
@@ -73,14 +82,15 @@ export function prepare(data, config, name, meta, productId) {
   const produit=produits.find(p=>p.id===Number(productId));
   const params=Object.fromEntries((data.parametres||[]).map(p=>[p.cle,p.valeur]));
   const wa=String(params.whatsapp_number||'22901695300').replace(/\D/g,'');
-  const visible=(data.temoignages||[]).filter(t=>t.visible===true||t.visible===1).map(t=>({...t,produit_nom:produits.find(p=>p.id===t.produit_id)?.nom||''}));
+  const visible=(data.temoignages||[]).filter(t=>t.visible===true||t.visible===1).map(t=>({...t,produit_nom:produits.find(p=>p.id===t.produit_id)?.nom||'',screenshot_url:testimonialImageUrl(t.screenshot)}));
   const temos_texte=visible.filter(t=>t.type==='texte');
   const photos=(data.produit_photos||[]).filter(p=>p.produit_id===produit?.id).sort((a,b)=>Number(b.is_principale)-Number(a.is_principale)||a.ordre-b.ordre);
   const siteUrl=config.siteUrl.replace(/\/$/,'');
   const path=name==='index'?'/':name==='produit'?'/produit/'+produit?.slug+'/':'/'+name+'.html';
   const title=produit?produit.nom+' — Iboukoun Cosmetics':meta.page_title;
   const description=produit?String(produit.description||'').slice(0,155):meta.meta_desc;
-  const ctx={...data,siteUrl,BASE_URL:'/',WA_NUMBER:wa,UPLOAD_PATH:'/',UPLOAD_URL_PRODUITS:'/produit/',UPLOAD_URL_EQUIPE:'/uploads/equipe/',UPLOAD_URL_EGERIES:'/uploads/egeries/',UPLOAD_URL_TEMOIGNAGES:'/uploads/temoignages/',GSC_VERIFICATION_CODE:e(config.googleSiteVerification||''),seo_title:title,seo_desc:description,seo_img:siteUrl+'/assets/images/hero.jpg',seo_url:siteUrl+path,seo:{keywords:'',og_type:produit?'product':'website'},page_active:meta.page_active||name,params,wa_number:wa,produits,categories,cat_filtre:'all',promos,promo_nav:promos[0]||null,promo_active:promos[0]||null,temos_texte,screenshots:visible.filter(t=>t.type==='screenshot'),total_avi:visible.length,note_moy:temos_texte.length?Math.round(temos_texte.reduce((n,t)=>n+t.note,0)/temos_texte.length*10)/10:0,egeries:(data.egeries||[]).filter(active).sort((a,b)=>a.ordre-b.ordre),equipe:(data.equipe||[]).filter(active).sort((a,b)=>a.ordre-b.ordre),fondateur:(data.equipe||[]).filter(active).sort((a,b)=>a.ordre-b.ordre)[0]||null,nb_clients:500,nb_produits:produits.length,nb_revendeurs:'—',videos:(data.videos||[]).filter(active),accueil_sections:data.accueil_sections||[],produit,photos,img_principale:photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image?(String(produit.image).startsWith('/')?produit.image:'/produit/'+produit.image):null,temos:visible.filter(t=>t.produit_id===produit?.id),similaires:produits.filter(p=>p.categorie_id===produit?.categorie_id&&p.id!==produit?.id).concat(produits.filter(p=>p.categorie_id!==produit?.categorie_id)).slice(0,4),faqs:[],page:null,renderFooter:footer};
+  const equipe=(data.equipe||[]).filter(active).sort((a,b)=>a.ordre-b.ordre);
+  const ctx={...data,siteUrl,BASE_URL:'/',WA_NUMBER:wa,UPLOAD_PATH:'/',UPLOAD_URL_PRODUITS:'/produit/',UPLOAD_URL_EQUIPE:'/uploads/equipe/',UPLOAD_URL_EGERIES:'/uploads/egeries/',UPLOAD_URL_TEMOIGNAGES:'/uploads/temoignages/',GSC_VERIFICATION_CODE:e(config.googleSiteVerification||''),seo_title:title,seo_desc:description,seo_img:siteUrl+'/assets/images/hero.jpg',seo_url:siteUrl+path,seo:{keywords:'',og_type:produit?'product':'website'},page_active:meta.page_active||name,params,wa_number:wa,produits,categories,cat_filtre:'all',promos,promo_nav:promos[0]||null,promo_active:promos[0]||null,temos_texte,screenshots:visible.filter(t=>t.type==='screenshot'),total_avi:visible.length,note_moy:temos_texte.length?Math.round(temos_texte.reduce((n,t)=>n+t.note,0)/temos_texte.length*10)/10:0,egeries:(data.egeries||[]).filter(active).sort((a,b)=>a.ordre-b.ordre),equipe,fondateur:equipe[0]||{nom:'Fidèle BARRA',photo:'fondateur.jpg'},nb_clients:500,nb_produits:produits.length,videos:(data.videos||[]).filter(active),accueil_sections:data.accueil_sections||[],produit,photos,img_principale:photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image?(String(produit.image).startsWith('/')?produit.image:'/produit/'+produit.image):null,temos:visible.filter(t=>t.produit_id===produit?.id),similaires:produits.filter(p=>p.categorie_id===produit?.categorie_id&&p.id!==produit?.id).concat(produits.filter(p=>p.categorie_id!==produit?.categorie_id)).slice(0,4),faqs:[],page:null,renderFooter:footer};
   if(name==='produit'){
     ctx.img_principale=photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image_url||null;
     ctx.similaires=produits.filter(p=>p.id!==produit?.id);
@@ -91,6 +101,9 @@ export function prepare(data, config, name, meta, productId) {
 
 export function renderPage(data,config,name,meta,productId){
   const ctx=prepare(data,config,name,meta,productId);
+  if(name==='promotions'&&!ctx.promos.length){
+    return '<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta http-equiv="refresh" content="0;url=/produits.html"><title>Redirection - Iboukoun Cosmetics</title><script>location.replace("/produits.html")</script></head><body><a href="/produits.html">Aucune promotion en cours. Voir nos produits.</a></body></html>';
+  }
   if(name==='produit'&&!ctx.produit) throw new Error('Produit introuvable');
   let html=header(ctx)+pages[name](ctx);
   if(name==='contact'){

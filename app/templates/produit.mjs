@@ -174,9 +174,9 @@ if (!empty(screenshots)) {
 out += "\n    <div class=\"fp-temos-ss-grid\">\n      ";
 for (var sc of screenshots) {
 out += "\n      <div class=\"fp-ss-card reveal\"\n           onclick=\"openLightbox('";
-out += (js_string(UPLOAD_URL_TEMOIGNAGES+e(sc["screenshot"]))) ?? "";
+out += (js_string(sc["screenshot_url"])) ?? "";
 out += "')\">\n        <img src=\"";
-out += (UPLOAD_URL_TEMOIGNAGES+e(sc["screenshot"])) ?? "";
+out += (e(sc["screenshot_url"])) ?? "";
 out += "\"\n     alt=\"Avis client ";
 out += (e(produit["nom"])) ?? "";
 out += " — Iboukoun Cosmetics\"\n     width=\"400\"\n     height=\"220\"\n     loading=\"lazy\">\n        <div class=\"fp-ss-overlay\"><i class=\"ri-zoom-in-line\"></i></div>\n      </div>\n      ";

@@ -39,8 +39,10 @@ out += (BASE_URL) ?? "";
 out += "produits.php?cat=corps\" title=\"Savon gommant peau africaine Bénin\">\n      <i class=\"ri-arrow-right-s-line\"></i>Savon gommant</a></li>\n    <li><a href=\"";
 out += (BASE_URL) ?? "";
 out += "produits.php?cat=visage\" title=\"Sérum anti-tache visage naturel Bénin\">\n      <i class=\"ri-arrow-right-s-line\"></i>Sérum visage</a></li>\n    <li><a href=\"";
+if (promo_nav) {
 out += (BASE_URL) ?? "";
 out += "promotions.php\" title=\"Promotions et offres spéciales Iboukoun Cosmetics\">\n      <i class=\"ri-arrow-right-s-line\"></i>Promotions</a></li>\n    <li><a href=\"";
+}
 out += (BASE_URL) ?? "";
 out += "temoignages.php\" title=\"Avis clients Iboukoun Cosmetics Bénin\">\n      <i class=\"ri-arrow-right-s-line\"></i>Témoignages</a></li>\n    <li><a href=\"";
 out += (BASE_URL) ?? "";
@@ -78,11 +80,11 @@ out += "</span>\n            </div>\n            ";
 }
 out += "\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>\n  <div class=\"footer-bottom\">\n    <div class=\"container\">\n      <div class=\"footer-bottom-inner\">\n        <p>© ";
 out += (date("Y")) ?? "";
-out += " Iboukoun Cosmetics — Tous droits réservés</p>\n        <div class=\"footer-legal\">\n          <a href=\"";
+out += " Iboukoun Cosmetics — Tous droits réservés</p>\n        <!-- <div class=\"footer-legal\">\n          <a href=\"";
 out += (BASE_URL) ?? "";
 out += "contact.php\">Mentions légales</a>\n          <a href=\"";
 out += (BASE_URL) ?? "";
-out += "contact.php\">Confidentialité</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</footer>\n\n<!-- WA Flottant -->\n<div class=\"wa-float\">\n  <div class=\"wa-float-label\">Commander sur WhatsApp</div>\n  <a class=\"wa-float-btn\"\n     href=\"https://wa.me/";
+out += "contact.php\">Confidentialité</a>\n        </div> -->\n      </div>\n    </div>\n  </div>\n</footer>\n\n<!-- WA Flottant -->\n<div class=\"wa-float\">\n  <div class=\"wa-float-label\">Commander sur WhatsApp</div>\n  <a class=\"wa-float-btn\"\n     href=\"https://wa.me/";
 out += (e(wa_number)) ?? "";
 out += "?text=";
 out += (rawurlencode("Bonjour, je veux commander !")) ?? "";

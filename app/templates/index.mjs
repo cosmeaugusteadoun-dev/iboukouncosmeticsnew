@@ -148,7 +148,7 @@ items_bot = screenshots;
       items_bot = array_merge(items_bot, items_bot);
       for (var sc of items_bot) {
 out += "\n      <div class=\"temo-mc-card temo-mc-ss\">\n  <div class=\"tmc-ss-img-wrap\">\n    <img src=\"";
-out += (UPLOAD_URL_TEMOIGNAGES+e(sc["screenshot"])) ?? "";
+out += (e(sc["screenshot_url"])) ?? "";
 out += "\"\n     alt=\"Avis client Iboukoun Cosmetics — Témoignage WhatsApp\"\n     width=\"320\"\n     height=\"260\"\n     loading=\"lazy\">\n  </div>\n</div>\n      ";
 }
 out += "\n    </div>\n  </div>\n  ";

@@ -1,6 +1,36 @@
 const $=s=>document.querySelector(s);
 const config=await fetch('/site-config.json').then(r=>r.json());
 let session=null,table='',page=0,total=0,rows=[],editing=null,refreshing=null;
+const adminMenuToggle=$('#admin-menu-toggle');
+const adminNavigation=$('#navigation');
+const themeToggle=$('#theme-toggle');
+function setAdminMenuOpen(open){
+ adminMenuToggle.setAttribute('aria-expanded',String(open));
+ adminNavigation.classList.toggle('is-open',open);
+}
+adminMenuToggle.addEventListener('click',()=>setAdminMenuOpen(adminMenuToggle.getAttribute('aria-expanded')!=='true'));
+adminNavigation.addEventListener('click',event=>{
+ if(event.target.closest('a'))setAdminMenuOpen(false);
+});
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&adminMenuToggle.getAttribute('aria-expanded')==='true'){
+  setAdminMenuOpen(false);
+  adminMenuToggle.focus();
+ }
+});
+function applyAdminTheme(theme,persist=false){
+ const dark=theme==='dark';
+ document.documentElement.dataset.theme=dark?'dark':'light';
+ themeToggle.setAttribute('aria-pressed',String(dark));
+ themeToggle.setAttribute('aria-label',dark?'Activer le mode clair':'Activer le mode sombre');
+ if(persist){
+  try{localStorage.setItem('iboukoun-admin-theme',dark?'dark':'light');}
+  catch{notify('Le thème est appliqué, mais ce navigateur ne permet pas de mémoriser ce choix.',true);}
+ }
+}
+themeToggle.addEventListener('click',()=>applyAdminTheme(themeToggle.getAttribute('aria-pressed')==='true'?'light':'dark',true));
+try{applyAdminTheme(localStorage.getItem('iboukoun-admin-theme')==='dark'?'dark':'light');}
+catch{applyAdminTheme('light');}
 const passwordInput=$('#admin-password');
 $('.password-toggle').addEventListener('click',event=>{
  const button=event.currentTarget;
@@ -12,17 +42,17 @@ $('.password-toggle').addEventListener('click',event=>{
 try{session=JSON.parse(sessionStorage.getItem('iboukoun-admin')||'null');}catch{}
 const labels={nom:'Nom',slug:'Identifiant URL',categorie_id:'Catégorie',description:'Description',benefices:'Bénéfices (un par ligne)',prix:'Prix (FCFA)',stock:'Stock',actif:'Actif',image:'Image',photo:'Photo',fichier:'Photo de galerie',screenshot:'Capture d’avis',produit_id:'Fiche produit liée',titre:'Titre',prix_promo:'Prix promotionnel',min_unites:'Quantité minimum',date_debut:'Début',date_fin:'Fin',nom_client:'Nom du client',ville:'Ville',note:'Note',message:'Message',type:'Type',visible:'Visible',role:'Rôle',bio:'Biographie',ordre:'Ordre',is_principale:'Photo principale',legende:'Légende',youtube_url:'URL YouTube',youtube_id:'Identifiant YouTube',date_pub:'Date de publication',statut:'Statut',notes:'Notes internes',lu:'Lu',cle:'Paramètre',valeur:'Valeur',contenu:'Contenu',email:'Email',telephone:'WhatsApp',telephone_appel:'Téléphone d’appel',quartier:'Quartier',quantite:'Quantité',prix_unitaire:'Prix unitaire',prix_total:'Total',source:'Source',produit:'Produit',created_at:'Date',page:'Page',section:'Section',item_type:'Type de contenu',surtitre:'Petit titre',texte_final:'Phrase de conclusion'};
 const specs={
- produits:{title:'Produits',fields:['categorie_id','nom','slug','description','benefices','prix','stock','image','actif'],list:['nom','prix','stock','actif']},
+ produits:{title:'Produits',fields:['categorie_id','nom','slug','description','benefices','prix','stock','image','actif'],list:['nom','categorie_id','prix','stock','actif']},
  categories:{title:'Catégories',fields:['nom','slug'],list:['nom','slug']},
- produit_photos:{title:'Galeries produits',fields:['produit_id','fichier','legende','ordre','is_principale'],list:['produit_id','legende','ordre','is_principale']},
+ produit_photos:{title:'Galeries produits',fields:['produit_id','fichier','legende','ordre','is_principale'],list:['produit_id','fichier','legende','ordre','is_principale']},
  promotions:{title:'Promotions',fields:['produit_id','titre','description','prix_promo','min_unites','date_debut','date_fin','actif'],list:['titre','prix_promo','min_unites','date_fin','actif']},
  commandes_formulaire:{title:'Commandes',fields:['statut','notes'],list:['nom_client','telephone','telephone_appel','ville','quartier','produit_id','quantite','prix_unitaire','prix_total','statut','created_at'],noCreate:true},
  commandes_whatsapp:{title:'Clics WhatsApp',fields:['statut','notes'],list:['nom_client','produit','source','statut','created_at'],noCreate:true},
  revendeurs:{title:'Revendeurs',fields:['statut','notes'],list:['nom','ville','telephone','statut','created_at'],noCreate:true},
  messages:{title:'Messages',fields:['lu'],list:['nom','email','telephone','sujet','message','lu','created_at'],noCreate:true},
- temoignages:{title:'Témoignages',fields:['nom_client','ville','produit_id','note','message','screenshot','type','visible'],list:['nom_client','ville','note','type','visible']},
- egeries:{title:'Égéries',fields:['nom','role','photo','ordre','actif'],list:['nom','role','ordre','actif']},
- equipe:{title:'Équipe',fields:['nom','role','bio','photo','ordre','actif'],list:['nom','role','ordre','actif']},
+ temoignages:{title:'Témoignages',fields:['nom_client','ville','produit_id','note','message','screenshot','type','visible','ordre'],list:['nom_client','produit_id','message','screenshot','type','visible','ordre']},
+ egeries:{title:'Égéries',fields:['nom','role','photo','ordre','actif'],list:['nom','role','photo','ordre','actif']},
+ equipe:{title:'Équipe',fields:['nom','role','bio','photo','ordre','actif'],list:['nom','role','photo','ordre','actif']},
  videos:{title:'Vidéos',fields:['titre','youtube_url','date_pub','actif'],list:['titre','youtube_url','date_pub','actif']},
  pages_contenu:{title:'Contenus',fields:['slug','titre','contenu'],list:['slug','titre']},
  accueil_sections:{title:'Accueil — Packs et images',fields:['section','item_type','titre','description','surtitre','texte_final','image','produit_id','ordre','actif'],list:['section','item_type','titre','image','produit_id','ordre','actif']},
@@ -44,6 +74,29 @@ const textareas=['description','benefices','message','bio','notes','contenu'];
 const statuses={commandes_formulaire:['nouveau','vu','contacte','termine'],commandes_whatsapp:['nouveau','en_cours','livre','annule'],revendeurs:['nouveau','contacte','actif','inactif']};
 const pk=t=>t==='parametres'?'cle':t==='pages_contenu'?'slug':'id';
 function notify(message,error=false){$('#notice').textContent=message;$('#notice').classList.toggle('error',error);}
+function mediaUrl(key,value){
+ if(typeof value!=='string'||!value.trim())return '';
+ const path=value.trim();
+ if(/^https?:\/\//i.test(path))return path;
+ if(path.startsWith('/'))return path;
+ if(/^assets\/images\/[a-z0-9_.-]+$/i.test(path))return '/'+path;
+ const filename=path.split(/[\\/]/).pop();
+ const siteImages=['equipe-iboukoun-cosmetics.png','aiselle-chic-application.png','resultat-sérums-clatants.png','duo-eclat.png','savon-antiseptique-creme.png','offre-special-gommant-creme.png'];
+ if((/^temoignage\d*\.webp$/i.test(filename)||siteImages.includes(filename))&&['image','screenshot'].includes(key))return '/assets/images/'+encodeURIComponent(filename);
+ if(/^sb_[a-z0-9_.-]+$/i.test(filename)){
+  if(!config.supabaseUrl)return '';
+  return config.supabaseUrl.replace(/\/$/,'')+'/storage/v1/object/public/media/'+mediaFolder(table)+'/'+encodeURIComponent(filename);
+ }
+ if(key==='image'&&table==='produits')return '/produit/'+encodeURIComponent(filename);
+ const folders={produit_photos:'produits/photos',temoignages:'temoignages',equipe:'equipe',egeries:'egeries',accueil_sections:'accueil'};
+ return '/uploads/'+(folders[table]||'produits')+'/'+filename.split('/').map(encodeURIComponent).join('/');
+}
+function imagePreview(key,value,alt){
+ const src=mediaUrl(key,value);
+ if(!src)return null;
+ const image=element('img');image.className='admin-image-preview';image.src=src;image.alt=alt||labels[key]||'Image';image.loading='lazy';
+ return image;
+}
 function saveSession(value){session=value;if(value)sessionStorage.setItem('iboukoun-admin',JSON.stringify(value));else sessionStorage.removeItem('iboukoun-admin');}
 async function refresh(){
  if(!session)return;
@@ -67,7 +120,7 @@ async function authorize(){
  const allowed=await (await api('/rest/v1/rpc/is_admin',{method:'POST',body:'{}'})).json();
  if(!allowed){await logout();throw new Error('Ce compte n’est pas autorisé à administrer le site.');}
  $('#login').hidden=true;$('#workspace').hidden=false;$('#logout').hidden=false;
- const nav=$('#navigation');nav.replaceChildren();
+ const nav=$('#navigation');nav.replaceChildren();setAdminMenuOpen(false);
  for(const [id,title] of [['dashboard','Tableau de bord'],...Object.entries(specs).map(([id,s])=>[id,s.title]),['account','Mon compte']]){const a=element('a',title);a.href='#'+id;nav.append(a);}
  await navigate();
 }
@@ -238,8 +291,17 @@ async function load(){
  const current=table;
  const r=await api('/rest/v1/'+table+'?'+query(),{headers:{Prefer:'count=exact',Range:`${page*25}-${page*25+24}`}});
  const data=await r.json();if(current!==table)return;rows=data;total=Number(r.headers.get('content-range')?.split('/')[1]||rows.length);
+ const referenceNames=new Map();
+ if(table==='produits'){
+  const categories=await(await api('/rest/v1/categories?select=id,nom&order=nom')).json();
+  for(const category of categories)referenceNames.set(String(category.id),category.nom);
+ }else if(table==='temoignages'){
+  const products=await(await api('/rest/v1/produits?select=id,nom&order=nom')).json();
+  for(const product of products)referenceNames.set(String(product.id),product.nom);
+ }
+ if(current!==table)return;
  const grid=element('table'),head=element('tr');for(const key of specs[table].list)head.append(element('th',labels[key]||key));if(!specs[table].readOnly)head.append(element('th','Actions'));const thead=element('thead');thead.append(head);grid.append(thead);const tbody=element('tbody');grid.append(tbody);
- for(const row of rows){const tr=element('tr');for(const key of specs[table].list){const val=row[key];tr.append(element('td',typeof val==='boolean'?(val?'Oui':'Non'):val??'—'));}
+ for(const row of rows){const tr=element('tr');for(const key of specs[table].list){const val=row[key],cell=element('td');if(imageFields.includes(key)&&val){cell.classList.add('media-cell');const preview=imagePreview(key,val,labels[key]||key);if(preview)cell.append(preview);cell.append(element('span',val));}else if(['categorie_id','produit_id'].includes(key)&&referenceNames.has(String(val)))cell.textContent=referenceNames.get(String(val));else cell.textContent=typeof val==='boolean'?(val?'Oui':'Non'):val??'—';tr.append(cell);}
   if(!specs[table].readOnly){const cell=element('td');cell.append(button('Modifier',()=>edit(row)));cell.append(button('Supprimer',async()=>{
    if(!confirm('Supprimer cet enregistrement ?'))return;
    let gallery=[];
@@ -268,6 +330,7 @@ async function edit(row){
  let products=[],categories=[];
  if(specs[table].fields.includes('produit_id'))products=await (await api('/rest/v1/produits?select=id,nom&order=nom')).json();
  if(specs[table].fields.includes('categorie_id'))categories=await (await api('/rest/v1/categories?select=id,nom&order=nom')).json();
+ const fieldLabels=new Map();
  for(const key of specs[table].fields){
   const label=element('label',labels[key]||key);let input;
   const choices=key==='statut'?statuses[table]:key==='type'?['texte','screenshot']:key==='section'&&table==='accueil_sections'?['packs','mission','resultats']:key==='item_type'&&table==='accueil_sections'?['pack','texte','image']:key==='cle'?['whatsapp_number','facebook_url','instagram_url','tiktok_url','adresse','email_contact','horaires','site_nom','site_slogan']:null;
@@ -280,13 +343,43 @@ async function edit(row){
   if(input.type==='checkbox')input.checked=row?Boolean(row[key]):['actif','visible'].includes(key);
   else input.value=row?.[key]??({stock:0,ordre:0,note:5,min_unites:10}[key]??input.value??'');
   if(row&&key===pk(table))input.disabled=true;
-  if(['nom','slug','titre','nom_client','categorie_id','prix','prix_promo','min_unites'].includes(key))input.required=true;
+  if(['nom','slug','titre','nom_client','categorie_id','prix','prix_promo','min_unites'].includes(key))input.required=!(table==='temoignages'&&key==='nom_client'&&(row?.type==='screenshot'));
   label.append(input);
   if(imageFields.includes(key)){
-   const upload=element('input');upload.type='file';upload.accept='image/jpeg,image/png,image/webp';upload.dataset.for=key;label.append(upload);
+   const current=imagePreview(key,row?.[key],labels[key]||key);
+   if(current){
+    const preview=element('div');preview.className='admin-image-current';preview.append(current,element('span',row[key]));
+    const remove=button('Retirer du site',()=>{
+     const value=label.querySelector(`input[name="${key}"]`);
+     if(value)value.value='';
+     upload.value='';
+     preview.hidden=true;
+    },'danger');
+    remove.setAttribute('aria-label','Retirer cette image du site');
+    preview.append(remove);label.append(preview);
+   }
+   const upload=element('input');upload.type='file';upload.accept='image/jpeg,image/png,image/webp';upload.dataset.for=key;
+   upload.addEventListener('change',()=>{if(upload.files[0])input.value=upload.files[0].name;});
+   label.append(upload);
    label.append(element('small','JPG, PNG ou WebP, 5 Mo maximum.'));
   }
+  fieldLabels.set(key,label);
   $('#fields').append(label);
+ }
+ if(table==='temoignages'){
+  const type=$('#fields [name="type"]');
+  const updateFields=()=>{
+   const screenshot=type.value==='screenshot';
+   for(const key of ['nom_client','ville','note','message']){
+    const label=fieldLabels.get(key),input=label?.querySelector(`[name="${key}"]`);
+    if(label)label.hidden=screenshot;
+    if(input){input.required=!screenshot;if(screenshot)input.value='';}
+   }
+   const screenshotInput=fieldLabels.get('screenshot')?.querySelector('[name="screenshot"]');
+   if(screenshotInput)screenshotInput.required=screenshot;
+  };
+  type.addEventListener('change',updateFields);
+  updateFields();
  }
  $('#editor').showModal();
 }
@@ -303,8 +396,13 @@ $('#edit-form').addEventListener('submit',async ev=>{
  const uploaded=[];let saved=false;
  try{
   const values=Object.fromEntries(new FormData(ev.target));
+  if(table==='temoignages'&&values.type==='screenshot'){
+   if(!values.screenshot)throw new Error('Choisissez une capture d’écran pour ce témoignage.');
+   for(const key of ['nom_client','ville','message'])values[key]=null;
+   values.note=null;
+  }
   for(const key of booleanFields)if(specs[table].fields.includes(key))values[key]=ev.target.elements[key].checked;
-  for(const key of [...numberFields,'produit_id','categorie_id'])if(key in values)values[key]=values[key]===''?null:Number(values[key]);
+  for(const key of [...numberFields,'produit_id','categorie_id'])if(key in values)values[key]=values[key]===null||values[key]===''?null:Number(values[key]);
   for(const key of ['date_debut','date_fin','date_pub'])if(values[key]==='')values[key]=null;
   if(table==='videos'){const id=values.youtube_url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/)?.[1];if(!id)throw new Error('URL YouTube invalide.');values.youtube_id=id;}
   if(table==='parametres'&&/_url$/.test(values.cle||editing?.cle)&&values.valeur&&!/^https:\/\//.test(values.valeur))throw new Error('Utilisez une URL HTTPS.');
