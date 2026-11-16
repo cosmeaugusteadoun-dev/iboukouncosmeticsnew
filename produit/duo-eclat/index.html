@@ -1,172 +1,1146 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="google-site-verification" content="">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pack Duo Éclat (Gel Clarifiant+ & Savon Gommant) — Iboukoun Cosmetics</title>
-<meta name="description" content="Le duo idéal : associez le Savon Gommant pour exfolier et le Gel Clarifiant+ pour nettoyer et unifier le teint au quotidien.">
-<meta name="author" content="Iboukoun Cosmetics">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://iboukouncosmetics.com/produit/duo-eclat/">
 
-<!-- Open Graph -->
-<meta property="og:type" content="product">
-<meta property="og:title" content="Pack Duo Éclat — Iboukoun Cosmetics">
-<meta property="og:description" content="Gel Clarifiant+ et Savon Gommant pour une peau nette et un teint lumineux sans décaper.">
-<meta property="og:image" content="https://iboukouncosmetics.com/produit/duo-eclat.png">
-<meta property="og:url" content="https://iboukouncosmetics.com/produit/duo-eclat/">
-<meta property="og:site_name" content="Iboukoun Cosmetics">
+<!-- ============================================================
+     SEO FONDAMENTAL
+============================================================ -->
+<title>Duo Éclaircissant+ — Iboukoun Cosmetics</title>
+<meta name="description" content="Le duo de soins éclaircissants Iboukoun Cosmetics.">
+<meta name="keywords"    content="">
+<meta name="author"      content="Iboukoun Cosmetics">
+<meta name="robots"      content="index, follow">
+<link rel="canonical"    href="https://www.iboukouncosmetics.com/produit/duo-eclat/">
 
+<!-- ============================================================
+     OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
+============================================================ -->
+<meta property="og:type"        content="product">
+<meta property="og:title"       content="Duo Éclaircissant+ — Iboukoun Cosmetics">
+<meta property="og:description" content="Le duo de soins éclaircissants Iboukoun Cosmetics.">
+<meta property="og:image"       content="https://www.iboukouncosmetics.com/assets/images/hero.jpg">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url"         content="https://www.iboukouncosmetics.com/produit/duo-eclat/">
+<meta property="og:site_name"   content="Iboukoun Cosmetics">
+<meta property="og:locale"      content="fr_BJ">
+
+<!-- ============================================================
+     TWITTER CARD
+============================================================ -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Duo Éclaircissant+ — Iboukoun Cosmetics">
+<meta name="twitter:description" content="Le duo de soins éclaircissants Iboukoun Cosmetics.">
+<meta name="twitter:image"       content="https://www.iboukouncosmetics.com/assets/images/hero.jpg">
+
+<!-- ============================================================
+     GÉO-LOCALISATION (aide le référencement local)
+============================================================ -->
+<meta name="geo.region"      content="BJ-AK">
+<meta name="geo.placename"   content="Parakou,Cotonou, Bénin">
+<meta name="geo.position"    content="9.337;2.628">
+<meta name="ICBM"            content="9.337, 2.628">
+
+<!-- Langue et région -->
+<meta name="language"      content="French">
+<meta name="content-language" content="fr-BJ">
+
+
+<!-- Fonts & Icons — preconnect pour performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
-<link rel="icon" type="image/jpeg" href="/assets/images/logo.jpg">
-<link rel="apple-touch-icon" href="/assets/images/logo.jpg">
 
-<link rel="stylesheet" href="/assets/generated/b63d8b14572e19bf.css">
-<link rel="stylesheet" href="/assets/accessibility.css">
-<script src="/assets/forms.js" defer></script>
-<script type="module" src="/assets/public.js"></script>
-</head>
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="/assets/images/logo.jpg">
+<link rel="apple-touch-icon"      href="/assets/images/logo.jpg">
+<!-- Préchargement ressources critiques -->
+<link rel="preload" href="/assets/images/hero.jpg" as="image">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+<!-- CSS Global -->
+<style>
+
+/* ============================================================
+   IBOUKOUN COSMETICS — Design System Global
+   Inspiré de Sculpted by Aimee : blanc dominant, épuré, aéré
+============================================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#2D9E35;--green-dark:#1B5E20;--green-light:#E8F5E9;--green-mid:#4DC657;
+  --navy:#0D1A5E;--navy-dark:#06103A;--navy-light:#E8EAF6;--navy-mid:#1a2d8a;
+  --gold:#C9920A;--gold-dark:#8B6200;--gold-light:#FFF8E1;--gold-mid:#E8B84B;
+  --cream:#FAF7F2;--cream-dark:#F2EDE4;--cream-mid:#F6F2EA;
+  --white:#FFFFFF;
+  --text:#0D1117;--text2:#4A4F6A;--text3:#9299B0;
+  --radius-xs:4px;--radius-sm:8px;--radius:14px;--radius-lg:20px;
+  --radius-xl:28px;--radius-pill:999px;
+  --shadow-xs:0 1px 4px rgba(13,26,94,.05);
+  --shadow-sm:0 2px 12px rgba(13,26,94,.07);
+  --shadow:0 6px 28px rgba(13,26,94,.09);
+  --shadow-lg:0 16px 56px rgba(13,26,94,.13);
+  --shadow-green:0 4px 20px rgba(45,158,53,.32);
+  --nav-h:68px;--ticker-h:36px;--container:1240px;--section-py:96px;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--white);color:var(--text);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block;}
+a{text-decoration:none;color:inherit;transition:color .2s;}
+ul,ol{list-style:none;}
+button{cursor:pointer;font-family:'DM Sans',sans-serif;border:none;outline:none;background:none;}
+input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
+
+/* ============================================================
+   SKELETON LOADER
+============================================================ */
+#skeletonLoader{
+  position:fixed;inset:0;z-index:99999;
+  background:var(--white);
+  display:flex;flex-direction:column;
+  transition:opacity .35s ease,visibility .35s ease;
+  overflow:hidden;
+}
+#skeletonLoader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+@keyframes skShimmer{
+  0%{background-position:-600px 0;}
+  100%{background-position:600px 0;}
+}
+.sk-box{
+  background:linear-gradient(90deg,#f5f5f5 25%,#eaeaea 50%,#f5f5f5 75%);
+  background-size:600px 100%;
+  animation:skShimmer 1.4s ease-in-out infinite;
+  border-radius:6px;flex-shrink:0;
+}
+.sk-nav{
+  height:var(--nav-h);background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.05);
+  display:flex;align-items:center;padding:0 5%;flex-shrink:0;
+}
+.sk-nav-inner{max-width:var(--container);margin:0 auto;width:100%;display:flex;align-items:center;gap:24px;}
+.sk-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.sk-logo-img{width:36px;height:36px;border-radius:8px;}
+.sk-logo-text{display:flex;flex-direction:column;gap:4px;}
+.sk-nav-links{display:flex;align-items:center;gap:20px;flex:1;justify-content:center;}
+.sk-btn-nav{width:110px;height:36px;border-radius:999px;flex-shrink:0;}
+.sk-line{border-radius:4px;}
+.sk-body{flex:1;overflow:hidden;}
+.sk-hero{
+  height:calc(100vh - var(--nav-h));
+  background:linear-gradient(135deg,#0D1A5E 0%,#1a2d8a 100%);
+  display:flex;align-items:flex-end;
+  padding:0 clamp(16px,5%,64px) 64px;
+  position:relative;overflow:hidden;
+}
+.sk-hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.03) 25%,rgba(255,255,255,.07) 50%,rgba(255,255,255,.03) 75%);
+  background-size:600px 100%;animation:skShimmer 1.8s ease-in-out infinite;
+}
+.sk-hero-content{display:flex;flex-direction:column;gap:16px;max-width:520px;position:relative;z-index:1;}
+.sk-hero-badge{width:200px;height:30px;border-radius:999px;background:rgba(255,255,255,.12);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-h1-1{width:320px;height:52px;border-radius:8px;background:rgba(255,255,255,.12);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-h1-2{width:240px;height:52px;border-radius:8px;background:rgba(255,255,255,.1);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-hero-sub{width:400px;height:14px;border-radius:4px;background:rgba(255,255,255,.08);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-sub2{width:320px;height:14px;border-radius:4px;background:rgba(255,255,255,.06);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-hero-btns{display:flex;gap:12px;margin-top:8px;}
+.sk-hero-btn1{width:160px;height:48px;border-radius:999px;background:rgba(45,158,53,.4);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-btn2{width:140px;height:48px;border-radius:999px;background:rgba(255,255,255,.1);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-page-hero{
+  background:var(--cream);
+  padding:72px clamp(16px,5%,64px) 64px;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+}
+.sk-page-hero-badge{width:120px;height:10px;border-radius:4px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-page-hero-title{width:340px;height:52px;border-radius:8px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-page-hero-sub{width:280px;height:14px;border-radius:4px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-section{padding:80px clamp(16px,5%,64px);}
+.sk-section-header{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:48px;}
+.sk-section-eyebrow{width:100px;height:10px;border-radius:4px;}
+.sk-section-title{width:360px;height:40px;border-radius:8px;}
+.sk-section-sub{width:280px;height:13px;border-radius:4px;}
+.sk-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;}
+.sk-product-card{border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.05);}
+.sk-product-img{height:260px;border-radius:0;}
+.sk-product-body{padding:20px;}
+.sk-product-cat{width:80px;height:10px;border-radius:4px;margin-bottom:10px;}
+.sk-product-name{width:140px;height:22px;border-radius:6px;margin-bottom:8px;}
+.sk-product-desc1{width:100%;height:11px;border-radius:4px;margin-bottom:6px;}
+.sk-product-desc2{width:75%;height:11px;border-radius:4px;margin-bottom:16px;}
+.sk-product-footer{display:flex;justify-content:space-between;align-items:center;}
+.sk-product-price{width:70px;height:24px;border-radius:6px;}
+.sk-product-btn{width:100px;height:36px;border-radius:999px;}
+.sk-temos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.sk-temo-card{border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,.05);}
+.sk-temo-stars{display:flex;gap:4px;margin-bottom:12px;}
+.sk-temo-star{width:14px;height:14px;border-radius:3px;}
+.sk-temo-text1{width:100%;height:12px;border-radius:4px;margin-bottom:7px;}
+.sk-temo-text2{width:85%;height:12px;border-radius:4px;margin-bottom:7px;}
+.sk-temo-text3{width:65%;height:12px;border-radius:4px;margin-bottom:18px;}
+.sk-temo-author{display:flex;align-items:center;gap:10px;}
+.sk-temo-avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;}
+.sk-temo-info{flex:1;}
+.sk-temo-name{width:100px;height:13px;border-radius:4px;margin-bottom:6px;}
+.sk-temo-city{width:70px;height:10px;border-radius:4px;}
+@media(max-width:768px){
+  .sk-nav-links,.sk-btn-nav{display:none;}
+  .sk-hero-content{max-width:100%;}
+  .sk-hero-h1-1,.sk-hero-h1-2{width:100%;max-width:280px;}
+  .sk-hero-btns{flex-direction:column;}
+  .sk-hero-btn1,.sk-hero-btn2{width:100%;}
+  .sk-products{grid-template-columns:1fr 1fr;}
+  .sk-temos{grid-template-columns:1fr;}
+  .sk-section-title{width:240px;}
+}
+@media(max-width:480px){
+  .sk-products{grid-template-columns:1fr;}
+  .sk-section{padding:52px 16px;}
+}
+
+/* ============================================================
+   CONTAINER & SECTION
+============================================================ */
+.container{max-width:var(--container);margin:0 auto;padding:0 clamp(16px,5%,64px);width:100%;}
+.section{padding:var(--section-py) clamp(16px,5%,64px);}
+.section-white{background:var(--white);}
+.section-cream{background:var(--cream);}
+.section-navy{background:var(--navy);}
+
+/* ============================================================
+   SECTION HEADER — style épuré inspiré Sculpted
+   Plus de doubles lignes vertes — lettres espacées minimalistes
+============================================================ */
+.section-header{text-align:center;margin-bottom:64px;}
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--green);
+  margin-bottom:16px;
+}
+.section-eyebrow i{font-size:13px;}
+.section-h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(30px,3.2vw,48px);font-weight:700;
+  color:var(--navy);line-height:1.1;margin-bottom:14px;
+  letter-spacing:-.5px;
+}
+.section-sub{
+  font-size:15px;color:var(--text2);
+  max-width:520px;margin:0 auto;line-height:1.78;
+}
+
+/* ============================================================
+   BOUTONS
+============================================================ */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--green);color:#fff;
+  padding:14px 30px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;letter-spacing:.2px;
+  transition:all .25s;border:none;cursor:pointer;
+  box-shadow:var(--shadow-green);
+}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(45,158,53,.4);}
+.btn-primary i{font-size:17px;}
+.btn-navy{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--navy);color:#fff;
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;transition:all .2s;border:none;cursor:pointer;
+}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px);}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:#fff;
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:500;
+  border:1.5px solid rgba(255,255,255,.4);transition:all .25s;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.8);}
+.btn-outline-green{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--green);
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;
+  border:1.5px solid var(--green);transition:all .25s;
+}
+.btn-outline-green:hover{background:var(--green);color:#fff;}
+.btn-outline-navy{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--navy);
+  padding:12px 26px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;
+  border:1.5px solid rgba(13,26,94,.2);transition:all .25s;
+}
+.btn-outline-navy:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* ============================================================
+   BADGES
+============================================================ */
+.badge-promo{
+  display:inline-flex;align-items:center;gap:4px;
+  background:linear-gradient(135deg,var(--gold),#E8A800);
+  color:#fff;padding:5px 13px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:700;letter-spacing:.3px;
+  box-shadow:0 2px 8px rgba(201,146,10,.25);
+}
+.badge-new{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--green);color:#fff;
+  padding:5px 11px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:700;
+}
+
+/* ============================================================
+   FLASH
+============================================================ */
+.flash-msg{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;margin-bottom:20px;}
+.flash-msg i{font-size:18px;flex-shrink:0;}
+.flash-success{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7;}
+.flash-error{background:#FFEBEE;color:#C62828;border:1px solid #EF9A9A;}
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+.pagination{display:flex;gap:6px;justify-content:center;margin-top:40px;flex-wrap:wrap;}
+.pag-btn{padding:8px 16px;border-radius:var(--radius-sm);border:1.5px solid rgba(0,0,0,.1);background:#fff;font-size:13px;font-weight:500;color:var(--text2);transition:.2s;text-decoration:none;}
+.pag-btn:hover,.pag-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* ============================================================
+   BOUTON WHATSAPP FLOTTANT
+============================================================ */
+.wa-float{position:fixed;bottom:32px;right:24px;z-index:9000;display:flex;align-items:center;}
+.wa-float-label{background:var(--navy);color:#fff;padding:10px 18px;border-radius:var(--radius-pill) 0 0 var(--radius-pill);font-size:12px;font-weight:600;box-shadow:var(--shadow);opacity:0;transform:translateX(12px);transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap;}
+.wa-float:hover .wa-float-label{opacity:1;transform:translateX(0);}
+.wa-float-btn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366,#1EB85A);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.4);transition:transform .25s;position:relative;}
+.wa-float-btn:hover{transform:scale(1.1);}
+.wa-float-btn i{font-size:26px;color:#fff;}
+.wa-pulse{position:absolute;top:-3px;right:-3px;width:15px;height:15px;border-radius:50%;background:#FF3B30;border:2.5px solid var(--white);animation:pulseBadge 2s infinite;}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes pulseBadge{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes menuItemIn{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+
+/* ============================================================
+   TICKER DÉFILANT — inspiré Sculpted by Aimee
+   Bande fine au-dessus de la nav avec USP en scrolling continu
+============================================================ */
+.site-ticker{
+  background:var(--navy-dark);
+  height:var(--ticker-h);
+  overflow:hidden;
+  position:relative;
+  z-index:1001;
+}
+.ticker-track{
+  display:flex;align-items:center;
+  height:100%;
+  animation:tickerScroll 28s linear infinite;
+  width:max-content;
+}
+.ticker-track:hover{animation-play-state:paused;}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:0 36px;
+  font-size:11px;font-weight:600;color:rgba(255,255,255,.85);
+  letter-spacing:.8px;text-transform:uppercase;
+  white-space:nowrap;
+}
+.ticker-item i{font-size:13px;color:var(--green-mid);flex-shrink:0;}
+.ticker-sep{
+  width:4px;height:4px;border-radius:50%;
+  background:rgba(255,255,255,.2);flex-shrink:0;
+}
+
+/* ============================================================
+   NAVIGATION DESKTOP — blanc épuré, minimaliste
+============================================================ */
+nav.main-nav{
+  position:sticky;top:0;z-index:1000;
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.08);
+  padding:0 5%;height:var(--nav-h);
+  transition:box-shadow .3s;
+}
+nav.main-nav.scrolled{
+  box-shadow:0 2px 24px rgba(0,0,0,.07);
+}
+.nav-inner{
+  max-width:var(--container);margin:0 auto;height:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-logo-img{height:38px;width:auto;display:flex;align-items:center;}
+.nav-logo-img img{height:38px;width:auto;object-fit:contain;border-radius:6px;}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.nav-logo-text .brand-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.3px;
+}
+.nav-logo-text .brand-tag{
+  font-size:9px;color:var(--text3);
+  letter-spacing:2px;text-transform:uppercase;margin-top:1px;
+}
+
+/* Liens nav — style minimaliste */
+.nav-links{
+  display:flex;align-items:center;gap:0;
+  flex:1;justify-content:center;
+}
+.nav-links a{
+  font-size:13px;font-weight:500;color:var(--text2);
+  padding:8px 12px;
+  transition:color .2s;white-space:nowrap;
+  position:relative;
+  display:inline-flex;align-items:center;gap:5px;
+  letter-spacing:.1px;
+}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:600;}
+/* Soulignement fin au hover et active — style Sculpted */
+.nav-links a::after{
+  content:'';position:absolute;
+  bottom:0;left:12px;right:12px;
+  height:1.5px;background:var(--navy);
+  transform:scaleX(0);transition:transform .25s ease;
+  border-radius:2px;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{transform:scaleX(1);}
+/* Promo — même style, icône verte */
+.nav-links a.nav-promo i{font-size:13px;color:var(--green);}
+.promo-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--green);display:inline-block;
+  animation:pulseBadge 2s infinite;flex-shrink:0;
+}
+
+/* Actions nav */
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.nav-wa-btn{
+  display:flex;align-items:center;gap:7px;
+  background:var(--green);color:#fff;
+  padding:10px 22px;border-radius:var(--radius-pill);
+  font-size:13px;font-weight:600;
+  transition:all .2s;white-space:nowrap;
+  box-shadow:0 2px 12px rgba(45,158,53,.28);
+}
+.nav-wa-btn:hover{background:var(--green-dark);transform:translateY(-1px);}
+.nav-wa-btn i{font-size:16px;}
+
+/* Hamburger */
+.hamburger{
+  display:none;width:40px;height:40px;
+  border-radius:var(--radius-sm);
+  background:transparent;border:none;
+  flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;
+  cursor:pointer;padding:0;transition:background .2s;
+  flex-shrink:0;
+}
+.hamburger:hover{background:rgba(13,26,94,.05);}
+.hamburger span{
+  display:block;width:22px;height:1.5px;
+  background:var(--navy);border-radius:2px;
+  transition:transform .32s cubic-bezier(.23,1,.32,1),opacity .2s,width .2s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;width:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* ============================================================
+   MENU MOBILE — conservé tel quel (il marche bien)
+============================================================ */
+.nav-mobile-menu{
+  display:none;position:fixed;
+  top:0;left:0;right:0;bottom:0;z-index:998;
+  flex-direction:column;background:var(--navy-dark);overflow:hidden;
+}
+.nav-mobile-menu.open{display:flex;}
+.mobile-menu-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;height:var(--nav-h);
+  border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;
+}
+.mobile-menu-logo{display:flex;align-items:center;gap:8px;}
+.mobile-menu-logo img{height:34px;width:auto;object-fit:contain;border-radius:6px;}
+.mobile-menu-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.mobile-menu-logo-text .m-brand{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:#fff;}
+.mobile-menu-logo-text .m-tag{font-size:8px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+.mobile-menu-close{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s;flex-shrink:0;pointer-events:auto;
+}
+.mobile-menu-close:hover{background:rgba(255,255,255,.16);}
+.mobile-menu-close *{pointer-events:none;}
+.mobile-menu-body{flex:1;padding:16px 0;overflow-y:auto;}
+.mobile-nav-item{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 24px;font-size:16px;font-weight:500;
+  color:rgba(255,255,255,.75);text-decoration:none;
+  border-left:3px solid transparent;transition:all .2s;
+}
+.mobile-nav-item:hover{color:#fff;background:rgba(255,255,255,.05);border-left-color:var(--green);}
+.mobile-nav-item.active{color:#fff;font-weight:600;background:rgba(45,158,53,.12);border-left-color:var(--green);}
+.mobile-nav-item-left{display:flex;align-items:center;gap:14px;}
+.mobile-nav-icon{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;}
+.mobile-nav-item:hover .mobile-nav-icon,.mobile-nav-item.active .mobile-nav-icon{background:rgba(45,158,53,.2);}
+.mobile-nav-icon i{font-size:17px;color:rgba(255,255,255,.6);}
+.mobile-nav-item:hover .mobile-nav-icon i,.mobile-nav-item.active .mobile-nav-icon i{color:var(--green-mid);}
+.mobile-nav-label{display:flex;flex-direction:column;gap:2px;}
+.mobile-nav-label span{display:block;}
+.mobile-nav-label .nav-label-main{font-size:15px;color:inherit;}
+.mobile-nav-label .nav-label-sub{font-size:11px;color:rgba(255,255,255,.35);font-weight:400;}
+.mobile-nav-arrow{font-size:16px;color:rgba(255,255,255,.25);}
+.mobile-nav-item:hover .mobile-nav-arrow,.mobile-nav-item.active .mobile-nav-arrow{color:rgba(255,255,255,.5);}
+.mobile-promo-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(201,146,10,.25);border:1px solid rgba(201,146,10,.4);color:var(--gold-mid);padding:2px 9px;border-radius:var(--radius-pill);font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;}
+.mobile-menu-sep{height:1px;background:rgba(255,255,255,.06);margin:8px 24px;}
+.mobile-menu-footer{padding:20px 20px max(20px,env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.07);flex-shrink:0;}
+.mobile-wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:linear-gradient(135deg,#25D366,#1EB85A);color:#fff;border-radius:var(--radius-pill);font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .2s,box-shadow .2s;}
+.mobile-wa-btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.45);}
+.mobile-wa-btn i{font-size:20px;}
+.mobile-menu-social{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;}
+.mobile-social-link{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;text-decoration:none;}
+.mobile-social-link:hover{background:rgba(255,255,255,.14);}
+.mobile-social-link i{font-size:17px;color:rgba(255,255,255,.65);}
+.nav-mobile-menu.open .mobile-nav-item{animation:menuItemIn .3s ease both;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(1){animation-delay:.05s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(2){animation-delay:.08s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(3){animation-delay:.11s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(4){animation-delay:.14s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(5){animation-delay:.17s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(6){animation-delay:.20s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(7){animation-delay:.23s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(8){animation-delay:.26s;}
+
+/* ============================================================
+   PAGE HERO INTÉRIEURE — inspiré Sculpted
+   Fond crème/blanc au lieu de navy systématique
+   Titre en navy foncé, aéré, propre
+============================================================ */
+.page-hero{
+  background:var(--cream);
+  padding:80px 5% 72px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+/* Accent décoratif très subtil */
+.page-hero::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--green),var(--navy),var(--gold));
+  opacity:.25;
+}
+.page-hero-content{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.page-hero-eyebrow{
+  display:inline-block;
+  font-size:11px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--green);
+  margin-bottom:18px;
+}
+.page-hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4.5vw,60px);font-weight:700;
+  color:var(--navy);line-height:1.06;
+  margin-bottom:16px;letter-spacing:-1px;
+}
+.page-hero-sub{
+  font-size:16px;color:var(--text2);
+  max-width:480px;margin:0 auto;line-height:1.78;
+}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq-item{border:1px solid rgba(0,0,0,.07);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;background:#fff;border:none;cursor:pointer;text-align:left;font-size:15px;font-weight:600;color:var(--navy);font-family:'DM Sans',sans-serif;transition:background .2s;}
+.faq-question:hover{background:var(--cream);}
+.faq-question i{font-size:22px;color:var(--text3);transition:transform .3s;flex-shrink:0;}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:15px;color:var(--text2);line-height:1.75;}
+.faq-answer-inner{padding:4px 22px 20px;}
+.faq-item.open .faq-question{background:var(--cream);}
+.faq-item.open .faq-question i{transform:rotate(45deg);color:var(--green);}
+.faq-item.open .faq-answer{max-height:300px;}
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+.empty-state{text-align:center;padding:80px 20px;color:var(--text3);font-size:15px;}
+.empty-state i{font-size:54px;display:block;margin-bottom:16px;opacity:.2;}
+
+/* ============================================================
+   RESPONSIVE GLOBAL
+============================================================ */
+@media(max-width:1100px){
+  .nav-links a{font-size:12px;padding:8px 9px;}
+}
+@media(max-width:1024px){
+  :root{--section-py:80px;}
+  .nav-wa-btn{padding:9px 16px;font-size:12px;}
+}
+@media(max-width:768px){
+  :root{--section-py:64px;--nav-h:64px;--ticker-h:32px;}
+  .nav-links,.nav-wa-btn{display:none;}
+  .hamburger{display:flex;}
+  .wa-float{bottom:24px;right:20px;}
+  .wa-float-btn{width:52px;height:52px;}
+  .wa-float-btn i{font-size:24px;}
+  .wa-float-label{display:none;}
+  .section{padding:var(--section-py) clamp(16px,4%,40px);}
+  .container{padding:0 clamp(16px,4%,40px);}
+  .section-header{margin-bottom:44px;}
+  .section-h2{font-size:clamp(26px,7vw,36px);}
+  .page-hero{padding:60px 4% 52px;}
+  .page-hero-title{font-size:clamp(28px,8vw,44px);}
+  .page-hero-sub{font-size:15px;}
+  .ticker-item{font-size:10px;padding:0 24px;}
+}
+@media(max-width:480px){
+  :root{--section-py:52px;}
+  .nav-logo-text .brand-name{font-size:14px;}
+  .nav-logo-text .brand-tag{font-size:8px;letter-spacing:1.2px;}
+  .nav-logo-img img{height:30px;}
+  nav.main-nav{padding:0 4%;}
+  .section{padding:var(--section-py) 16px;}
+  .container{padding:0 16px;}
+  .section-h2{font-size:clamp(24px,8vw,32px);}
+  .page-hero{padding:52px 4% 44px;}
+  .page-hero-title{font-size:clamp(26px,9vw,36px);}
+  .ticker-item span:not(.ticker-sep){display:none;}
+  .ticker-item i{display:none;}
+}
+@media(max-width:360px){
+  .section-h2{font-size:24px;}
+  .page-hero-title{font-size:26px;}
+  .mobile-nav-item{padding:12px 16px;}
+  .mobile-nav-label .nav-label-sub{display:none;}
+}
+</style>
+<link rel="stylesheet" href="/assets/accessibility.css"><noscript><style>#skeletonLoader{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript><script src="/assets/forms.js" defer></script><script type="module" src="/assets/public.js"></script></head>
 <body>
 
+<!-- SKELETON LOADER -->
+<div id="skeletonLoader">
+  <div class="sk-nav">
+    <div class="sk-nav-inner">
+      <div class="sk-logo">
+        <div class="sk-box sk-logo-img"></div>
+        <div class="sk-logo-text">
+          <div class="sk-box sk-line" style="width:140px;height:14px;"></div>
+          <div class="sk-box sk-line" style="width:80px;height:9px;margin-top:4px;"></div>
+        </div>
+      </div>
+      <div class="sk-nav-links">
+        <div class="sk-box sk-line" style="width:56px;height:12px;"></div>
+        <div class="sk-box sk-line" style="width:56px;height:12px;"></div>
+        <div class="sk-box sk-line" style="width:80px;height:12px;"></div>
+        <div class="sk-box sk-line" style="width:72px;height:12px;"></div>
+        <div class="sk-box sk-line" style="width:56px;height:12px;"></div>
+      </div>
+      <div class="sk-box sk-btn-nav"></div>
+    </div>
+  </div>
+  <div class="sk-body" id="skBody"></div>
+</div>
+
+<!-- TICKER DÉFILANT -->
 <div class="site-ticker" id="siteTicker">
   <div class="ticker-track">
+    <!-- Première copie -->
     <span class="ticker-item"><i class="ri-leaf-line"></i>Soins 100% naturels</span>
     <span class="ticker-item ticker-sep"></span>
     <span class="ticker-item"><i class="ri-map-pin-line"></i>Fabriqués à Parakou, Bénin</span>
     <span class="ticker-item ticker-sep"></span>
     <span class="ticker-item"><i class="ri-truck-line"></i>Livraison partout au Bénin</span>
     <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-group-line"></i>+500 clients satisfaits</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-award-line"></i>5 ans d'expertise naturelle</span>
+    <span class="ticker-item ticker-sep"></span>
     <span class="ticker-item"><i class="ri-whatsapp-line"></i>Commandez sur WhatsApp</span>
+    <span class="ticker-item ticker-sep"></span>
+    
+    <!-- Deuxième copie pour boucle seamless -->
+    <span class="ticker-item"><i class="ri-leaf-line"></i>Soins 100% naturels</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-map-pin-line"></i>Fabriqués à Parakou, Bénin</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-truck-line"></i>Livraison partout au Bénin</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-group-line"></i>+500 clients satisfaits</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-award-line"></i>5 ans d'expertise naturelle</span>
+    <span class="ticker-item ticker-sep"></span>
+    <span class="ticker-item"><i class="ri-whatsapp-line"></i>Commandez sur WhatsApp</span>
+    <span class="ticker-item ticker-sep"></span>
+    
   </div>
 </div>
 
+<!-- NAVIGATION -->
 <nav class="main-nav" id="mainNav">
   <div class="nav-inner">
+
     <a href="/index.html" class="nav-logo">
-      <div class="nav-logo-img"><img src="/assets/images/logo.jpg" alt="Iboukoun Cosmetics" width="38" height="38"></div>
-      <div class="nav-logo-text"><span class="brand-name">Iboukoun Cosmetics</span><span class="brand-tag">Naturellement vous</span></div>
+      <div class="nav-logo-img">
+        <img src="/assets/images/logo.jpg"
+     alt="Iboukoun Cosmetics — Soins naturels Bénin"
+     width="38"
+     height="38"
+     loading="eager">
+      </div>
+      <div class="nav-logo-text">
+        <span class="brand-name">Iboukoun Cosmetics</span>
+        <span class="brand-tag">Naturellement vous</span>
+      </div>
     </a>
+
     <div class="nav-links">
-      <a href="/index.html">Accueil</a>
+      <a href="/index.html" class="">Accueil</a>
       <a href="/produits.html" class="active">Produits</a>
-      
-      <a href="/histoire.html">Notre histoire</a>
-      <a href="/temoignages.html">Témoignages</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/histoire.html" class="">Notre histoire</a>
+      <a href="/temoignages.html" class="">Témoignages</a>
+      <a href="/egeries.html" class="">Égéries</a>
+      <a href="/revendeurs.html" class="">Revendeurs</a>
+      <a href="/contact.html" class="">Contact</a>
     </div>
+
     <div class="nav-actions">
-      <a href="https://wa.me/22901695300?text=Bonjour%2C%20je%20veux%20commander%20le%20Duo%20%C3%89clat%20!" class="nav-wa-btn" target="_blank" rel="noopener">
+      <a href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
+         class="nav-wa-btn" target="_blank" rel="noopener">
         <i class="ri-whatsapp-line"></i>Commander
       </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+
   </div>
 </nav>
 
-<div class="fp-breadcrumb">
-  <div class="container">
-    <a href="/index.html">Accueil</a><i class="ri-arrow-right-s-line"></i>
-    <a href="/produits.html">Produits</a><i class="ri-arrow-right-s-line"></i>
-    <span>Duo Éclat</span>
+<!-- MENU MOBILE -->
+<div class="nav-mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <div class="mobile-menu-logo">
+      <img src="/assets/images/logo.jpg"
+     alt="Iboukoun Cosmetics — Soins naturels Bénin"
+     width="34"
+     height="34"
+     loading="eager">
+      <div class="mobile-menu-logo-text">
+        <span class="m-brand">Iboukoun Cosmetics</span>
+        <span class="m-tag">Naturellement vous</span>
+      </div>
+    </div>
+    <button class="mobile-menu-close" type="button" onclick="menuClose()">
+      <i class="ri-close-line"></i>
+    </button>
+  </div>
+
+  <div class="mobile-menu-body">
+    <a href="/index.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-home-4-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Accueil</span>
+          <span class="nav-label-sub">Page principale</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/produits.html" class="mobile-nav-item active" onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-sparkling-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Produits</span>
+          <span class="nav-label-sub">Notre gamme complète</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/histoire.html" class="mobile-nav-item " onclick="menuClose()">
+  <div class="mobile-nav-item-left">
+    <div class="mobile-nav-icon"><i class="ri-history-line"></i></div>
+    <div class="mobile-nav-label">
+      <span class="nav-label-main">Notre histoire</span>
+      <span class="nav-label-sub">La marque & le PDG</span>
+    </div>
+  </div>
+  <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+</a>
+    <a href="/temoignages.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-star-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Témoignages</span>
+          <span class="nav-label-sub">Avis de nos clients</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/egeries.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-user-star-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Égéries</span>
+          <span class="nav-label-sub">Nos ambassadeurs</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/videos.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-video-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Vidéos</span>
+          <span class="nav-label-sub">Nos contenus</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <div class="mobile-menu-sep"></div>
+    <a href="/revendeurs.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-store-2-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Revendeurs</span>
+          <span class="nav-label-sub">Rejoindre le réseau</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/contact.html" class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-customer-service-2-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Contact</span>
+          <span class="nav-label-sub">Écrivez-nous</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+  </div>
+
+  <div class="mobile-menu-footer">
+    <a href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
+       class="mobile-wa-btn" target="_blank" rel="noopener" onclick="menuClose()">
+      <i class="ri-whatsapp-line"></i>Commander sur WhatsApp
+    </a>
+    <div class="mobile-menu-social">
+      
+      <a href="https://wa.me/2290169156300" class="mobile-social-link" target="_blank" rel="noopener noreferrer">
+        <i class="ri-whatsapp-line"></i>
+      </a>
+      
+      
+    </div>
   </div>
 </div>
 
+<script>
+/* ============================================================
+   MENU BURGER — VERSION PRO CORRIGÉE
+============================================================ */
+
+// Toggle (ouvre + ferme avec le même bouton)
+window.toggleMenu = function(){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  menu.classList.toggle('open');
+  burger.classList.toggle('open');
+
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+};
+
+// Fermeture forcée
+window.menuClose = function(){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  menu.classList.remove('open');
+  burger.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+// Fermer avec ESC
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') menuClose();
+});
+
+// Fermer en cliquant à l’extérieur
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  if(
+    menu.classList.contains('open') &&
+    !menu.contains(e.target) &&
+    !burger.contains(e.target)
+  ){
+    menuClose();
+  }
+});
+
+// Effet scroll nav + fermeture menu
+window.addEventListener('scroll', function(){
+  const nav = document.getElementById('mainNav');
+  if(nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+
+  const menu = document.getElementById('mobileMenu');
+  if(menu.classList.contains('open')){
+    menuClose();
+  }
+});
+
+/* ============================================================
+   SKELETON LOADER (inchangé)
+============================================================ */
+(function(){
+  var body   = document.getElementById('skBody');
+  var loader = document.getElementById('skeletonLoader');
+  var path   = window.location.pathname;
+  var isHome = path.indexOf('index.html') !== -1 || path.endsWith('/') || path.endsWith('/iboukoun/');
+
+  function skProduct(){
+    return '<div class="sk-product-card"><div class="sk-box sk-product-img"></div><div class="sk-product-body"><div class="sk-box sk-product-cat"></div><div class="sk-box sk-product-name"></div><div class="sk-box sk-product-desc1"></div><div class="sk-box sk-product-desc2"></div><div class="sk-product-footer"><div class="sk-box sk-product-price"></div><div class="sk-box sk-product-btn"></div></div></div></div>';
+  }
+
+  function skTemo(){
+    return '<div class="sk-temo-card"><div class="sk-temo-stars"><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div></div><div class="sk-box sk-temo-text1"></div><div class="sk-box sk-temo-text2"></div><div class="sk-box sk-temo-text3"></div><div class="sk-temo-author"><div class="sk-box sk-temo-avatar"></div><div class="sk-temo-info"><div class="sk-box sk-temo-name"></div><div class="sk-box sk-temo-city"></div></div></div></div>';
+  }
+
+  function skSectionHeader(){
+    return '<div class="sk-section-header"><div class="sk-box sk-section-eyebrow"></div><div class="sk-box sk-section-title"></div><div class="sk-box sk-section-sub"></div></div>';
+  }
+
+  var html = '';
+
+  if(isHome){
+    html += '<div class="sk-hero"><div class="sk-hero-content"><div class="sk-hero-badge"></div><div class="sk-hero-h1-1"></div><div class="sk-hero-h1-2"></div><div class="sk-hero-sub"></div><div class="sk-hero-sub2"></div><div class="sk-hero-btns"><div class="sk-hero-btn1"></div><div class="sk-hero-btn2"></div></div></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+skTemo()+'</div></div>';
+  } else {
+    html += '<div class="sk-page-hero"><div class="sk-box sk-page-hero-badge"></div><div class="sk-box sk-page-hero-title"></div><div class="sk-box sk-page-hero-sub"></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+'</div></div>';
+  }
+
+  if(body) body.innerHTML = html;
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 600);
+  });
+
+  setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 2000);
+})();
+</script>
+
+<!-- BREADCRUMB -->
+<div class="fp-breadcrumb">
+  <div class="container">
+    <a href="/index.html">Accueil</a>
+    <i class="ri-arrow-right-s-line"></i>
+    <a href="/produits.html">Produits</a>
+    <i class="ri-arrow-right-s-line"></i>
+    <span>Duo Éclaircissant+</span>
+  </div>
+</div>
+
+<!-- SECTION PRINCIPALE -->
 <section class="fp-main">
   <div class="container">
     <div class="fp-layout">
+
+      <!-- GALERIE -->
       <div class="fp-gallery">
-        <div class="fp-img-main">
-          <img src="/produit/duo-eclat.png" alt="Duo Éclat Iboukoun Cosmetics" id="fpMainImg" class="fp-main-img" width="800" height="800">
-          <div class="fp-badge-sale">Pack Duo</div>
+        
+        <div class="fp-img-main" id="fpImgMain">
+          
+          <img src="/produit/duo-eclat.png"
+     alt="Duo Éclaircissant+ — Soin naturel Iboukoun Cosmetics, Bénin"
+     title="Duo Éclaircissant+ | Iboukoun Cosmetics"
+     id="fpMainImg"
+     class="fp-main-img"
+     width="800"
+     height="800"
+     loading="eager">
+          
+          
         </div>
+        
       </div>
 
+      <!-- INFOS PRODUIT -->
       <div class="fp-info">
-        <div class="fp-cat-label">Soin corps · Pack Duo</div>
-        <h1 class="fp-name">Duo Éclat</h1>
+        <div class="fp-cat-label">Soin corps</div>
+        <h1 class="fp-name">Duo Éclaircissant+</h1>
 
-        <div class="fp-rating">
-          <div class="fp-stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
-          <span class="fp-rating-num">5/5</span>
-          <span class="fp-rating-count">(Synergie corps préférée)</span>
-        </div>
+        
+        
 
+        <!-- Prix -->
         <div class="fp-price-wrap">
-          <span class="fp-price" id="fpPriceDisplay">Prix à renseigner</span>
+          <span class="fp-price" id="fpPriceDisplay">11.000 f</span>
+          
         </div>
 
-        <div class="fp-description">
-          Le rituel corps complet : le Savon Gommant pour éliminer les cellules mortes 2 à 3 fois par semaine, et le Gel Clarifiant+ pour laver en douceur et uniformiser le teint au quotidien lors du bain.
-        </div>
+        <!-- Description -->
+        
+        <div class="fp-description">Le duo de soins éclaircissants Iboukoun Cosmetics.</div>
+        
 
+        <!-- Bénéfices -->
+        
         <div class="fp-benefits">
-          <div class="fp-benefit-item"><i class="ri-check-line"></i>Pack économique 2 produits indispensables</div>
-          <div class="fp-benefit-item"><i class="ri-check-line"></i>Exfoliation et nettoyage clarifiant combinés</div>
-          <div class="fp-benefit-item"><i class="ri-check-line"></i>Redonne de l'éclat sans jamais décaper</div>
-          <div class="fp-benefit-item"><i class="ri-check-line"></i>Résultats rapides et durables</div>
+          
+          
+          <div class="fp-benefit-item"><i class="ri-check-line"></i>Deux soins complémentaires</div>
+          
+          
+          <div class="fp-benefit-item"><i class="ri-check-line"></i>Routine éclaircissante</div>
+          
+          
+          <div class="fp-benefit-item"><i class="ri-check-line"></i>Format économique</div>
+          
         </div>
+        
 
-        <!-- Bloc commande -->
+        <!-- ====== BLOC COMMANDE ====== -->
         <div class="fp-order-box">
-          <div class="fp-order-box-title"><i class="ri-shopping-bag-line"></i>Passer commande</div>
+          <div class="fp-order-box-title">
+            <i class="ri-shopping-bag-line"></i>Passer commande
+          </div>
+
+          <!-- Quantité -->
           <div class="fp-qty-row">
-            <label class="fp-qty-label">Quantité de packs</label>
+            <label class="fp-qty-label">Quantité</label>
             <div class="fp-qty-ctrl">
-              <button type="button" class="fp-qty-btn" onclick="changeQty(-1)"><i class="ri-subtract-line"></i></button>
-              <input type="number" id="fpQty" value="1" min="1" max="999" oninput="updateTotal()" class="fp-qty-input">
-              <button type="button" class="fp-qty-btn" onclick="changeQty(1)"><i class="ri-add-line"></i></button>
+              <button type="button" class="fp-qty-btn" onclick="changeQty(-1)">
+                <i class="ri-subtract-line"></i>
+              </button>
+              <input type="number" id="fpQty" value="1" min="1" max="999"
+                     oninput="updateTotal()" class="fp-qty-input">
+              <button type="button" class="fp-qty-btn" onclick="changeQty(1)">
+                <i class="ri-add-line"></i>
+              </button>
             </div>
           </div>
+
+          <!-- Total -->
           <div class="fp-total-row">
             <span class="fp-total-label">Total estimé</span>
-            <span class="fp-total-val" id="fpTotal">Prix à renseigner</span>
+            <span class="fp-total-val" id="fpTotal">11.000 f</span>
           </div>
 
+          <!-- FORMULAIRE DE COMMANDE -->
+          <!-- Note : plus de bouton WhatsApp ici, uniquement le formulaire -->
           <form id="fpOrderForm" class="fp-form" onsubmit="showRecap(event)">
             <input type="hidden" name="produit_id"  value="8">
-            <input type="hidden" name="produit_nom" value="Duo Éclat (Gel Clarifiant+ & Savon Gommant)">
+            <input type="hidden" name="produit_nom" id="fpFormNom" value="Duo Éclaircissant+">
             <input type="hidden" name="quantite"    id="fpFormQty" value="1">
-            <input type="hidden" name="prix_total"  id="fpFormTotal" value="0">
+            <input type="hidden" name="prix_total"  id="fpFormTotal" value="11000">
 
             <div class="fp-form-row">
               <div class="fp-form-group">
                 <label>Nom complet <span class="req">*</span></label>
-                <div class="fp-input-wrap"><i class="ri-user-line"></i><input type="text" name="nom_client" id="fNom" placeholder="Votre nom" required></div>
+                <div class="fp-input-wrap">
+                  <i class="ri-user-line"></i>
+                  <input type="text" name="nom_client" id="fNom"
+                         placeholder="Votre nom" required>
+                </div>
               </div>
               <div class="fp-form-group">
                 <label>Ville <span class="req">*</span></label>
-                <div class="fp-input-wrap"><i class="ri-map-pin-line"></i><input type="text" name="ville" id="fVille" placeholder="Cotonou, Parakou..." required></div>
+                <div class="fp-input-wrap">
+                  <i class="ri-map-pin-line"></i>
+                  <input type="text" name="ville" id="fVille"
+                         placeholder="Cotonou, Parakou..." required>
+                </div>
               </div>
             </div>
 
+            <!-- Quartier -->
             <div class="fp-form-group">
               <label>Quartier <span class="req">*</span></label>
-              <div class="fp-input-wrap"><i class="ri-map-2-line"></i><input type="text" name="quartier" id="fQuartier" placeholder="Votre quartier" required></div>
+              <div class="fp-input-wrap">
+                <i class="ri-map-2-line"></i>
+                <input type="text" name="quartier" id="fQuartier"
+                       placeholder="Votre quartier" required>
+              </div>
             </div>
 
+            <!-- WhatsApp -->
             <div class="fp-form-group">
               <label>Numéro WhatsApp <span class="req">*</span></label>
-              <div class="fp-input-wrap"><i class="ri-whatsapp-line"></i><input type="tel" name="telephone" id="fWa" placeholder="+229 ..." required></div>
+              <div class="fp-input-wrap">
+                <i class="ri-whatsapp-line"></i>
+                <input type="tel" name="telephone" id="fWa"
+                       placeholder="+229 ..." required>
+              </div>
             </div>
 
+            <!-- Numéro appel direct -->
             <div class="fp-form-group">
               <label>Numéro d'appel direct <span class="req">*</span></label>
-              <div class="fp-input-wrap"><i class="ri-phone-line"></i><input type="tel" name="telephone_appel" id="fTel" placeholder="+229 ..." required></div>
+              <div class="fp-input-wrap">
+                <i class="ri-phone-line"></i>
+                <input type="tel" name="telephone_appel" id="fTel"
+                       placeholder="+229 ..." required>
+              </div>
             </div>
 
+            <!-- Confirmer numéro appel -->
             <div class="fp-form-group">
               <label>Confirmer le numéro d'appel <span class="req">*</span></label>
-              <div class="fp-input-wrap"><i class="ri-phone-lock-line"></i><input type="tel" id="fTelConfirm" placeholder="+229 ..." required></div>
-              <div class="fp-field-error" id="fTelError" style="display:none;"><i class="ri-error-warning-line"></i> Les numéros ne correspondent pas.</div>
+              <div class="fp-input-wrap">
+                <i class="ri-phone-lock-line"></i>
+                <input type="tel" id="fTelConfirm"
+                       placeholder="+229 ..." required>
+              </div>
+              <div class="fp-field-error" id="fTelError" style="display:none;">
+                <i class="ri-error-warning-line"></i>
+                Les numéros d'appel ne correspondent pas.
+              </div>
             </div>
 
-            <button type="submit" class="fp-submit-btn"><i class="ri-send-plane-line"></i>Vérifier et confirmer la commande</button>
+            <button type="submit" class="fp-submit-btn">
+              <i class="ri-send-plane-line"></i>
+              Vérifier et confirmer la commande
+            </button>
           </form>
           <div id="fpOrderMsg" class="fp-form-result" style="display:none;"></div>
         </div>
 
+        <!-- Trust -->
         <div class="fp-trust-row">
           <div class="fp-trust-item"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
           <div class="fp-trust-item"><i class="ri-truck-line"></i><span>Livraison Bénin</span></div>
@@ -174,221 +1148,876 @@
         </div>
       </div>
     </div>
-
-    <!-- ============================================================
-         FICHE PRODUIT COMPLÈTE & DÉTAILLÉE (MODIFIABLE ICI)
-    ============================================================ -->
-    <div class="fp-full-sheet-wrap reveal">
-      <div class="fp-sheet-tabs-header">
-        <button type="button" class="fp-sheet-tab active" onclick="switchSheetTab('desc', this)"><i class="ri-file-text-line"></i>Présentation du pack</button>
-        <button type="button" class="fp-sheet-tab" onclick="switchSheetTab('composition', this)"><i class="ri-leaf-line"></i>Contenu du duo</button>
-        <button type="button" class="fp-sheet-tab" onclick="switchSheetTab('utilisation', this)"><i class="ri-drop-line"></i>Protocole d'application</button>
-      </div>
-
-      <div class="fp-sheet-content-box">
-        <div class="fp-sheet-pane active" id="tab-pane-desc">
-          <h3 class="fp-pane-title">La routine complète pour sublimer votre peau</h3>
-          <p>Le <strong>Pack Duo Éclat</strong> est le choix numéro un de nos clientes pour obtenir un teint unifié, doux et lumineux. Plutôt que d'utiliser un seul produit, l'alternance entre le gommage et le gel lavant clarifiant apporte à la peau tout ce dont elle a besoin pour respirer et rayonner.</p>
-        </div>
-
-        <div class="fp-sheet-pane" id="tab-pane-composition">
-          <h3 class="fp-pane-title">Ce que contient votre pack</h3>
-          <ul class="fp-ingredients-list">
-            <li><strong>1 Gel Clarifiant+ :</strong> bain moussant doux clarifiant et unifiant pour l'hygiène quotidienne.</li>
-            <li><strong>1 Savon Gommant :</strong> pâte exfoliante enrichie aux poudres végétales et savon noir pour débarrasser la peau des impuretés.</li>
-          </ul>
-        </div>
-
-        <div class="fp-sheet-pane" id="tab-pane-utilisation">
-          <h3 class="fp-pane-title">Protocole recommandé</h3>
-          <p><strong>Matin et soir (quotidien) :</strong> prenez votre douche avec le Gel Clarifiant+ sur une éponge propre.</p>
-          <p><strong>2 à 3 fois par semaine :</strong> remplacez par le Savon Gommant pour éliminer les peaux mortes et désobstruer les pores en massant doucement sur tout le corps.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- Modal Récap -->
+<!-- ====================================================
+     MODAL RÉCAPITULATIF DE COMMANDE
+==================================================== -->
 <div class="recap-overlay" id="recapOverlay">
   <div class="recap-modal">
     <div class="recap-header">
       <div class="recap-header-icon"><i class="ri-file-list-3-line"></i></div>
-      <div><h2 class="recap-title">Récapitulatif de commande</h2><p class="recap-sub">Vérifiez vos informations</p></div>
-    </div>
-    <div class="recap-produit-row">
-      <img src="/produit/duo-eclat.png" alt="Duo Éclat" class="recap-prod-img" width="64" height="64">
-      <div class="recap-prod-info">
-        <div class="recap-prod-cat">Pack Duo</div>
-        <div class="recap-prod-name">Duo Éclat</div>
-        <div class="recap-prod-price">Prix à confirmer</div>
+      <div>
+        <h2 class="recap-title">Récapitulatif de commande</h2>
+        <p class="recap-sub">Vérifiez vos informations avant de valider</p>
       </div>
     </div>
-    <div class="recap-details">
-      <div class="recap-detail-row"><span class="recap-label">Quantité</span><span class="recap-val" id="rQty">—</span></div>
-      <div class="recap-detail-row recap-total-row"><span class="recap-label">Total</span><span class="recap-val recap-total" id="rTotal">—</span></div>
-      <div class="recap-sep"></div>
-      <div class="recap-detail-row"><span class="recap-label">Nom</span><span class="recap-val" id="rNom">—</span></div>
-      <div class="recap-detail-row"><span class="recap-label">Ville</span><span class="recap-val" id="rVille">—</span></div>
-      <div class="recap-detail-row"><span class="recap-label">WhatsApp</span><span class="recap-val" id="rWa">—</span></div>
+
+    <!-- Produit -->
+    <div class="recap-produit-row">
+      
+      <img src="/produit/duo-eclat.png"
+     alt="Duo Éclaircissant+ — Iboukoun Cosmetics"
+     class="recap-prod-img"
+     width="64"
+     height="64"
+     loading="lazy">
+      
+      <div class="recap-prod-info">
+        <div class="recap-prod-cat">Soin corps</div>
+        <div class="recap-prod-name">Duo Éclaircissant+</div>
+        <div class="recap-prod-price">11.000 f / unité</div>
+      </div>
     </div>
+
+    <!-- Détails -->
+    <div class="recap-details">
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-stack-line"></i>Quantité</span>
+        <span class="recap-val" id="rQty">—</span>
+      </div>
+      <div class="recap-detail-row recap-total-row">
+        <span class="recap-label"><i class="ri-money-dollar-circle-line"></i>Total</span>
+        <span class="recap-val recap-total" id="rTotal">—</span>
+      </div>
+      <div class="recap-sep"></div>
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-user-line"></i>Nom</span>
+        <span class="recap-val" id="rNom">—</span>
+      </div>
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-map-pin-line"></i>Ville</span>
+        <span class="recap-val" id="rVille">—</span>
+      </div>
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-map-2-line"></i>Quartier</span>
+        <span class="recap-val" id="rQuartier">—</span>
+      </div>
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-whatsapp-line"></i>WhatsApp</span>
+        <span class="recap-val" id="rWa">—</span>
+      </div>
+      <div class="recap-detail-row">
+        <span class="recap-label"><i class="ri-phone-line"></i>Appel direct</span>
+        <span class="recap-val" id="rTel">—</span>
+      </div>
+    </div>
+
     <div class="recap-actions">
-      <button class="recap-btn-modifier" onclick="closeRecap()"><i class="ri-edit-line"></i>Modifier</button>
-      <button class="recap-btn-valider" id="recapValiderBtn" onclick="submitCommande()"><i class="ri-check-double-line"></i>Valider la commande</button>
+      <button class="recap-btn-modifier" onclick="closeRecap()">
+        <i class="ri-edit-line"></i>Modifier
+      </button>
+      <button class="recap-btn-valider" id="recapValiderBtn" onclick="submitCommande()">
+        <i class="ri-check-double-line"></i>Valider la commande
+      </button>
     </div>
   </div>
 </div>
 
+<!-- ====================================================
+     PAGE SUCCÈS (cachée, affichée après validation)
+==================================================== -->
 <div class="succes-overlay" id="succesOverlay" style="display:none;">
   <div class="succes-modal">
-    <div class="succes-icon"><i class="ri-checkbox-circle-fill"></i></div>
+    <div class="succes-icon-wrap">
+      <div class="succes-icon"><i class="ri-checkbox-circle-fill"></i></div>
+    </div>
     <h2 class="succes-title">Commande validée !</h2>
-    <p class="succes-msg">Merci <strong id="succesNom"></strong> ! Nous vous contacterons pour confirmer la livraison de votre Duo Éclat.</p>
-    <div class="succes-actions"><a href="/produits.html" class="succes-btn-produits">Voir nos produits</a></div>
+    <p class="succes-msg">
+      Merci <strong id="succesNom"></strong> ! Votre commande a été enregistrée avec succès.
+      Notre équipe vous contactera très prochainement sur WhatsApp ou par appel direct
+      pour confirmer la livraison.
+    </p>
+    <div class="succes-order-num">
+      Commande <span id="succesNum"></span>
+    </div>
+    <div class="succes-actions">
+      <a href="/produits.html" class="succes-btn-produits">
+        <i class="ri-sparkling-line"></i>Commander un autre produit
+      </a>
+      <a href="/index.html" class="succes-btn-accueil">
+        <i class="ri-home-line"></i>Retour à l'accueil
+      </a>
+    </div>
   </div>
 </div>
 
+<!-- TÉMOIGNAGES DU PRODUIT -->
+
+
+<section class="fp-section fp-temos-section" id="fp-temos"><div class="container"><div class="section-header reveal"><div class="section-eyebrow"><i class="ri-star-line"></i>Avis clients</div><h2 class="section-h2">Ce qu’ils disent de ce produit</h2><p class="section-sub">Aucun témoignage pour le moment.</p></div></div></section>
+<!-- PRODUITS SIMILAIRES -->
+
+<section class="fp-section fp-similaires-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow"><i class="ri-sparkling-line"></i>Notre gamme complète</div>
+      <h2 class="section-h2">Vous aimerez aussi</h2>
+    </div>
+    <div class="fp-similaires-grid">
+      
+      <a href="/produit/aisselles-chic/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/aiselle-chic.png"
+     alt="Aisselles Chic — Soin naturel Iboukoun Cosmetics"
+     title="Aisselles Chic | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Aisselles Chic</div>
+          <div class="fp-sim-price">2.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/savon-gommant/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/savon-gommant.png"
+     alt="Savon Gommant — Soin naturel Iboukoun Cosmetics"
+     title="Savon Gommant | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Savon Gommant</div>
+          <div class="fp-sim-price">6.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/serum-anti-tache/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/serum-anti-tache.png"
+     alt="Sérum Anti-taches &amp; Éclat — Soin naturel Iboukoun Cosmetics"
+     title="Sérum Anti-taches &amp; Éclat | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Sérum Anti-taches &amp; Éclat</div>
+          <div class="fp-sim-price">5.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/huile-eclat/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/huile-eclat.png"
+     alt="Huile Éclat — Soin naturel Iboukoun Cosmetics"
+     title="Huile Éclat | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Huile Éclat</div>
+          <div class="fp-sim-price">4.500 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/savon-gommant-premium/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/savon-gommant-premium.png"
+     alt="Savon Gommant Premium — Soin naturel Iboukoun Cosmetics"
+     title="Savon Gommant Premium | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Savon Gommant Premium</div>
+          <div class="fp-sim-price">7.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/gel-clarifiant-plus/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/gel-clarifiant%2B.png"
+     alt="Gel Clarifiant + — Soin naturel Iboukoun Cosmetics"
+     title="Gel Clarifiant + | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Gel Clarifiant +</div>
+          <div class="fp-sim-price">5.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/savon-antiseptique/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/savon-antiseptique.png"
+     alt="Savon Antiseptique — Soin naturel Iboukoun Cosmetics"
+     title="Savon Antiseptique | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Savon Antiseptique</div>
+          <div class="fp-sim-price">3.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/lotion-anti-quinto/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/lotion-anti-quinto.png"
+     alt="Lotion Anti Quinto — Soin naturel Iboukoun Cosmetics"
+     title="Lotion Anti Quinto | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Lotion Anti Quinto</div>
+          <div class="fp-sim-price">3.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/creme-visage/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/creme-visage.png"
+     alt="Crème de Visage — Soin naturel Iboukoun Cosmetics"
+     title="Crème de Visage | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Crème de Visage</div>
+          <div class="fp-sim-price">4.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/pack-savon-antiseptique-creme-visage/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/savon-antiseptique-creme.png"
+     alt="Savon Antiseptique + Crème de Visage — Soin naturel Iboukoun Cosmetics"
+     title="Savon Antiseptique + Crème de Visage | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Savon Antiseptique + Crème de Visage</div>
+          <div class="fp-sim-price">4.000 f</div>
+        </div>
+      </a>
+      
+      <a href="/produit/pack-savon-gommant-premium-creme-visage/" class="fp-sim-card reveal">
+        <div class="fp-sim-img">
+          
+          <img src="/produit/offre-special-gommant-creme.png"
+     alt="Savon Gommant + Crème de Visage — Soin naturel Iboukoun Cosmetics"
+     title="Savon Gommant + Crème de Visage | Iboukoun Cosmetics"
+     width="400"
+     height="400"
+     loading="lazy">
+          
+        </div>
+        <div class="fp-sim-info">
+          <div class="fp-sim-name">Savon Gommant + Crème de Visage</div>
+          <div class="fp-sim-price">10.000 f</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="main-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="/index.html" class="footer-logo">
+            <img src="/assets/images/logo.jpg" alt="Iboukoun Cosmetics">
+            <div class="footer-logo-text">
+              <span class="footer-brand-name">Iboukoun Cosmetics</span>
+              <span class="footer-brand-tag">Naturellement vous</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Des soins conçus pour révéler votre beauté naturelle — formulés avec soin à Parakou, au cœur du Bénin.
+          </p>
+          <div class="social-row">
+            
+            <a class="social-icon" href="https://wa.me/2290169156300" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="ri-whatsapp-line"></i>
+            </a>
+            
+            
+          </div>
+        </div>
+
+        <div class="footer-col">
+  <h4>Explorer</h4>
+  <ul>
+    <li><a href="/produits.html" title="Voir tous les soins naturels Iboukoun Cosmetics">
+      <i class="ri-arrow-right-s-line"></i>Nos produits</a></li>
+    <li><a href="/produits.html?cat=deodorant" title="Déodorant naturel sans aluminium Bénin">
+      <i class="ri-arrow-right-s-line"></i>Déodorant naturel</a></li>
+    <li><a href="/produits.html?cat=corps" title="Savon gommant peau africaine Bénin">
+      <i class="ri-arrow-right-s-line"></i>Savon gommant</a></li>
+    <li><a href="/produits.html?cat=visage" title="Sérum anti-tache visage naturel Bénin">
+      <i class="ri-arrow-right-s-line"></i>Sérum visage</a></li>
+    <li><a href="/temoignages.html" title="Avis clients Iboukoun Cosmetics Bénin">
+      <i class="ri-arrow-right-s-line"></i>Témoignages</a></li>
+    <li><a href="/egeries.html" title="Ambassadeurs Iboukoun Cosmetics">
+      <i class="ri-arrow-right-s-line"></i>Nos égéries</a></li>
+      <li><a href="/produits.html" 
+          title="Soins naturels Parakou Bénin">
+          <i class="ri-arrow-right-s-line"></i>Soins à Parakou</a></li>
+      <li><a href="/produits.html" 
+       title="Cosmétiques naturels Cotonou livraison">
+      <i class="ri-arrow-right-s-line"></i>Livraison à Cotonou</a></li>
+  </ul>
+</div>
+
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="/revendeurs.html"><i class="ri-arrow-right-s-line"></i>Devenir revendeur</a></li>
+            <li><a href="/contact.html"><i class="ri-arrow-right-s-line"></i>Contactez-nous</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-whatsapp-line"></i>
+              <a href="https://wa.me/2290169156300" target="_blank" rel="noopener noreferrer">+2290169156300</a>
+            </div>
+            
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line"></i>
+              <span>Parakou, Bénin</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-line"></i>
+              <span>Livraison à Cotonou, Porto-Novo, Calavi et partout au Bénin</span>
+            </div>
+            
+            
+            
+            <div class="footer-contact-item">
+              <i class="ri-time-line"></i>
+              <span>Lun–Sam : 8h–20h</span>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>© 2026 Iboukoun Cosmetics — Tous droits réservés</p>
+        <!-- <div class="footer-legal">
+          <a href="/mentions-legales.html">Mentions légales</a>
+          <a href="/confidentialite.html">Confidentialité</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WA Flottant -->
+<div class="wa-float">
+  <div class="wa-float-label">Commander sur WhatsApp</div>
+  <a class="wa-float-btn"
+     href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
+     target="_blank" rel="noopener"
+     onclick="logWA('','bouton_flottant')">
+    <i class="ri-whatsapp-line"></i>
+    <div class="wa-pulse"></div>
+  </a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1});
+  els.forEach(function(el){obs.observe(el);});
+})();
+
+function logWA(produit,source){
+  fetch('/api/log_whatsapp',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({nom_client:'',produit:produit||'',source:source||'inconnu'})
+  }).catch(function(){});
+}
+
+function orderWA(produitNom,source){
+  logWA(produitNom,source||'fiche_produit');
+  var msg='Bonjour, je souhaite commander : *'+produitNom+'* 🌿';
+  window.open('https://wa.me/2290169156300?text='+encodeURIComponent(msg),'_blank');
+}
+
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen)item.classList.add('open');
+  });
+});
+</script>
+
 <style>
+footer.main-footer{background:var(--navy-dark);}
+.footer-top{padding:72px 0 56px;}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;
+  gap:56px;
+}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px;text-decoration:none;}
+.footer-logo img{height:46px;width:auto;object-fit:contain;border-radius:8px;}
+.footer-logo-text{display:flex;flex-direction:column;line-height:1.2;}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;}
+.footer-brand-tag{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:1.8px;text-transform:uppercase;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:24px;max-width:260px;}
+.social-row{display:flex;gap:10px;}
+.social-icon{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.social-icon:hover{background:var(--green);border-color:var(--green);transform:translateY(-2px);}
+.social-icon i{font-size:17px;color:#fff;}
+.footer-col h4{
+  font-size:11px;font-weight:600;letter-spacing:1.2px;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+  margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:11px;}
+.footer-col ul li a{
+  font-size:14px;color:rgba(255,255,255,.6);
+  display:flex;align-items:center;gap:5px;transition:color .2s;
+}
+.footer-col ul li a i{font-size:13px;transition:transform .2s;}
+.footer-col ul li a:hover{color:var(--green-mid);}
+.footer-col ul li a:hover i{transform:translateX(3px);}
+.footer-contact-items{display:flex;flex-direction:column;gap:12px;}
+.footer-contact-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:13px;color:rgba(255,255,255,.6);
+}
+.footer-contact-item i{font-size:16px;color:var(--green-mid);flex-shrink:0;margin-top:1px;}
+.footer-contact-item a{color:rgba(255,255,255,.6);transition:color .2s;}
+.footer-contact-item a:hover{color:var(--green-mid);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:22px 0;
+}
+.footer-bottom-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-bottom-inner p{font-size:12px;color:rgba(255,255,255,.3);}
+.footer-legal{display:flex;gap:24px;}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s;}
+.footer-legal a:hover{color:rgba(255,255,255,.7);}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;gap:24px;}.footer-tagline{max-width:100%;}}
+</style>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Iboukoun Cosmetics","url":"https://www.iboukouncosmetics.com","logo":"https://www.iboukouncosmetics.com/assets/images/logo.jpg","contactPoint":{"@type":"ContactPoint","telephone":"+2290169156300","contactType":"customer service","availableLanguage":"French"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Iboukoun Cosmetics","url":"https://www.iboukouncosmetics.com","image":"https://www.iboukouncosmetics.com/assets/images/hero.jpg","telephone":"+2290169156300","address":{"@type":"PostalAddress","addressLocality":"Parakou","addressCountry":"BJ"}}</script>
+
+
+<style>
+.fp-slide-container{position:relative;aspect-ratio:1;border-radius:var(--radius-xl);overflow:hidden;background:var(--cream)}
+.fp-slide-item{position:absolute;inset:0;opacity:0;visibility:hidden;transition:.35s}
+.fp-slide-item.active{opacity:1;visibility:visible}
+.fp-badge-format-overlay{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700}
+.fp-slide-nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.92);cursor:pointer}
+.fp-slide-prev{left:12px}.fp-slide-next{right:12px}
+.fp-slide-indicator{position:absolute;right:14px;bottom:18px;display:flex;gap:6px}
+.fp-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.65);cursor:pointer}.fp-dot.active{background:var(--navy)}
+.fp-thumbs-format{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.fp-thumb-card{display:flex;align-items:center;gap:10px;border:2px solid transparent;border-radius:12px;padding:6px;background:var(--cream);cursor:pointer;text-align:left;color:var(--navy)}
+.fp-thumb-card.active{border-color:var(--navy)}
+.fp-thumb-card img{width:68px;height:68px;object-fit:cover;border-radius:8px}.fp-thumb-card span{display:flex;flex-direction:column}.fp-thumb-card small{color:var(--green);font-weight:700}
+.fp-format-selector-box{margin-bottom:18px;padding:14px;background:var(--cream);border-radius:12px}
+.fp-format-label{display:block;font-size:13px;font-weight:700;margin-bottom:10px;color:var(--navy)}
+.fp-format-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fp-btn-format{border:1px solid rgba(0,0,0,.12);border-radius:10px;padding:10px;background:#fff;cursor:pointer;color:var(--navy)}
+.fp-btn-format.active{border-color:var(--navy);box-shadow:0 0 0 1px var(--navy)}
+.fp-btn-format strong{display:block;color:var(--green)}
+@media(max-width:760px){.fp-thumbs-format,.fp-format-buttons{grid-template-columns:1fr}}
+</style>
+
+<style>
+/* ============================================================
+   FICHE PRODUIT
+============================================================ */
 .fp-breadcrumb{background:var(--cream);border-bottom:1px solid rgba(0,0,0,.06);padding:12px 0;}
-.fp-breadcrumb .container{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3);}
-.fp-breadcrumb a{color:var(--text3);text-decoration:none;}
+.fp-breadcrumb .container{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3);flex-wrap:wrap;}
+.fp-breadcrumb a{color:var(--text3);transition:.2s;}
+.fp-breadcrumb a:hover{color:var(--navy);}
+.fp-breadcrumb i{font-size:14px;}
 .fp-breadcrumb span{color:var(--navy);font-weight:600;}
+
 .fp-main{background:var(--white);padding:56px 0 72px;}
 .fp-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+
+/* Galerie */
 .fp-img-main{position:relative;border-radius:var(--radius-xl);overflow:hidden;background:var(--cream);aspect-ratio:1;}
-.fp-main-img{width:100%;height:100%;object-fit:cover;display:block;}
-.fp-badge-sale{position:absolute;top:16px;left:16px;background:var(--navy);color:#fff;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;}
+.fp-main-img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s;}
+.fp-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.fp-img-placeholder i{font-size:96px;color:rgba(0,0,0,.08);}
+.fp-badge-sale{position:absolute;top:16px;left:16px;background:var(--green);color:#fff;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:700;}
+.fp-thumbs{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+.fp-thumb{position:relative;width:80px;border-radius:var(--radius);overflow:hidden;cursor:pointer;border:2px solid transparent;transition:.2s;background:var(--cream);}
+.fp-thumb.active,.fp-thumb:hover{border-color:var(--navy);}
+.fp-thumb img{width:100%;aspect-ratio:1;object-fit:cover;display:block;}
+.fp-thumb-label{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);color:#fff;font-size:8px;font-weight:600;text-align:center;padding:3px 4px;text-transform:uppercase;}
+
+/* Infos */
 .fp-cat-label{font-size:11px;color:var(--green);text-transform:uppercase;letter-spacing:1.8px;font-weight:600;margin-bottom:8px;}
-.fp-name{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,48px);font-weight:700;color:var(--navy);margin-bottom:14px;}
-.fp-rating{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
-.fp-stars{display:flex;gap:2px;color:var(--gold);}
+.fp-name{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.5vw,48px);font-weight:700;color:var(--navy);margin-bottom:14px;line-height:1.08;letter-spacing:-.5px;}
+.fp-rating{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.fp-stars{display:flex;gap:2px;}
+.fp-stars i{font-size:15px;color:var(--gold);}
 .fp-rating-num{font-size:14px;font-weight:700;color:var(--navy);}
 .fp-rating-count{font-size:13px;color:var(--text3);}
-.fp-price-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.fp-rating-link{font-size:12px;color:var(--green);font-weight:600;text-decoration:underline;}
+.fp-price-wrap{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
 .fp-price{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--navy);}
-.fp-description{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:20px;}
+.fp-price-old{font-size:18px;color:var(--text3);text-decoration:line-through;}
+.fp-promo-badge{display:inline-flex;align-items:center;gap:5px;background:var(--gold-light);color:var(--gold);border:1px solid rgba(201,146,10,.25);padding:5px 12px;border-radius:999px;font-size:12px;font-weight:700;}
+.fp-description{font-size:15px;color:var(--text2);line-height:1.78;margin-bottom:20px;}
 .fp-benefits{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
 .fp-benefit-item{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text2);}
-.fp-benefit-item i{color:var(--green);font-size:16px;flex-shrink:0;}
+.fp-benefit-item i{font-size:16px;color:var(--green);flex-shrink:0;}
+
+/* Bloc commande */
 .fp-order-box{background:var(--cream);border:1px solid rgba(0,0,0,.07);border-radius:var(--radius-xl);padding:28px;margin-bottom:24px;}
 .fp-order-box-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(0,0,0,.07);}
 .fp-order-box-title i{font-size:18px;color:var(--green);}
 .fp-qty-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
 .fp-qty-label{font-size:14px;font-weight:600;color:var(--navy);}
-.fp-qty-ctrl{display:flex;align-items:center;border:1.5px solid rgba(0,0,0,.12);border-radius:999px;background:#fff;}
-.fp-qty-btn{width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--navy);cursor:pointer;}
-.fp-qty-input{width:52px;text-align:center;border:none;border-left:1px solid rgba(0,0,0,.1);border-right:1px solid rgba(0,0,0,.1);font-size:16px;font-weight:700;color:var(--navy);padding:8px 4px;}
+.fp-qty-ctrl{display:flex;align-items:center;border:1.5px solid rgba(0,0,0,.12);border-radius:999px;overflow:hidden;background:#fff;}
+.fp-qty-btn{width:40px;height:40px;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--navy);transition:background .2s;}
+.fp-qty-btn:hover{background:var(--navy-light);}
+.fp-qty-input{width:52px;text-align:center;border:none;border-left:1px solid rgba(0,0,0,.1);border-right:1px solid rgba(0,0,0,.1);font-size:16px;font-weight:700;color:var(--navy);font-family:'DM Sans',sans-serif;padding:8px 4px;background:#fff;}
 .fp-total-row{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);padding:14px 18px;margin-bottom:20px;}
 .fp-total-label{font-size:13px;color:var(--text2);}
 .fp-total-val{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--navy);}
+
+/* Formulaire */
 .fp-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .fp-form-group{margin-bottom:14px;}
 .fp-form-group label{display:block;font-size:12px;font-weight:600;color:var(--text2);margin-bottom:5px;}
 .req{color:var(--gold);}
 .fp-input-wrap{position:relative;}
-.fp-input-wrap i{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--text3);}
-.fp-input-wrap input{width:100%;padding:11px 12px 11px 38px;border:1.5px solid rgba(0,0,0,.1);border-radius:var(--radius-sm);font-size:14px;color:var(--text);background:#fff;}
-.fp-submit-btn{width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
-.fp-submit-btn:hover{background:var(--green);}
+.fp-input-wrap i{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--text3);pointer-events:none;}
+.fp-input-wrap input{width:100%;padding:11px 12px 11px 38px;border:1.5px solid rgba(0,0,0,.1);border-radius:var(--radius-sm);font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;transition:.2s;}
+.fp-input-wrap input:focus{border-color:var(--navy);outline:none;}
+.fp-input-wrap input.input-error{border-color:#FF3B30;}
+.fp-field-error{display:flex;align-items:center;gap:6px;font-size:12px;color:#FF3B30;margin-top:5px;}
+.fp-field-error i{font-size:14px;}
+.fp-submit-btn{width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:999px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;}
+.fp-submit-btn:hover{background:var(--green);transform:translateY(-1px);}
+.fp-submit-btn i{font-size:17px;}
+.fp-form-result{padding:12px 14px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;margin-top:10px;}
+.fp-form-result.success{background:var(--green-light);color:var(--green-dark);border:1px solid rgba(45,158,53,.2);}
+.fp-form-result.error{background:#FFEBEE;color:#C62828;border:1px solid #FFCDD2;}
+
+/* Trust */
 .fp-trust-row{display:flex;gap:16px;flex-wrap:wrap;}
 .fp-trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3);font-weight:500;}
 .fp-trust-item i{font-size:15px;color:var(--green);}
 
-.fp-full-sheet-wrap{margin-top:64px;background:#fff;border-radius:var(--radius-xl);border:1px solid rgba(0,0,0,.08);box-shadow:0 12px 40px rgba(13,26,94,.06);overflow:hidden;}
-.fp-sheet-tabs-header{display:flex;background:var(--cream);border-bottom:1px solid rgba(0,0,0,.08);overflow-x:auto;}
-.fp-sheet-tab{padding:16px 24px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;border-bottom:3px solid transparent;}
-.fp-sheet-tab.active{color:var(--navy);background:#fff;border-bottom-color:var(--green);font-weight:700;}
-.fp-sheet-content-box{padding:36px clamp(16px,4%,40px);}
-.fp-sheet-pane{display:none;}
-.fp-sheet-pane.active{display:block;}
-.fp-pane-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--navy);margin-bottom:16px;}
-.fp-ingredients-list{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;}
-.fp-ingredients-list li{background:var(--cream);padding:12px 16px;border-radius:var(--radius-sm);font-size:13px;border-left:3px solid var(--green);}
-
-.recap-overlay{display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+/* ============================================================
+   MODAL RÉCAPITULATIF
+============================================================ */
+.recap-overlay{
+  display:none;position:fixed;inset:0;z-index:9998;
+  background:rgba(0,0,0,.6);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:20px;
+}
 .recap-overlay.open{display:flex;}
-.recap-modal{background:#fff;border-radius:var(--radius-xl);padding:36px;max-width:520px;width:100%;}
+.recap-modal{
+  background:#fff;border-radius:var(--radius-xl);
+  padding:36px;max-width:520px;width:100%;
+  max-height:90vh;overflow-y:auto;
+  box-shadow:0 24px 80px rgba(0,0,0,.3);
+  animation:slideUp .35s cubic-bezier(.23,1,.32,1);
+}
+@keyframes slideUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
 .recap-header{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(0,0,0,.08);}
 .recap-header-icon{width:48px;height:48px;border-radius:14px;background:var(--navy-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .recap-header-icon i{font-size:22px;color:var(--navy);}
 .recap-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--navy);}
+.recap-sub{font-size:12px;color:var(--text3);margin-top:3px;}
+/* Produit dans recap */
 .recap-produit-row{display:flex;align-items:center;gap:14px;background:var(--cream);border-radius:var(--radius);padding:14px;margin-bottom:20px;}
 .recap-prod-img{width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;}
+.recap-prod-img-fallback{width:64px;height:64px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.recap-prod-img-fallback i{font-size:28px;color:rgba(0,0,0,.15);}
+.recap-prod-cat{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;}
 .recap-prod-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--navy);}
+.recap-prod-price{font-size:13px;color:var(--text2);margin-top:2px;}
+/* Détails recap */
 .recap-details{margin-bottom:24px;}
 .recap-detail-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.05);}
+.recap-detail-row:last-child{border-bottom:none;}
+.recap-label{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--text3);}
+.recap-label i{font-size:15px;color:var(--green);}
+.recap-val{font-size:14px;font-weight:600;color:var(--navy);}
 .recap-total-row{background:var(--cream);border-radius:var(--radius-sm);padding:12px 14px;margin:4px 0;}
+.recap-total-row .recap-label{font-weight:700;color:var(--navy);}
 .recap-total{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--navy);}
+.recap-sep{height:1px;background:rgba(0,0,0,.07);margin:8px 0;}
+/* Actions recap */
 .recap-actions{display:grid;grid-template-columns:1fr 1.5fr;gap:12px;}
-.recap-btn-modifier{padding:13px;border:1.5px solid rgba(0,0,0,.15);border-radius:999px;background:#fff;font-weight:600;cursor:pointer;}
-.recap-btn-valider{padding:13px;background:linear-gradient(135deg,var(--green),#25a330);color:#fff;border:none;border-radius:999px;font-weight:700;cursor:pointer;}
-.succes-overlay{position:fixed;inset:0;z-index:9999;background:#fff;display:flex;align-items:center;justify-content:center;padding:24px;}
-.succes-modal{max-width:480px;width:100%;text-align:center;}
-.succes-icon{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--green),#25a330);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:#fff;font-size:44px;}
-.succes-actions{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
-.succes-btn-produits{padding:16px;background:var(--navy);color:#fff;border-radius:999px;font-weight:700;text-decoration:none;}
+.recap-btn-modifier{padding:13px;border:1.5px solid rgba(0,0,0,.15);border-radius:999px;background:#fff;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:7px;color:var(--text2);font-family:'DM Sans',sans-serif;}
+.recap-btn-modifier:hover{border-color:var(--navy);color:var(--navy);}
+.recap-btn-modifier i{font-size:16px;}
+.recap-btn-valider{padding:13px;background:linear-gradient(135deg,var(--green),#25a330);color:#fff;border:none;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 6px 20px rgba(45,158,53,.4);font-family:'DM Sans',sans-serif;}
+.recap-btn-valider:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(45,158,53,.5);}
+.recap-btn-valider i{font-size:16px;}
 
+/* ============================================================
+   PAGE SUCCÈS
+============================================================ */
+.succes-overlay{
+  position:fixed;inset:0;z-index:9999;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+.succes-modal{max-width:480px;width:100%;text-align:center;}
+.succes-icon-wrap{margin-bottom:24px;}
+.succes-icon{
+  width:88px;height:88px;border-radius:50%;
+  background:linear-gradient(135deg,var(--green),#25a330);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;
+  box-shadow:0 8px 32px rgba(45,158,53,.35);
+  animation:popIn .5s cubic-bezier(.23,1,.32,1);
+}
+@keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.succes-icon i{font-size:44px;color:#fff;}
+.succes-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:var(--navy);margin-bottom:14px;}
+.succes-msg{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:20px;}
+.succes-order-num{
+  display:inline-block;
+  background:var(--cream);border:1px solid rgba(0,0,0,.08);
+  border-radius:999px;padding:8px 20px;
+  font-size:13px;color:var(--text3);margin-bottom:32px;font-weight:600;
+}
+.succes-order-num span{color:var(--navy);}
+.succes-actions{display:flex;flex-direction:column;gap:12px;}
+.succes-btn-produits{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--navy);color:#fff;padding:16px;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none;transition:all .25s;box-shadow:0 4px 16px rgba(13,26,94,.25);}
+.succes-btn-produits:hover{background:var(--green);}
+.succes-btn-produits i{font-size:18px;}
+.succes-btn-accueil{display:flex;align-items:center;justify-content:center;gap:9px;background:transparent;color:var(--navy);padding:14px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid rgba(13,26,94,.2);transition:all .25s;}
+.succes-btn-accueil:hover{background:var(--navy);color:#fff;}
+.succes-btn-accueil i{font-size:18px;}
+
+/* ============================================================
+   TÉMOIGNAGES PRODUIT
+============================================================ */
+.fp-section{padding:80px 0;}
+.fp-temos-section{background:var(--cream);}
+.fp-temos-ss-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-bottom:48px;}
+.fp-ss-card{border-radius:var(--radius);overflow:hidden;cursor:pointer;position:relative;border:1px solid rgba(0,0,0,.07);transition:transform .25s,box-shadow .25s;}
+.fp-ss-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
+.fp-ss-card img{width:100%;height:220px;object-fit:cover;display:block;}
+.fp-ss-overlay{position:absolute;inset:0;background:rgba(13,26,94,.4);display:flex;align-items:center;justify-content:center;opacity:0;transition:.2s;}
+.fp-ss-card:hover .fp-ss-overlay{opacity:1;}
+.fp-ss-overlay i{font-size:32px;color:#fff;}
+.fp-temos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.fp-temo-card{background:#fff;border-radius:var(--radius-xl);padding:26px;border:1px solid rgba(0,0,0,.06);transition:box-shadow .25s;}
+.fp-temo-card:hover{box-shadow:var(--shadow);}
+.fp-temo-stars{display:flex;gap:3px;margin-bottom:12px;}
+.fp-temo-stars i{font-size:14px;color:var(--gold);}
+.fp-temo-text{font-size:14px;color:var(--text2);line-height:1.72;font-style:italic;margin-bottom:16px;}
+.fp-temo-author{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid rgba(0,0,0,.06);}
+.fp-temo-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;}
+.fp-temo-name{font-size:13px;font-weight:700;color:var(--navy);}
+.fp-temo-city{font-size:11px;color:var(--text3);display:flex;align-items:center;gap:3px;margin-top:2px;}
+.fp-temo-city i{font-size:11px;}
+/* Lightbox */
+.lightbox-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.9);align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+.lightbox-overlay.open{display:flex;}
+.lb-close{position:fixed;top:20px;right:20px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:10000;transition:.2s;}
+.lb-close:hover{background:rgba(255,255,255,.2);}
+.lb-close i{font-size:22px;color:#fff;}
+.lb-img-wrap{max-width:90vw;max-height:90vh;}
+.lb-img-wrap img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:var(--radius);}
+
+/* SIMILAIRES */
+.fp-similaires-section{background:var(--white);}
+.fp-similaires-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:24px;}
+.fp-sim-card{text-decoration:none;color:inherit;}
+.fp-sim-img{border-radius:var(--radius-lg);overflow:hidden;background:var(--cream);aspect-ratio:1;margin-bottom:12px;}
+.fp-sim-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.fp-sim-card:hover .fp-sim-img img{transform:scale(1.04);}
+.fp-sim-img-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
+.fp-sim-img-fallback i{font-size:48px;color:rgba(0,0,0,.1);}
+.fp-sim-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.fp-sim-price{font-size:15px;font-weight:600;color:var(--text2);}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:1024px){.fp-layout{gap:48px;}}
 @media(max-width:768px){
   .fp-layout{grid-template-columns:1fr;gap:32px;}
+  .fp-main{padding:32px 0 56px;}
   .fp-form-row{grid-template-columns:1fr;}
+  .fp-thumbs .fp-thumb{width:64px;}
+  .fp-temos-ss-grid{grid-template-columns:1fr 1fr;}
+  .fp-temos-grid{grid-template-columns:1fr;}
+  .fp-similaires-grid{grid-template-columns:1fr 1fr;}
+  .fp-section{padding:56px 0;}
+  .fp-order-box{padding:22px 18px;}
+  .fp-name{font-size:clamp(26px,8vw,36px);}
+  .fp-price{font-size:28px;}
+  .recap-modal{padding:24px 20px;}
   .recap-actions{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .fp-main{padding:24px 0 48px;}
+  .fp-temos-ss-grid{grid-template-columns:1fr;}
+  .fp-similaires-grid{grid-template-columns:1fr 1fr;}
+  .fp-name{font-size:clamp(24px,8vw,32px);}
+  .fp-order-box{padding:18px 14px;}
+  .fp-qty-btn{width:36px;height:36px;}
+  .fp-qty-input{width:44px;}
+  .succes-title{font-size:28px;}
+}
+@media(max-width:360px){
+  .fp-similaires-grid{grid-template-columns:1fr;}
 }
 </style>
 
 <script>
-var FP_PRIX = 0; // À renseigner
-var FP_NOM  = 'Duo Éclat';
+var FP_PRIX     = 11000;
+var FP_NOM      = 'Duo Éclaircissant+';
+var FP_WA_NUM   = '2290169156300';
+var SAVON_FORMATS = { grand:{prix:6000,nom:'Savon Gommant (Grand pot)'}, petit:{prix:3000,nom:'Savon Gommant (Petit pot)'} };
+var currentFormat = 'grand';
+if (document.getElementById('slide-grand')) { FP_PRIX = SAVON_FORMATS.grand.prix; FP_NOM = SAVON_FORMATS.grand.nom; }
+function setFormat(fmt){
+  if (!SAVON_FORMATS[fmt] || !document.getElementById('slide-grand')) return;
+  currentFormat = fmt; var format = SAVON_FORMATS[fmt]; FP_PRIX = format.prix; FP_NOM = format.nom;
+  ['grand','petit'].forEach(function(name){
+    ['slide','dot','thumb','btn'].forEach(function(prefix){ var node=document.getElementById(prefix+'-'+name); if(node) node.classList.toggle('active',name===fmt); });
+  });
+  document.getElementById('fpPriceDisplay').textContent=FP_PRIX.toLocaleString('fr-FR')+' FCFA';
+  document.getElementById('fpFormatBadgeCurrent').textContent=format.badge||((fmt==='grand'?'Grand pot':'Petit pot')+' sélectionné');
+  document.getElementById('fpFormNom').value=FP_NOM+' - '+FP_PRIX+' F'; updateTotal();
+}
+function toggleFormatSlide(){setFormat(currentFormat==='grand'?'petit':'grand');}
 
+/* ---- Quantité & Total ---- */
 function changeQty(delta){
   var input = document.getElementById('fpQty');
-  var val = Math.max(1, Math.min(999, parseInt(input.value||1) + delta));
+  var val   = Math.max(1, Math.min(999, parseInt(input.value||1) + delta));
   input.value = val;
   updateTotal();
 }
 function updateTotal(){
-  var qty = Math.max(1, parseInt(document.getElementById('fpQty').value)||1);
-  if(FP_PRIX > 0){
-    var total = FP_PRIX * qty;
-    document.getElementById('fpTotal').textContent = total.toLocaleString('fr-FR') + ' FCFA';
-    document.getElementById('fpFormTotal').value = total;
-  } else {
-    document.getElementById('fpTotal').textContent = 'Prix à renseigner';
-  }
-  document.getElementById('fpFormQty').value = qty;
+  var qty   = Math.max(1, parseInt(document.getElementById('fpQty').value)||1);
+  var unit = [].filter(function(p){return p.min<=qty}).reduce(function(price,p){return Math.min(price,p.price)},FP_PRIX);
+  var total = unit * qty;
+  document.getElementById('fpTotal').textContent =
+    total.toLocaleString('fr-FR') + ' FCFA';
+  document.getElementById('fpFormQty').value   = qty;
+  document.getElementById('fpFormTotal').value = total;
 }
 
-function switchSheetTab(tabId, btn){
-  document.querySelectorAll('.fp-sheet-tab').forEach(function(b){b.classList.remove('active');});
-  document.querySelectorAll('.fp-sheet-pane').forEach(function(p){p.classList.remove('active');});
-  btn.classList.add('active');
-  var pane = document.getElementById('tab-pane-' + tabId);
-  if(pane) pane.classList.add('active');
-}
-
+/* ---- Vérification numéros ---- */
 function verifyTel(){
-  var t1 = document.getElementById('fTel').value.trim();
-  var t2 = document.getElementById('fTelConfirm').value.trim();
+  var t1  = document.getElementById('fTel').value.trim();
+  var t2  = document.getElementById('fTelConfirm').value.trim();
   var err = document.getElementById('fTelError');
-  var ok = (t1 === t2 && t1 !== '');
+  var ok  = (t1 === t2 && t1 !== '');
   err.style.display = (!ok && t2 !== '') ? 'flex' : 'none';
+  document.getElementById('fTel').classList.toggle('input-error', !ok && t2!=='');
+  document.getElementById('fTelConfirm').classList.toggle('input-error', !ok && t2!=='');
   return ok;
 }
 document.getElementById('fTelConfirm').addEventListener('input', verifyTel);
 document.getElementById('fTel').addEventListener('input', verifyTel);
 
+/* ---- Afficher le récapitulatif ---- */
 function showRecap(e){
   e.preventDefault();
+  // Vérification numéros
   if(!verifyTel()){
     document.getElementById('fTelError').style.display = 'flex';
     document.getElementById('fTelConfirm').focus();
     return;
   }
-  var qty = parseInt(document.getElementById('fpFormQty').value);
+  var qty   = parseInt(document.getElementById('fpFormQty').value);
+  var total = parseInt(document.getElementById('fpFormTotal').value);
+  // Remplir le récap
   document.getElementById('rNom').textContent     = document.getElementById('fNom').value;
   document.getElementById('rVille').textContent   = document.getElementById('fVille').value;
+  document.getElementById('rQuartier').textContent= document.getElementById('fQuartier').value;
   document.getElementById('rWa').textContent      = document.getElementById('fWa').value;
-  document.getElementById('rQty').textContent     = qty + ' pack' + (qty>1?'s':'');
-  document.getElementById('rTotal').textContent   = FP_PRIX > 0 ? (FP_PRIX * qty).toLocaleString('fr-FR') + ' FCFA' : 'Prix à confirmer';
+  document.getElementById('rTel').textContent     = document.getElementById('fTel').value;
+  document.getElementById('rQty').textContent     = qty + ' unité' + (qty>1?'s':'');
+  document.getElementById('rTotal').textContent   = total.toLocaleString('fr-FR') + ' FCFA';
+  // Ouvrir
   document.getElementById('recapOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -396,20 +2025,29 @@ function closeRecap(){
   document.getElementById('recapOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+/* ---- Soumettre la commande ---- */
 function submitCommande(){
   var btn = document.getElementById('recapValiderBtn');
   btn.disabled = true;
   btn.innerHTML = '<i class="ri-loader-4-line" style="animation:spin 1s linear infinite"></i>Validation...';
+
   var form = document.getElementById('fpOrderForm');
   var data = new FormData(form);
-  fetch('/api/commande_submit.php', {method:'POST', body:data})
+
+  fetch('/api/commande_submit', {method:'POST', body:data})
   .then(function(r){ return r.json(); })
   .then(function(res){
-    if(res.success){
+    if(res.success && res.commande_id){
+      // Fermer recap
       closeRecap();
+      // Remplir page succès
       document.getElementById('succesNom').textContent = document.getElementById('fNom').value;
+      document.getElementById('succesNum').textContent = '#' + res.commande_id;
+      // Afficher succès
       document.getElementById('succesOverlay').style.display = 'flex';
       document.body.style.overflow = 'hidden';
+      // Réinitialiser form
       form.reset();
       updateTotal();
     } else {
@@ -417,7 +2055,7 @@ function submitCommande(){
       var msg = document.getElementById('fpOrderMsg');
       msg.style.display = 'block';
       msg.className = 'fp-form-result error';
-      msg.textContent = res.message || 'Erreur commande.';
+      msg.textContent = res.message || 'Commande non confirmée. Réessayez.';
     }
   })
   .catch(function(){
@@ -425,25 +2063,52 @@ function submitCommande(){
     var msg = document.getElementById('fpOrderMsg');
     msg.style.display = 'block';
     msg.className = 'fp-form-result error';
-    msg.textContent = 'Erreur réseau. Vous pouvez commander directement sur WhatsApp.';
+    msg.textContent = 'Erreur réseau. Contactez-nous directement sur WhatsApp.';
   })
   .finally(function(){
     btn.disabled = false;
     btn.innerHTML = '<i class="ri-check-double-line"></i>Valider la commande';
   });
 }
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Duo Éclat",
-  "description": "Gel Clarifiant+ et Savon Gommant pour une peau unifiée et lumineuse.",
-  "image": "https://iboukouncosmetics.com/produit/duo-eclat.png",
-  "brand": {"@type": "Brand", "name": "Iboukoun Cosmetics"}
+/* ---- Photo gallery ---- */
+function switchPhoto(src, el){
+  document.getElementById('fpMainImg').src = src;
+  document.querySelectorAll('.fp-thumb').forEach(function(t){t.classList.remove('active');});
+  el.classList.add('active');
 }
-</script>
-</body>
-</html>
 
+/* ---- Lightbox ---- */
+function openLightbox(src){
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){ closeLightbox(); closeRecap(); }
+});
+
+/* ---- Reveal ---- */
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){en.target.classList.add('visible');obs.unobserve(en.target);}
+    });
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+})();
+
+var s = document.createElement('style');
+s.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(s);
+
+
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Duo Éclaircissant+","description":"Le duo de soins éclaircissants Iboukoun Cosmetics.","image":"https://www.iboukouncosmetics.com/produit/duo-eclat.png","brand":{"@type":"Brand","name":"Iboukoun Cosmetics"},"offers":{"@type":"Offer","url":"https://www.iboukouncosmetics.com/produit/duo-eclat/","price":11000,"priceCurrency":"XOF","availability":"https://schema.org/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.iboukouncosmetics.com/"},{"@type":"ListItem","position":2,"name":"Produits","item":"https://www.iboukouncosmetics.com/produits.html"},{"@type":"ListItem","position":3,"name":"Duo Éclaircissant+","item":"https://www.iboukouncosmetics.com/produit/duo-eclat/"}]}
+</script>
+</body></html>

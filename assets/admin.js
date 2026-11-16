@@ -46,7 +46,7 @@ const specs={
  categories:{title:'Catégories',fields:['nom','slug'],list:['nom','slug']},
  produit_photos:{title:'Galeries produits',fields:['produit_id','fichier','legende','ordre','is_principale'],list:['produit_id','fichier','legende','ordre','is_principale']},
  promotions:{title:'Promotions',fields:['produit_id','titre','description','prix_promo','min_unites','date_debut','date_fin','actif'],list:['titre','prix_promo','min_unites','date_fin','actif']},
- commandes_formulaire:{title:'Commandes',fields:['statut','notes'],list:['nom_client','telephone','telephone_appel','ville','quartier','produit_id','quantite','prix_unitaire','prix_total','statut','created_at'],noCreate:true},
+ commandes_formulaire:{title:'Commandes',fields:['statut','notes'],list:['nom_client','telephone','telephone_appel','ville','quartier','produit_id','quantite','prix_unitaire','prix_total','notes','statut','created_at'],noCreate:true},
  commandes_whatsapp:{title:'Clics WhatsApp',fields:['statut','notes'],list:['nom_client','produit','source','statut','created_at'],noCreate:true},
  revendeurs:{title:'Revendeurs',fields:['statut','notes'],list:['nom','ville','telephone','statut','created_at'],noCreate:true},
  messages:{title:'Messages',fields:['lu'],list:['nom','email','telephone','sujet','message','lu','created_at'],noCreate:true},
@@ -74,8 +74,47 @@ const textareas=['description','benefices','message','bio','notes','contenu'];
 const statuses={commandes_formulaire:['nouveau','vu','contacte','termine'],commandes_whatsapp:['nouveau','en_cours','livre','annule'],revendeurs:['nouveau','contacte','actif','inactif']};
 const pk=t=>t==='parametres'?'cle':t==='pages_contenu'?'slug':'id';
 function notify(message,error=false){$('#notice').textContent=message;$('#notice').classList.toggle('error',error);}
-function mediaUrl(key,value){
- if(typeof value!=='string'||!value.trim())return '';
+const defaultProductImagesBySlug={
+ 'savon-gommant':'/produit/savon-gommant.jpg',
+ 'savon-gommant-petit-pot':'/produit/savon-gommant-petit-pot.jpg',
+ 'savon-gommant-premium':'/produit/savon-gommant-premium.jpg',
+ 'creme-visage':'/produit/creme-visage.jpg',
+ 'duo-eclat':'/produit/duo-eclat.jpg',
+ 'duo-eclaircissant-plus':'/produit/duo-eclat.jpg',
+ 'gel-clarifiant-plus':'/produit/gel-clarifiant+.jpg',
+ 'gel-clarifiant':'/produit/gel-clarifiant+.jpg',
+ 'lotion-anti-quinto':'/produit/lotion-anti-quinto.jpg',
+ 'serum-anti-tache':'/produit/serum-anti-tache.jpg',
+ 'serum-eclat':'/produit/serum-anti-tache.jpg',
+ 'huile-eclat':'/produit/huile-eclat.png',
+ 'savon-antiseptique':'/produit/savon-antiseptique.jpg',
+ 'aisselles-chic':'/assets/images/aiselle-chic-application.png',
+ 'pack-savon-antiseptique-creme-visage':'/assets/images/savon-antiseptique-creme.png',
+ 'pack-savon-gommant-premium-creme-visage':'/assets/images/offre-special-gommant-creme.png'
+};
+const defaultProductImagesById={
+ 1:'/assets/images/aiselle-chic-application.png',
+ 2:'/produit/savon-gommant.jpg',
+ 3:'/produit/serum-anti-tache.jpg',
+ 4:'/produit/huile-eclat.png',
+ 5:'/produit/savon-gommant-premium.jpg',
+ 6:'/produit/gel-clarifiant+.jpg',
+ 7:'/produit/savon-antiseptique.jpg',
+ 8:'/produit/duo-eclat.jpg',
+ 9:'/produit/lotion-anti-quinto.jpg',
+ 10:'/produit/creme-visage.jpg',
+ 11:'/assets/images/savon-antiseptique-creme.png',
+ 12:'/assets/images/offre-special-gommant-creme.png'
+};
+function mediaUrl(key,value,row=null){
+ if(typeof value!=='string'||!value.trim()){
+  if(table==='produits'&&key==='image'&&row){
+   if(row.slug&&defaultProductImagesBySlug[row.slug])return defaultProductImagesBySlug[row.slug];
+   if(row.id&&defaultProductImagesById[row.id])return defaultProductImagesById[row.id];
+   if(row.slug)return '/produit/'+encodeURIComponent(row.slug)+'.jpg';
+  }
+  return '';
+ }
  const path=value.trim();
  if(/^https?:\/\//i.test(path))return path;
  if(path.startsWith('/'))return path;
@@ -91,10 +130,14 @@ function mediaUrl(key,value){
  const folders={produit_photos:'produits/photos',temoignages:'temoignages',equipe:'equipe',egeries:'egeries',accueil_sections:'accueil'};
  return '/uploads/'+(folders[table]||'produits')+'/'+filename.split('/').map(encodeURIComponent).join('/');
 }
-function imagePreview(key,value,alt){
- const src=mediaUrl(key,value);
+function imagePreview(key,value,alt,row=null){
+ const src=mediaUrl(key,value,row);
  if(!src)return null;
  const image=element('img');image.className='admin-image-preview';image.src=src;image.alt=alt||labels[key]||'Image';image.loading='lazy';
+ image.onerror=()=>{
+  if(image.src.endsWith('.jpg'))image.src=image.src.replace(/\.jpg$/,'.png');
+  else if(image.src.endsWith('.png')&&!image.src.includes('/assets/images/'))image.src='/assets/images/'+image.src.split('/').pop();
+ };
  return image;
 }
 function saveSession(value){session=value;if(value)sessionStorage.setItem('iboukoun-admin',JSON.stringify(value));else sessionStorage.removeItem('iboukoun-admin');}
@@ -283,7 +326,7 @@ $('#search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer
 function query(){
  const params=new URLSearchParams({select:'*',order:pk(table)==='id'?'id.desc':pk(table)+'.asc'});
  const q=$('#search').value.replace(/[^\p{L}\p{N}\s@+_-]/gu,'').trim();
- if(q){const fields=specs[table].list.filter(f=>['nom','nom_client','ville','telephone','titre','message','sujet','slug','cle','page'].includes(f));if(fields.length)params.set('or','('+fields.map(f=>f+'.ilike.*'+q+'*').join(',')+')');}
+ if(q){const fields=specs[table].list.filter(f=>['nom','nom_client','ville','telephone','titre','message','sujet','slug','cle','page','notes'].includes(f));if(fields.length)params.set('or','('+fields.map(f=>f+'.ilike.*'+q+'*').join(',')+')');}
  return params.toString();
 }
 async function load(){
@@ -295,22 +338,87 @@ async function load(){
  if(table==='produits'){
   const categories=await(await api('/rest/v1/categories?select=id,nom&order=nom')).json();
   for(const category of categories)referenceNames.set(String(category.id),category.nom);
- }else if(table==='temoignages'){
+ }else if(table==='temoignages'||table==='commandes_formulaire'){
   const products=await(await api('/rest/v1/produits?select=id,nom&order=nom')).json();
   for(const product of products)referenceNames.set(String(product.id),product.nom);
  }
  if(current!==table)return;
  const grid=element('table'),head=element('tr');for(const key of specs[table].list)head.append(element('th',labels[key]||key));if(!specs[table].readOnly)head.append(element('th','Actions'));const thead=element('thead');thead.append(head);grid.append(thead);const tbody=element('tbody');grid.append(tbody);
- for(const row of rows){const tr=element('tr');for(const key of specs[table].list){const val=row[key],cell=element('td');if(imageFields.includes(key)&&val){cell.classList.add('media-cell');const preview=imagePreview(key,val,labels[key]||key);if(preview)cell.append(preview);cell.append(element('span',val));}else if(['categorie_id','produit_id'].includes(key)&&referenceNames.has(String(val)))cell.textContent=referenceNames.get(String(val));else cell.textContent=typeof val==='boolean'?(val?'Oui':'Non'):val??'—';tr.append(cell);}
-  if(!specs[table].readOnly){const cell=element('td');cell.append(button('Modifier',()=>edit(row)));cell.append(button('Supprimer',async()=>{
-   if(!confirm('Supprimer cet enregistrement ?'))return;
-   let gallery=[];
-   if(table==='produits')gallery=await(await api('/rest/v1/produit_photos?select=fichier&produit_id=eq.'+row.id)).json();
-   await api('/rest/v1/'+table+'?'+pk(table)+'=eq.'+encodeURIComponent(row[pk(table)]),{method:'DELETE'});
-   try{await deleteMedia(table,row);for(const photo of gallery)await deleteMedia('produit_photos',photo);}
-   catch{await load();notify('Enregistrement supprimé. La suppression de certaines images Storage a échoué ; vérifiez le bucket media.',true);return;}
-   await load();notify('Enregistrement supprimé.');
-  },'danger'));tr.append(cell);}tbody.append(tr);
+ for(const row of rows){
+  const tr=element('tr');
+  for(const key of specs[table].list){
+   const val=row[key],cell=element('td');
+   if(table==='commandes_formulaire'&&['telephone','telephone_appel'].includes(key)&&val){
+    const digits=String(val).replace(/\D/g,'');
+    if(digits.length>=8&&digits.length<=15){
+     const fullDigits=digits.startsWith('229')?digits:'229'+digits;
+     const link=element('a',String(val));
+     if(key==='telephone_appel'){
+      link.href='tel:+'+fullDigits;
+      link.title='Appeler directement';
+     }else{
+      link.href='https://wa.me/'+fullDigits+'?text='+encodeURIComponent('Bonjour '+(row.nom_client||'')+', je vous contacte au sujet de votre commande '+(referenceNames.get(String(row.produit_id))||'')+'.');
+      link.target='_blank';link.rel='noopener noreferrer';
+      link.title='Contacter sur WhatsApp';
+     }
+     cell.append(link);
+    }else cell.textContent=String(val);
+   }else if(table==='produits'&&key==='image'){
+    cell.classList.add('media-cell');
+    const preview=imagePreview(key,val,labels[key]||key,row);
+    if(preview)cell.append(preview);
+    cell.append(element('span',val||(row?.slug?row.slug+'.jpg':'—')));
+   }else if(imageFields.includes(key)&&val){
+    cell.classList.add('media-cell');
+    const preview=imagePreview(key,val,labels[key]||key,row);
+    if(preview)cell.append(preview);
+    cell.append(element('span',val));
+   }else if(table==='temoignages'&&key==='produit_id'){
+    if(val&&referenceNames.has(String(val)))cell.textContent=referenceNames.get(String(val));
+    else cell.textContent='Tous les produits';
+   }else if(table==='temoignages'&&key==='nom_client'&&!val&&row.type==='screenshot'){
+    cell.textContent='Capture d’avis';
+   }else if(['categorie_id','produit_id'].includes(key)&&referenceNames.has(String(val))){
+    cell.textContent=referenceNames.get(String(val));
+   }else cell.textContent=typeof val==='boolean'?(val?'Oui':'Non'):val??'—';
+   tr.append(cell);
+  }
+  if(!specs[table].readOnly){
+   const cell=element('td');
+   cell.append(button('Modifier',()=>edit(row)));
+   if(table==='commandes_formulaire'){
+    const waDigits=String(row.telephone||'').replace(/\D/g,'');
+    if(waDigits.length>=8){
+     const fullWa=waDigits.startsWith('229')?waDigits:'229'+waDigits;
+     const prodNom=referenceNames.get(String(row.produit_id))||'votre commande';
+     const waMsg='Bonjour '+(row.nom_client||'')+', nous vous contactons depuis Iboukoun Cosmetics au sujet de votre commande ('+prodNom+'). Confirmez-vous votre adresse de livraison à '+(row.ville||'')+(row.quartier?' ('+row.quartier+')':'')+' ?';
+     const waBtn=element('a','WhatsApp');waBtn.className='button secondary';waBtn.target='_blank';waBtn.rel='noopener noreferrer';waBtn.href='https://wa.me/'+fullWa+'?text='+encodeURIComponent(waMsg);waBtn.style.marginLeft='4px';waBtn.style.color='#1b5e20';
+     cell.append(waBtn);
+    }
+    const telDigits=String(row.telephone_appel||row.telephone||'').replace(/\D/g,'');
+    if(telDigits.length>=8){
+     const fullTel=telDigits.startsWith('229')?telDigits:'229'+telDigits;
+     const callBtn=element('a','Appel');callBtn.className='button secondary';callBtn.href='tel:+'+fullTel;callBtn.style.marginLeft='4px';
+     cell.append(callBtn);
+    }
+    const emailMatch=row.email||(typeof row.notes==='string'&&row.notes.match(/[\w.+-]+@[\w.-]+\.[a-z]{2,}/i)?.[0]);
+    if(emailMatch){
+     const mailBtn=element('a','Email');mailBtn.className='button secondary';mailBtn.href='mailto:'+emailMatch+'?subject='+encodeURIComponent('Votre commande Iboukoun Cosmetics');mailBtn.style.marginLeft='4px';
+     cell.append(mailBtn);
+    }
+   }
+   cell.append(button('Supprimer',async()=>{
+    if(!confirm('Supprimer cet enregistrement ?'))return;
+    let gallery=[];
+    if(table==='produits')gallery=await(await api('/rest/v1/produit_photos?select=fichier&produit_id=eq.'+row.id)).json();
+    await api('/rest/v1/'+table+'?'+pk(table)+'=eq.'+encodeURIComponent(row[pk(table)]),{method:'DELETE'});
+    try{await deleteMedia(table,row);for(const photo of gallery)await deleteMedia('produit_photos',photo);}
+    catch{await load();notify('Enregistrement supprimé. La suppression de certaines images Storage a échoué ; vérifiez le bucket media.',true);return;}
+    await load();notify('Enregistrement supprimé.');
+   },'danger'));
+   tr.append(cell);
+  }
+  tbody.append(tr);
  }
  $('#content').replaceChildren(rows.length?grid:element('p','Aucun enregistrement.'));
  $('#pagination').replaceChildren();const previous=button('Précédent',async()=>{page--;await load();});previous.disabled=page===0;const next=button('Suivant',async()=>{page++;await load();});next.disabled=(page+1)*25>=total;$('#pagination').append(previous,element('span',`${total} résultat(s) · Page ${page+1}`),next);
@@ -346,9 +454,9 @@ async function edit(row){
   if(['nom','slug','titre','nom_client','categorie_id','prix','prix_promo','min_unites'].includes(key))input.required=!(table==='temoignages'&&key==='nom_client'&&(row?.type==='screenshot'));
   label.append(input);
   if(imageFields.includes(key)){
-   const current=imagePreview(key,row?.[key],labels[key]||key);
+   const current=imagePreview(key,row?.[key],labels[key]||key,row);
    if(current){
-    const preview=element('div');preview.className='admin-image-current';preview.append(current,element('span',row[key]));
+    const preview=element('div');preview.className='admin-image-current';preview.append(current,element('span',row?.[key]||(table==='produits'&&row?.slug?row.slug+'.jpg':'')));
     const remove=button('Retirer du site',()=>{
      const value=label.querySelector(`input[name="${key}"]`);
      if(value)value.value='';

@@ -28,8 +28,8 @@ export function renderHomepageSections(ctx) {
   if (!rows.length) {
     rows.push(
       {section:'packs',item_type:'pack',titre:'Duo Éclaircissant+',description:'Découvrez le duo de soins éclaircissants Iboukoun.',produit_id:8,ordre:1,actif:true},
-      {section:'packs',item_type:'pack',titre:'Savon Antiseptique + Crème de Visage',description:'Deux soins réunis dans un même pack. Contactez-nous pour connaître le prix.',ordre:2,actif:true},
-      {section:'packs',item_type:'pack',titre:'Savon Gommant + Crème de Visage',description:'Une association de soins pour le corps et le visage. Contactez-nous pour connaître le prix.',ordre:3,actif:true},
+      {section:'packs',item_type:'pack',titre:'Savon Antiseptique + Crème de Visage',description:'Un soin antiseptique associé à la Crème de Visage Iboukoun.',ordre:2,actif:true},
+      {section:'packs',item_type:'pack',titre:'Savon Gommant + Crème de Visage',description:'Le Savon Gommant associé à la Crème de Visage Iboukoun.',ordre:3,actif:true},
       {section:'mission',item_type:'texte',titre:'Notre mission',description:'Chez Iboukoun Cosmetics, nous croyons qu’une belle peau commence par des soins adaptés, nourrissants et inspirés par la nature. Nos formules sont pensées pour accompagner chaque peau dans sa routine beauté.',surtitre:'Nous avons à cœur',texte_final:'Iboukoun Cosmetics, prendre soin de votre peau naturellement.',ordre:1,actif:true},
       ...Array.from({length:3},(_,index)=>({section:'mission',item_type:'image',titre:`Image de mission ${index+1}`,ordre:index+1,actif:true})),
       {section:'resultats',item_type:'texte',titre:'Nos résultats parlent d’eux-mêmes',description:'Chaque image témoigne de la confiance de notre communauté et de son expérience avec nos soins.',ordre:1,actif:true},
@@ -41,6 +41,11 @@ export function renderHomepageSections(ctx) {
     2:'savon-antiseptique-creme.png',
     3:'offre-special-gommant-creme.png'
   };
+  const defaultPackProducts = [
+    {slug:'duo-eclat',price:11000},
+    {slug:'pack-savon-antiseptique-creme-visage',price:4000},
+    {slug:'pack-savon-gommant-premium-creme-visage',price:10000}
+  ];
   const defaultMissionImages = {
     1:'equipe-iboukoun-cosmetics.png',
     2:'aiselle-chic-application.png',
@@ -63,12 +68,18 @@ export function renderHomepageSections(ctx) {
       <p class="section-sub">Des associations de soins pensées pour accompagner votre routine.</p>
     </header>
     <div class="home-packs-grid">`;
-    for (const pack of packs) {
-      const product = ctx.produits.find(item => item.id === pack.produit_id);
-      const target = product ? '/produit/' + encodeURIComponent(product.slug) + '/' : 'https://wa.me/' + encodeURIComponent(ctx.WA_NUMBER) + '?text=' + encodeURIComponent('Bonjour, je souhaite en savoir plus sur le pack ' + pack.titre + '.');
-      const price = product ? `<span class="home-pack-price">${esc(product.prix_final ?? product.prix).toLocaleString('fr-FR').replace(/\s/g, '.')} F</span>` : '<span class="home-pack-price">Prix à définir</span>';
+    for (const [index, pack] of packs.entries()) {
+      const fallbackProduct = defaultPackProducts[Number(pack.ordre) - 1]
+        || defaultPackProducts[index]
+        || defaultPackProducts[0];
+      const product = ctx.produits.find(item => item.id === pack.produit_id)
+        || ctx.produits.find(item => item.slug === fallbackProduct.slug);
+      const target = '/produit/' + encodeURIComponent(product?.slug || fallbackProduct.slug) + '/';
+      const priceValue = product?.prix_final ?? product?.prix ?? fallbackProduct.price;
+      const formattedPrice = Number(priceValue).toLocaleString('fr-FR').replace(/\s/g, '.');
+      const price = `<span class="home-pack-price">${esc(formattedPrice)} F</span>`;
       html += `<article class="home-pack-card reveal">
-        <a class="home-pack-image" href="${esc(target)}" ${product ? '' : 'target="_blank" rel="noopener noreferrer"'}>
+        <a class="home-pack-image" href="${esc(target)}">
           ${photo({...pack,image:pack.image||defaultPackImages[pack.ordre]}, ctx.supabaseUrl, pack.titre, 'home-pack-photo')}
           <span class="home-pack-image-shade"></span>
           <span class="home-pack-image-title">${esc(pack.titre)}</span>
@@ -76,7 +87,7 @@ export function renderHomepageSections(ctx) {
         </a>
         <div class="home-pack-copy">
           <p>${esc(pack.description || '')}</p>
-          <div class="home-pack-action">${price}<a href="${esc(target)}" ${product ? '' : 'target="_blank" rel="noopener noreferrer"'}>${product ? 'Voir la fiche et commander' : 'Nous contacter'} <i class="ri-arrow-right-line" aria-hidden="true"></i></a></div>
+          <div class="home-pack-action">${price}<a href="${esc(target)}">Voir la fiche et commander <i class="ri-arrow-right-line" aria-hidden="true"></i></a></div>
         </div>
       </article>`;
     }

@@ -1,4 +1,4 @@
-
+﻿
 (function(){
   var els=document.querySelectorAll('.reveal');
   if(!els.length)return;
@@ -24,7 +24,7 @@ function logWA(produit,source){
 function orderWA(produitNom,source){
   logWA(produitNom,source||'fiche_produit');
   var msg='Bonjour, je souhaite commander : *'+produitNom+'* 🌿';
-  window.open('https://wa.me/22901695300?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/2290169156300?text='+encodeURIComponent(msg),'_blank');
 }
 
 document.querySelectorAll('.faq-question').forEach(function(btn){
@@ -35,3 +35,4 @@ document.querySelectorAll('.faq-question').forEach(function(btn){
     if(!isOpen)item.classList.add('open');
   });
 });
+

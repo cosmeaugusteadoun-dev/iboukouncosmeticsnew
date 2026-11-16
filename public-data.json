@@ -1,11 +1,11 @@
-{
+﻿{
     "accueil_sections":  [
                          {
                              "id":  16,
                              "section":  "packs",
                              "item_type":  "pack",
                              "titre":  "Duo Éclaircissant+",
-                             "description":  "Découvrez le duo de soins éclaircissants Iboukoun.",
+                             "description":  "Le duo de soins éclaircissants Iboukoun Cosmetics.",
                              "produit_id":  8,
                              "image":  "duo-eclat.png",
                              "ordre":  1,
@@ -16,7 +16,8 @@
                              "section":  "packs",
                              "item_type":  "pack",
                              "titre":  "Savon Antiseptique + Crème de Visage",
-                             "description":  "Deux soins réunis dans un même pack. Contactez-nous pour connaître le prix.",
+                             "description":  "Un soin antiseptique associé à la Crème de Visage Iboukoun.",
+                             "produit_id":  11,
                              "image":  "savon-antiseptique-creme.png",
                              "ordre":  2,
                              "actif":  true
@@ -26,7 +27,8 @@
                              "section":  "packs",
                              "item_type":  "pack",
                              "titre":  "Savon Gommant + Crème de Visage",
-                             "description":  "Une association de soins pour le corps et le visage. Contactez-nous pour connaître le prix.",
+                             "description":  "Le Savon Gommant associé à la Crème de Visage Iboukoun.",
+                             "produit_id":  12,
                              "image":  "offre-special-gommant-creme.png",
                              "ordre":  3,
                              "actif":  true
@@ -37,7 +39,7 @@
                              "item_type":  "texte",
                              "titre":  "Notre mission",
                              "description":  "Chez Iboukoun Cosmetics, nous croyons qu’une belle peau commence par des soins adaptés, nourrissants et inspirés par la nature. Nos formules sont pensées pour accompagner chaque peau dans sa routine beauté.",
-                             "surtitre":  "Nous avons à cœur",
+                             "surtitre":  "Nous avons à cÅ“ur",
                              "texte_final":  "Iboukoun Cosmetics, prendre soin de votre peau naturellement.",
                              "ordre":  1,
                              "actif":  true
@@ -227,7 +229,7 @@
                        },
                        {
                            "slug":  "deodorant",
-                           "nom":  "DÃ©odorant naturel",
+                           "nom":  "Déodorant naturel",
                            "id":  3
                        }
                    ],
@@ -236,121 +238,145 @@
                          "categorie_id":  3,
                          "nom":  "Aisselles Chic",
                          "slug":  "aisselles-chic",
-                         "description":  "DÃ©odorant naturel combat les odeurs, rÃ©duit la transpiration. Sans parfum ni sels d\u0027aluminium.",
+                         "description":  "Déodorant naturel combat les odeurs, réduit la transpiration. Sans parfum ni sels d\u0027aluminium.",
                          "prix":  2000,
                          "stock":  100,
                          "id":  1,
                          "actif":  1,
                          "image":  "aiselle-chic.png",
-                         "benefices":  "100% naturel\nSans sels d\u0027aluminium\nEfficacitÃ© 24h"
+                         "benefices":  "100% naturel\nSans sels d\u0027aluminium\nEfficacité 24h"
                      },
                      {
                          "categorie_id":  1,
                          "nom":  "Savon Gommant",
                          "slug":  "savon-gommant",
-                         "description":  "DÃ©barrasse la peau des cellules mortes et ravive le teint sans le dÃ©caper. PrÃ©sentÃ© en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).",
+                         "description":  "Débarrasse la peau des cellules mortes et ravive le teint sans le décaper. Présenté en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).",
                          "prix":  6000,
                          "stock":  80,
                          "id":  2,
                          "actif":  1,
                          "image":  "savon-gommant.png",
-                         "benefices":  "Exfoliation naturelle douce\nÃ‰limine les cellules mortes\nRavive le teint sans dÃ©caper\nDeux formats : Grand pot \u0026 Petit pot"
+                         "benefices":  "Exfoliation naturelle douce\nÉlimine les cellules mortes\nRavive le teint sans décaper\nDeux formats : Grand pot \u0026 Petit pot"
                      },
                      {
                          "categorie_id":  2,
-                         "nom":  "SÃ©rum Anti-taches \u0026 Ã‰clat",
+                         "nom":  "Sérum Anti-taches \u0026 Éclat",
                          "slug":  "serum-anti-tache",
-                         "description":  "SÃ©rum unifiant, formulÃ© pour rÃ©duire les taches pigmentaires et prÃ©venir l\u0027hyperpigmentation.",
+                         "description":  "Sérum unifiant, formulé pour réduire les taches pigmentaires et prévenir l\u0027hyperpigmentation.",
                          "prix":  5000,
                          "stock":  50,
                          "id":  3,
                          "actif":  1,
                          "image":  "serum-anti-tache.png",
-                         "benefices":  "RÃ©duit les taches pigmentaires\nUniformise le grain de peau\nTexture lÃ©gÃ¨re et fluide\nPÃ©nÃ©tration rapide"
+                         "benefices":  "Réduit les taches pigmentaires\nUniformise le grain de peau\nTexture légère et fluide\nPénétration rapide"
                      },
                      {
                          "categorie_id":  1,
-                         "nom":  "Huile Ã‰clat",
+                         "nom":  "Huile Éclat",
                          "slug":  "huile-eclat",
-                         "description":  "Huile prÃ©cieuse pour nourrir et illuminer la peau. Absorption rapide.",
+                         "description":  "Huile précieuse pour nourrir et illuminer la peau. Absorption rapide.",
                          "prix":  4500,
                          "stock":  60,
                          "id":  4,
                          "actif":  1,
                          "image":  "huile-eclat.png",
-                         "benefices":  "Nutrition intense\nFini satinÃ© non gras\nIllumine le teint"
+                         "benefices":  "Nutrition intense\nFini satiné non gras\nIllumine le teint"
                      },
                      {
                          "categorie_id":  1,
                          "nom":  "Savon Gommant Premium",
                          "slug":  "savon-gommant-premium",
-                         "description":  "Donne de l\u0027Ã©clat et uniformise votre teint. Formule enrichie au collagÃ¨ne, miel et huile d\u0027amande douce.",
+                         "description":  "Donne de l\u0027éclat et uniformise votre teint. Formule enrichie au collagène, miel et huile d\u0027amande douce.",
                          "prix":  7000,
                          "stock":  50,
                          "id":  5,
                          "actif":  1,
                          "image":  "savon-gommant-premium.png",
-                         "benefices":  "Formule enrichie au collagÃ¨ne\nDonne de l\u0027Ã©clat et uniformise\nAdoucit et hydrate en profondeur"
+                         "benefices":  "Formule enrichie au collagène\nDonne de l\u0027éclat et uniformise\nAdoucit et hydrate en profondeur"
                      },
                      {
                          "categorie_id":  1,
                          "nom":  "Gel Clarifiant +",
                          "slug":  "gel-clarifiant-plus",
-                         "description":  "Clarifie et uniformise le teint en lui redonnant son Ã©clat normal.",
+                         "description":  "Clarifie et uniformise le teint en lui redonnant son éclat normal.",
                          "prix":  5000,
                          "stock":  50,
                          "id":  6,
                          "actif":  1,
                          "image":  "gel-clarifiant+.png",
-                         "benefices":  "Clarifie et uniformise\nRedonne l\u0027Ã©clat naturel\nNettoyage doux pour le bain"
+                         "benefices":  "Clarifie et uniformise\nRedonne l\u0027éclat naturel\nNettoyage doux pour le bain"
                      },
                      {
                          "categorie_id":  1,
                          "nom":  "Savon Antiseptique",
                          "slug":  "savon-antiseptique",
-                         "description":  "Fait Ã  base de racines et de plantes. Traite les dÃ©mangeaisons, teignes, acnÃ©s, bourbouilles et dartres.",
+                         "description":  "Fait à base de racines et de plantes. Traite les démangeaisons, teignes, acnés, bourbouilles et dartres.",
                          "prix":  3000,
                          "stock":  50,
                          "id":  7,
                          "actif":  1,
                          "image":  "savon-antiseptique.png",
-                         "benefices":  "Base de racines et plantes mÃ©dicinales\nTraite dÃ©mangeaisons et dartres\nLutte contre acnÃ©s et bourbouilles"
+                         "benefices":  "Base de racines et plantes médicinales\nTraite démangeaisons et dartres\nLutte contre acnés et bourbouilles"
                      },
                      {
                          "categorie_id":  1,
-                         "nom":  "Duo Ã‰clat",
+                         "nom":  "Duo Éclaircissant+",
                          "slug":  "duo-eclat",
-                         "description":  "Le duo parfait : Gel Clarifiant+ et Savon Gommant pour une peau nette, bien gommÃ©e et Ã©clatante.",
-                         "prix":  10000,
+                         "description":  "Le duo de soins éclaircissants Iboukoun Cosmetics.",
+                         "prix":  11000,
                          "stock":  30,
                          "id":  8,
                          "actif":  1,
                          "image":  "duo-eclat.png",
-                         "benefices":  "Pack Ã©conomique 2 soins complÃ©mentaires\nExfoliation et nettoyage clarifiant\nRÃ©sultats optimaux et durables"
+                         "benefices":  "Deux soins complémentaires\nRoutine éclaircissante\nFormat économique"
                      },
                      {
                          "categorie_id":  1,
                          "nom":  "Lotion Anti Quinto",
                          "slug":  "lotion-anti-quinto",
-                         "description":  "Solution ciblÃ©e pour estomper les quintos, phalanges sombres, jointures, coudes et genoux rebelles.",
+                         "description":  "Solution ciblée pour estomper les quintos, phalanges sombres, jointures, coudes et genoux rebelles.",
                          "prix":  3000,
                          "stock":  50,
                          "id":  9,
                          "actif":  1,
                          "image":  "lotion-anti-quinto.png",
-                         "benefices":  "Ã‰claircit les jointures sombres\nAction ciblÃ©e anti-quintos\nApplication locale facile"
+                         "benefices":  "Éclaircit les jointures sombres\nAction ciblée anti-quintos\nApplication locale facile"
                      },
                      {
                          "categorie_id":  2,
-                         "nom":  "CrÃ¨me de Visage",
+                         "nom":  "Crème de Visage",
                          "slug":  "creme-visage",
-                         "description":  "Soin hydratant, nourrissant et unifiant spÃ©cialement formulÃ© pour la peau dÃ©licate du visage.",
+                         "description":  "Soin hydratant, nourrissant et unifiant spécialement formulé pour la peau délicate du visage.",
                          "prix":  4000,
                          "stock":  50,
                          "id":  10,
                          "actif":  1,
                          "image":  "creme-visage.png",
-                         "benefices":  "Hydratation quotidienne intense\nProtÃ¨ge la peau dÃ©licate du visage\nIllumine et unifie le teint"
+                         "benefices":  "Hydratation quotidienne intense\nProtège la peau délicate du visage\nIllumine et unifie le teint"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Savon Antiseptique + Crème de Visage",
+                         "slug":  "pack-savon-antiseptique-creme-visage",
+                         "description":  "Un soin antiseptique associé à la Crème de Visage Iboukoun.",
+                         "prix":  4000,
+                         "stock":  50,
+                         "id":  11,
+                         "actif":  1,
+                         "image":  "savon-antiseptique-creme.png",
+                         "benefices":  "Savon antiseptique et Crème de Visage\nDeux soins complémentaires\nRoutine complète"
+                     },
+                     {
+                         "categorie_id":  1,
+                         "nom":  "Savon Gommant + Crème de Visage",
+                         "slug":  "pack-savon-gommant-premium-creme-visage",
+                         "description":  "Le Savon Gommant associé à la Crème de Visage Iboukoun.",
+                         "prix":  10000,
+                         "stock":  50,
+                         "id":  12,
+                         "actif":  1,
+                         "image":  "offre-special-gommant-creme.png",
+                         "benefices":  "Savon gommant et Crème de Visage\nDeux soins complémentaires\nRoutine corps et visage"
                      }
                  ],
     "promotions":  [
@@ -415,7 +441,7 @@
                             "ville":  null,
                             "produit_id":  null,
                             "note":  1,
-                            "message":  "Iboukoun cosmétiques c\u0027est la meilleure recommandation que je puisse faire à mon entourage pour finir avec les imperfections corporelles 😍 😍 et aujourd\u0027hui j\u0027ai un joli teint sans aucune imperfections 🥰 😍 😘 c\u0027est la référence aufaite ❤️ ❤️",
+                            "message":  "Iboukoun cosmétiques c\u0027est la meilleure recommandation que je puisse faire à mon entourage pour finir avec les imperfections corporelles 😍 😍 et aujourd\u0027hui j\u0027ai un joli teint sans aucune imperfections 🥰 😍 😘 c\u0027est la référence aufaite ❤ï¸ ❤ï¸",
                             "type":  "texte",
                             "screenshot":  null,
                             "visible":  true,
@@ -428,7 +454,7 @@
                             "ville":  null,
                             "produit_id":  null,
                             "note":  5,
-                            "message":  "Ces produits sont les meilleurs que j\u0027ai eu à utiliser sans être déçu et je recommande vivement surtout le savon gommant 😍 ❤️",
+                            "message":  "Ces produits sont les meilleurs que j\u0027ai eu à utiliser sans être déçu et je recommande vivement surtout le savon gommant 😍 ❤ï¸",
                             "type":  "texte",
                             "screenshot":  null,
                             "visible":  true,
@@ -454,7 +480,7 @@
                             "ville":  null,
                             "produit_id":  null,
                             "note":  5,
-                            "message":  "En matière de cosmétiques naturels corporelle, Iboukoun est la meilleure 🥰 ❤️",
+                            "message":  "En matière de cosmétiques naturels corporelle, Iboukoun est la meilleure 🥰 ❤ï¸",
                             "type":  "texte",
                             "screenshot":  null,
                             "visible":  true,
@@ -480,7 +506,7 @@
                             "ville":  null,
                             "produit_id":  null,
                             "note":  5,
-                            "message":  "J’ai testé les produits IBOUKOUN et j’ai vraiment aimé le résultat sur ma peau. Mon teint est plus propre, plus doux et lumineux. C’est tout simplement waoh❤️",
+                            "message":  "J’ai testé les produits IBOUKOUN et j’ai vraiment aimé le résultat sur ma peau. Mon teint est plus propre, plus doux et lumineux. C’est tout simplement waoh❤ï¸",
                             "type":  "texte",
                             "screenshot":  null,
                             "visible":  true,
@@ -686,7 +712,7 @@
     "parametres":  [
                        {
                            "cle":  "whatsapp_number",
-                           "valeur":  "22901695300"
+                           "valeur":  "2290169156300"
                        },
                        {
                            "cle":  "facebook_url",
@@ -702,7 +728,7 @@
                        },
                        {
                            "cle":  "adresse",
-                           "valeur":  "Parakou, BÃ©nin"
+                           "valeur":  "Parakou, Bénin"
                        },
                        {
                            "cle":  "email_contact",
@@ -710,7 +736,7 @@
                        },
                        {
                            "cle":  "horaires",
-                           "valeur":  "Lunâ€“Sam : 8hâ€“20h"
+                           "valeur":  "Lun–Sam : 8h–20h"
                        },
                        {
                            "cle":  "site_nom",
@@ -737,3 +763,4 @@
 
                ]
 }
+

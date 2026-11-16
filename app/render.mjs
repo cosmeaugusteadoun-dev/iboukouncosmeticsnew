@@ -26,12 +26,15 @@ function productImageUrl(image, supabaseUrl) {
   if (value.startsWith('/')&&!/^\/uploads\/produits\//i.test(value)) return value;
   return '/produit/'+encodeURIComponent(filename);
 }
-function testimonialImageUrl(image) {
+function testimonialImageUrl(image, supabaseUrl) {
   if (!image) return null;
   const value=String(image).trim();
   if (/^(?:https?:)?\/\//i.test(value)||value.startsWith('/')) return value;
-  if (/^assets\/images\/[a-z0-9_.-]+$/i.test(value)) return '/'+value;
   const filename=value.split(/[\\/]/).pop();
+  if (/^sb_[a-z0-9_.-]+$/i.test(filename)&&supabaseUrl) {
+    return supabaseUrl.replace(/\/$/,'')+'/storage/v1/object/public/media/temoignages/'+encodeURIComponent(filename);
+  }
+  if (/^assets\/images\/[a-z0-9_.-]+$/i.test(value)) return '/'+value;
   if (/^temoignage\d*\.webp$/i.test(filename)) return '/assets/images/'+encodeURIComponent(filename);
   return '/uploads/temoignages/'+encodeURIComponent(filename);
 }
@@ -81,8 +84,8 @@ export function prepare(data, config, name, meta, productId) {
   for(const p of produits){ const promo=promos.filter(x=>x.produit_id===p.id&&x.min_unites<=1&&x.prix_promo<p.prix).sort((a,b)=>a.prix_promo-b.prix_promo)[0]; Object.assign(p,{prix_final:promo?.prix_promo??p.prix,prix_promo:promo?.prix_promo,promo_id:promo?.id,promo_titre:promo?.titre,promo_pct:promo&&p.prix>0?Math.round((1-promo.prix_promo/p.prix)*100):null}); }
   const produit=produits.find(p=>p.id===Number(productId));
   const params=Object.fromEntries((data.parametres||[]).map(p=>[p.cle,p.valeur]));
-  const wa=String(params.whatsapp_number||'22901695300').replace(/\D/g,'');
-  const visible=(data.temoignages||[]).filter(t=>t.visible===true||t.visible===1).map(t=>({...t,produit_nom:produits.find(p=>p.id===t.produit_id)?.nom||'',screenshot_url:testimonialImageUrl(t.screenshot)}));
+  const wa=String(params.whatsapp_number||'2290169156300').replace(/\D/g,'');
+  const visible=(data.temoignages||[]).filter(t=>t.visible===true||t.visible===1).map(t=>({...t,produit_nom:produits.find(p=>p.id===t.produit_id)?.nom||'',screenshot_url:testimonialImageUrl(t.screenshot,config.supabaseUrl)}));
   const temos_texte=visible.filter(t=>t.type==='texte');
   const photos=(data.produit_photos||[]).filter(p=>p.produit_id===produit?.id).sort((a,b)=>Number(b.is_principale)-Number(a.is_principale)||a.ordre-b.ordre);
   const siteUrl=config.siteUrl.replace(/\/$/,'');
@@ -90,7 +93,7 @@ export function prepare(data, config, name, meta, productId) {
   const title=produit?produit.nom+' — Iboukoun Cosmetics':meta.page_title;
   const description=produit?String(produit.description||'').slice(0,155):meta.meta_desc;
   const equipe=(data.equipe||[]).filter(active).sort((a,b)=>a.ordre-b.ordre);
-  const ctx={...data,siteUrl,BASE_URL:'/',WA_NUMBER:wa,UPLOAD_PATH:'/',UPLOAD_URL_PRODUITS:'/produit/',UPLOAD_URL_EQUIPE:'/uploads/equipe/',UPLOAD_URL_EGERIES:'/uploads/egeries/',UPLOAD_URL_TEMOIGNAGES:'/uploads/temoignages/',GSC_VERIFICATION_CODE:e(config.googleSiteVerification||''),seo_title:title,seo_desc:description,seo_img:siteUrl+'/assets/images/hero.jpg',seo_url:siteUrl+path,seo:{keywords:'',og_type:produit?'product':'website'},page_active:meta.page_active||name,params,wa_number:wa,produits,categories,cat_filtre:'all',promos,promo_nav:promos[0]||null,promo_active:promos[0]||null,temos_texte,screenshots:visible.filter(t=>t.type==='screenshot'),total_avi:visible.length,note_moy:temos_texte.length?Math.round(temos_texte.reduce((n,t)=>n+t.note,0)/temos_texte.length*10)/10:0,egeries:(data.egeries||[]).filter(active).sort((a,b)=>a.ordre-b.ordre),equipe,fondateur:equipe[0]||{nom:'Fidèle BARRA',photo:'fondateur.jpg'},nb_clients:500,nb_produits:produits.length,videos:(data.videos||[]).filter(active),accueil_sections:data.accueil_sections||[],produit,photos,img_principale:photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image?(String(produit.image).startsWith('/')?produit.image:'/produit/'+produit.image):null,temos:visible.filter(t=>t.produit_id===produit?.id),similaires:produits.filter(p=>p.categorie_id===produit?.categorie_id&&p.id!==produit?.id).concat(produits.filter(p=>p.categorie_id!==produit?.categorie_id)).slice(0,4),faqs:[],page:null,renderFooter:footer};
+  const ctx={...data,siteUrl,BASE_URL:'/',WA_NUMBER:wa,UPLOAD_PATH:'/',UPLOAD_URL_PRODUITS:'/produit/',UPLOAD_URL_EQUIPE:'/uploads/equipe/',UPLOAD_URL_EGERIES:'/uploads/egeries/',UPLOAD_URL_TEMOIGNAGES:'/uploads/temoignages/',GSC_VERIFICATION_CODE:e(config.googleSiteVerification||''),seo_title:title,seo_desc:description,seo_img:siteUrl+'/assets/images/hero.jpg',seo_url:siteUrl+path,seo:{keywords:'',og_type:produit?'product':'website'},page_active:meta.page_active||name,params,wa_number:wa,produits,categories,cat_filtre:'all',promos,promo_nav:promos[0]||null,promo_active:promos[0]||null,temos_texte,screenshots:visible.filter(t=>t.type==='screenshot'),total_avi:visible.length,note_moy:temos_texte.length?Math.round(temos_texte.reduce((n,t)=>n+t.note,0)/temos_texte.length*10)/10:0,egeries:(data.egeries||[]).filter(active).sort((a,b)=>a.ordre-b.ordre),equipe,fondateur:equipe[0]||{nom:'Fidèle BARRA',photo:'fondateur.jpg'},nb_clients:500,nb_produits:produits.length,videos:(data.videos||[]).filter(active),accueil_sections:data.accueil_sections||[],produit,photos,img_principale:photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image?(String(produit.image).startsWith('/')?produit.image:'/produit/'+produit.image):null,temos:visible.filter(t=>t.produit_id&&Number(t.produit_id)===Number(produit?.id)),similaires:produits.filter(p=>p.categorie_id===produit?.categorie_id&&p.id!==produit?.id).concat(produits.filter(p=>p.categorie_id!==produit?.categorie_id)).slice(0,4),faqs:[],page:null,renderFooter:footer};
   if(name==='produit'){
     ctx.img_principale=photos[0]?'/uploads/produits/photos/'+photos[0].fichier:produit?.image_url||null;
     ctx.similaires=produits.filter(p=>p.id!==produit?.id);
@@ -123,7 +126,7 @@ export function renderPage(data,config,name,meta,productId){
     if(results&&html.includes(nextHomeSection))html=html.replace(nextHomeSection,results+'\n'+nextHomeSection);
   }
   if(name==='produit'){
-    html=html.replace('Vous aimerez aussi','Les autres produits').replace('Dans la même gamme','Notre gamme complète');
+    html=html.replace('Dans la même gamme','Notre gamme complète');
     if(!ctx.temos.length)html=html.replace('<!-- PRODUITS SIMILAIRES -->','<section class="fp-section fp-temos-section" id="fp-temos"><div class="container"><div class="section-header reveal"><div class="section-eyebrow"><i class="ri-star-line"></i>Avis clients</div><h2 class="section-h2">Ce qu’ils disent de ce produit</h2><p class="section-sub">Aucun témoignage pour le moment.</p></div></div></section>\n<!-- PRODUITS SIMILAIRES -->');
     if(!ctx.similaires.length)html=html.replace('<footer','<section class="fp-section fp-similaires-section"><div class="container"><div class="section-header reveal"><div class="section-eyebrow"><i class="ri-sparkling-line"></i>Notre gamme complète</div><h2 class="section-h2">Les autres produits</h2><p class="section-sub">Aucun autre produit disponible pour le moment.</p></div></div></section>\n<footer');
   }
@@ -166,3 +169,4 @@ export function sanitizeData(input){
  }
  return data;
 }
+

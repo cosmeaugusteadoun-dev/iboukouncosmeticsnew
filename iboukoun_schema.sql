@@ -434,7 +434,7 @@ insert into public.temoignages (id, nom_client, ville, produit_id, note, message
 on conflict (id) do nothing;
 
 insert into public.parametres (cle, valeur) values
-('whatsapp_number', '22901695300'),
+('whatsapp_number', '2290169156300'),
 ('facebook_url', ''),
 ('instagram_url', ''),
 ('tiktok_url', ''),
@@ -472,11 +472,15 @@ select setval(pg_get_serial_sequence('public.visites','id'), coalesce((select ma
 --      insert into public.admins (id, email, nom, role)
 --      values ('<uuid-de-l-utilisateur>', 'admin@iboukoun.com', 'Administrateur', 'admin');
 --
--- 2) Mettre à jour site-config.json avec :
+-- 2) Mettre à jour site-config.json avec l’URL du projet et la clé publishable
+--    (clé publique/anon, jamais la clé secrète service_role) :
 --      "supabaseUrl": "https://<project-ref>.supabase.co",
---      "supabasePublicKey": "<anon key>"
+--      "supabasePublicKey": "<publishable key>"
 --    puis exécuter : npm run build
 --
--- 3) L'Edge Function "public-submit" (formulaires, visites, WhatsApp) doit être
---    déployée séparément (dossier supabase/functions) avec la clé service_role.
+-- 3) Les commandes du site utilisent la RPC sécurisée
+--    public.submit_public_order, créée dans migration_fiches_packs.sql.
+--    Elle valide les prix et écrit dans commandes_formulaire sans exposer de clé
+--    secrète. Les autres formulaires publics utilisent l’Edge Function séparée.
 -- ============================================================
+

@@ -15,7 +15,7 @@
 <meta name="keywords"    content="">
 <meta name="author"      content="Iboukoun Cosmetics">
 <meta name="robots"      content="index, follow">
-<link rel="canonical"    href="https://iboukouncosmetics.com/bio.html">
+<link rel="canonical"    href="https://www.iboukouncosmetics.com/bio.html">
 
 <!-- ============================================================
      OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
@@ -23,10 +23,10 @@
 <meta property="og:type"        content="website">
 <meta property="og:title"       content="Fidèle BARRA — Fondateur &amp; PDG — Iboukoun Cosmetics">
 <meta property="og:description" content="Découvrez la biographie de Fidèle BARRA, fondateur et PDG d&#039;Iboukoun Cosmetics, marque de soins naturels made in Bénin.">
-<meta property="og:image"       content="https://iboukouncosmetics.com/assets/images/hero.jpg">
+<meta property="og:image"       content="https://www.iboukouncosmetics.com/assets/images/hero.jpg">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url"         content="https://iboukouncosmetics.com/bio.html">
+<meta property="og:url"         content="https://www.iboukouncosmetics.com/bio.html">
 <meta property="og:site_name"   content="Iboukoun Cosmetics">
 <meta property="og:locale"      content="fr_BJ">
 
@@ -36,7 +36,7 @@
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="Fidèle BARRA — Fondateur &amp; PDG — Iboukoun Cosmetics">
 <meta name="twitter:description" content="Découvrez la biographie de Fidèle BARRA, fondateur et PDG d&#039;Iboukoun Cosmetics, marque de soins naturels made in Bénin.">
-<meta name="twitter:image"       content="https://iboukouncosmetics.com/assets/images/hero.jpg">
+<meta name="twitter:image"       content="https://www.iboukouncosmetics.com/assets/images/hero.jpg">
 
 <!-- ============================================================
      GÉO-LOCALISATION (aide le référencement local)
@@ -66,11 +66,585 @@
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
 
 <!-- CSS Global -->
-<link rel="stylesheet" href="/assets/generated/b63d8b14572e19bf.css">
-<link rel="stylesheet" href="/assets/accessibility.css"><noscript><link rel="stylesheet" href="/assets/generated/9b2c0b94688e4e4b.css"></noscript><script src="/assets/forms.js" defer></script><script type="module" src="/assets/public.js"></script>
-<link rel="stylesheet" href="/assets/generated/b96b5aff735be415.css">
-<link rel="stylesheet" href="/assets/generated/0dff5dede3af85f5.css">
-</head>
+<style>
+
+/* ============================================================
+   IBOUKOUN COSMETICS — Design System Global
+   Inspiré de Sculpted by Aimee : blanc dominant, épuré, aéré
+============================================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --green:#2D9E35;--green-dark:#1B5E20;--green-light:#E8F5E9;--green-mid:#4DC657;
+  --navy:#0D1A5E;--navy-dark:#06103A;--navy-light:#E8EAF6;--navy-mid:#1a2d8a;
+  --gold:#C9920A;--gold-dark:#8B6200;--gold-light:#FFF8E1;--gold-mid:#E8B84B;
+  --cream:#FAF7F2;--cream-dark:#F2EDE4;--cream-mid:#F6F2EA;
+  --white:#FFFFFF;
+  --text:#0D1117;--text2:#4A4F6A;--text3:#9299B0;
+  --radius-xs:4px;--radius-sm:8px;--radius:14px;--radius-lg:20px;
+  --radius-xl:28px;--radius-pill:999px;
+  --shadow-xs:0 1px 4px rgba(13,26,94,.05);
+  --shadow-sm:0 2px 12px rgba(13,26,94,.07);
+  --shadow:0 6px 28px rgba(13,26,94,.09);
+  --shadow-lg:0 16px 56px rgba(13,26,94,.13);
+  --shadow-green:0 4px 20px rgba(45,158,53,.32);
+  --nav-h:68px;--ticker-h:36px;--container:1240px;--section-py:96px;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--white);color:var(--text);
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block;}
+a{text-decoration:none;color:inherit;transition:color .2s;}
+ul,ol{list-style:none;}
+button{cursor:pointer;font-family:'DM Sans',sans-serif;border:none;outline:none;background:none;}
+input,textarea,select{font-family:'DM Sans',sans-serif;outline:none;}
+
+/* ============================================================
+   SKELETON LOADER
+============================================================ */
+#skeletonLoader{
+  position:fixed;inset:0;z-index:99999;
+  background:var(--white);
+  display:flex;flex-direction:column;
+  transition:opacity .35s ease,visibility .35s ease;
+  overflow:hidden;
+}
+#skeletonLoader.hidden{opacity:0;visibility:hidden;pointer-events:none;}
+@keyframes skShimmer{
+  0%{background-position:-600px 0;}
+  100%{background-position:600px 0;}
+}
+.sk-box{
+  background:linear-gradient(90deg,#f5f5f5 25%,#eaeaea 50%,#f5f5f5 75%);
+  background-size:600px 100%;
+  animation:skShimmer 1.4s ease-in-out infinite;
+  border-radius:6px;flex-shrink:0;
+}
+.sk-nav{
+  height:var(--nav-h);background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.05);
+  display:flex;align-items:center;padding:0 5%;flex-shrink:0;
+}
+.sk-nav-inner{max-width:var(--container);margin:0 auto;width:100%;display:flex;align-items:center;gap:24px;}
+.sk-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.sk-logo-img{width:36px;height:36px;border-radius:8px;}
+.sk-logo-text{display:flex;flex-direction:column;gap:4px;}
+.sk-nav-links{display:flex;align-items:center;gap:20px;flex:1;justify-content:center;}
+.sk-btn-nav{width:110px;height:36px;border-radius:999px;flex-shrink:0;}
+.sk-line{border-radius:4px;}
+.sk-body{flex:1;overflow:hidden;}
+.sk-hero{
+  height:calc(100vh - var(--nav-h));
+  background:linear-gradient(135deg,#0D1A5E 0%,#1a2d8a 100%);
+  display:flex;align-items:flex-end;
+  padding:0 clamp(16px,5%,64px) 64px;
+  position:relative;overflow:hidden;
+}
+.sk-hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(255,255,255,.03) 25%,rgba(255,255,255,.07) 50%,rgba(255,255,255,.03) 75%);
+  background-size:600px 100%;animation:skShimmer 1.8s ease-in-out infinite;
+}
+.sk-hero-content{display:flex;flex-direction:column;gap:16px;max-width:520px;position:relative;z-index:1;}
+.sk-hero-badge{width:200px;height:30px;border-radius:999px;background:rgba(255,255,255,.12);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-h1-1{width:320px;height:52px;border-radius:8px;background:rgba(255,255,255,.12);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-h1-2{width:240px;height:52px;border-radius:8px;background:rgba(255,255,255,.1);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-hero-sub{width:400px;height:14px;border-radius:4px;background:rgba(255,255,255,.08);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-sub2{width:320px;height:14px;border-radius:4px;background:rgba(255,255,255,.06);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-hero-btns{display:flex;gap:12px;margin-top:8px;}
+.sk-hero-btn1{width:160px;height:48px;border-radius:999px;background:rgba(45,158,53,.4);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-hero-btn2{width:140px;height:48px;border-radius:999px;background:rgba(255,255,255,.1);animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;animation-delay:.1s;}
+.sk-page-hero{
+  background:var(--cream);
+  padding:72px clamp(16px,5%,64px) 64px;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+}
+.sk-page-hero-badge{width:120px;height:10px;border-radius:4px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-page-hero-title{width:340px;height:52px;border-radius:8px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-page-hero-sub{width:280px;height:14px;border-radius:4px;animation:skShimmer 1.4s ease-in-out infinite;background-size:600px 100%;}
+.sk-section{padding:80px clamp(16px,5%,64px);}
+.sk-section-header{display:flex;flex-direction:column;align-items:center;gap:12px;margin-bottom:48px;}
+.sk-section-eyebrow{width:100px;height:10px;border-radius:4px;}
+.sk-section-title{width:360px;height:40px;border-radius:8px;}
+.sk-section-sub{width:280px;height:13px;border-radius:4px;}
+.sk-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;}
+.sk-product-card{border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.05);}
+.sk-product-img{height:260px;border-radius:0;}
+.sk-product-body{padding:20px;}
+.sk-product-cat{width:80px;height:10px;border-radius:4px;margin-bottom:10px;}
+.sk-product-name{width:140px;height:22px;border-radius:6px;margin-bottom:8px;}
+.sk-product-desc1{width:100%;height:11px;border-radius:4px;margin-bottom:6px;}
+.sk-product-desc2{width:75%;height:11px;border-radius:4px;margin-bottom:16px;}
+.sk-product-footer{display:flex;justify-content:space-between;align-items:center;}
+.sk-product-price{width:70px;height:24px;border-radius:6px;}
+.sk-product-btn{width:100px;height:36px;border-radius:999px;}
+.sk-temos{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+.sk-temo-card{border-radius:16px;padding:24px;border:1px solid rgba(0,0,0,.05);}
+.sk-temo-stars{display:flex;gap:4px;margin-bottom:12px;}
+.sk-temo-star{width:14px;height:14px;border-radius:3px;}
+.sk-temo-text1{width:100%;height:12px;border-radius:4px;margin-bottom:7px;}
+.sk-temo-text2{width:85%;height:12px;border-radius:4px;margin-bottom:7px;}
+.sk-temo-text3{width:65%;height:12px;border-radius:4px;margin-bottom:18px;}
+.sk-temo-author{display:flex;align-items:center;gap:10px;}
+.sk-temo-avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;}
+.sk-temo-info{flex:1;}
+.sk-temo-name{width:100px;height:13px;border-radius:4px;margin-bottom:6px;}
+.sk-temo-city{width:70px;height:10px;border-radius:4px;}
+@media(max-width:768px){
+  .sk-nav-links,.sk-btn-nav{display:none;}
+  .sk-hero-content{max-width:100%;}
+  .sk-hero-h1-1,.sk-hero-h1-2{width:100%;max-width:280px;}
+  .sk-hero-btns{flex-direction:column;}
+  .sk-hero-btn1,.sk-hero-btn2{width:100%;}
+  .sk-products{grid-template-columns:1fr 1fr;}
+  .sk-temos{grid-template-columns:1fr;}
+  .sk-section-title{width:240px;}
+}
+@media(max-width:480px){
+  .sk-products{grid-template-columns:1fr;}
+  .sk-section{padding:52px 16px;}
+}
+
+/* ============================================================
+   CONTAINER & SECTION
+============================================================ */
+.container{max-width:var(--container);margin:0 auto;padding:0 clamp(16px,5%,64px);width:100%;}
+.section{padding:var(--section-py) clamp(16px,5%,64px);}
+.section-white{background:var(--white);}
+.section-cream{background:var(--cream);}
+.section-navy{background:var(--navy);}
+
+/* ============================================================
+   SECTION HEADER — style épuré inspiré Sculpted
+   Plus de doubles lignes vertes — lettres espacées minimalistes
+============================================================ */
+.section-header{text-align:center;margin-bottom:64px;}
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--green);
+  margin-bottom:16px;
+}
+.section-eyebrow i{font-size:13px;}
+.section-h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(30px,3.2vw,48px);font-weight:700;
+  color:var(--navy);line-height:1.1;margin-bottom:14px;
+  letter-spacing:-.5px;
+}
+.section-sub{
+  font-size:15px;color:var(--text2);
+  max-width:520px;margin:0 auto;line-height:1.78;
+}
+
+/* ============================================================
+   BOUTONS
+============================================================ */
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--green);color:#fff;
+  padding:14px 30px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;letter-spacing:.2px;
+  transition:all .25s;border:none;cursor:pointer;
+  box-shadow:var(--shadow-green);
+}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(45,158,53,.4);}
+.btn-primary i{font-size:17px;}
+.btn-navy{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--navy);color:#fff;
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;transition:all .2s;border:none;cursor:pointer;
+}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-1px);}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:#fff;
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:500;
+  border:1.5px solid rgba(255,255,255,.4);transition:all .25s;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.8);}
+.btn-outline-green{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--green);
+  padding:13px 28px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;
+  border:1.5px solid var(--green);transition:all .25s;
+}
+.btn-outline-green:hover{background:var(--green);color:#fff;}
+.btn-outline-navy{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:var(--navy);
+  padding:12px 26px;border-radius:var(--radius-pill);
+  font-size:14px;font-weight:600;
+  border:1.5px solid rgba(13,26,94,.2);transition:all .25s;
+}
+.btn-outline-navy:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* ============================================================
+   BADGES
+============================================================ */
+.badge-promo{
+  display:inline-flex;align-items:center;gap:4px;
+  background:linear-gradient(135deg,var(--gold),#E8A800);
+  color:#fff;padding:5px 13px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:700;letter-spacing:.3px;
+  box-shadow:0 2px 8px rgba(201,146,10,.25);
+}
+.badge-new{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--green);color:#fff;
+  padding:5px 11px;border-radius:var(--radius-pill);
+  font-size:11px;font-weight:700;
+}
+
+/* ============================================================
+   FLASH
+============================================================ */
+.flash-msg{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:var(--radius);font-size:14px;font-weight:500;margin-bottom:20px;}
+.flash-msg i{font-size:18px;flex-shrink:0;}
+.flash-success{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7;}
+.flash-error{background:#FFEBEE;color:#C62828;border:1px solid #EF9A9A;}
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+.pagination{display:flex;gap:6px;justify-content:center;margin-top:40px;flex-wrap:wrap;}
+.pag-btn{padding:8px 16px;border-radius:var(--radius-sm);border:1.5px solid rgba(0,0,0,.1);background:#fff;font-size:13px;font-weight:500;color:var(--text2);transition:.2s;text-decoration:none;}
+.pag-btn:hover,.pag-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* ============================================================
+   BOUTON WHATSAPP FLOTTANT
+============================================================ */
+.wa-float{position:fixed;bottom:32px;right:24px;z-index:9000;display:flex;align-items:center;}
+.wa-float-label{background:var(--navy);color:#fff;padding:10px 18px;border-radius:var(--radius-pill) 0 0 var(--radius-pill);font-size:12px;font-weight:600;box-shadow:var(--shadow);opacity:0;transform:translateX(12px);transition:opacity .3s,transform .3s;pointer-events:none;white-space:nowrap;}
+.wa-float:hover .wa-float-label{opacity:1;transform:translateX(0);}
+.wa-float-btn{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25D366,#1EB85A);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.4);transition:transform .25s;position:relative;}
+.wa-float-btn:hover{transform:scale(1.1);}
+.wa-float-btn i{font-size:26px;color:#fff;}
+.wa-pulse{position:absolute;top:-3px;right:-3px;width:15px;height:15px;border-radius:50%;background:#FF3B30;border:2.5px solid var(--white);animation:pulseBadge 2s infinite;}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+@keyframes pulseBadge{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes menuItemIn{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:translateX(0)}}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+
+/* ============================================================
+   TICKER DÉFILANT — inspiré Sculpted by Aimee
+   Bande fine au-dessus de la nav avec USP en scrolling continu
+============================================================ */
+.site-ticker{
+  background:var(--navy-dark);
+  height:var(--ticker-h);
+  overflow:hidden;
+  position:relative;
+  z-index:1001;
+}
+.ticker-track{
+  display:flex;align-items:center;
+  height:100%;
+  animation:tickerScroll 28s linear infinite;
+  width:max-content;
+}
+.ticker-track:hover{animation-play-state:paused;}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:0 36px;
+  font-size:11px;font-weight:600;color:rgba(255,255,255,.85);
+  letter-spacing:.8px;text-transform:uppercase;
+  white-space:nowrap;
+}
+.ticker-item i{font-size:13px;color:var(--green-mid);flex-shrink:0;}
+.ticker-sep{
+  width:4px;height:4px;border-radius:50%;
+  background:rgba(255,255,255,.2);flex-shrink:0;
+}
+
+/* ============================================================
+   NAVIGATION DESKTOP — blanc épuré, minimaliste
+============================================================ */
+nav.main-nav{
+  position:sticky;top:0;z-index:1000;
+  background:#fff;
+  border-bottom:1px solid rgba(0,0,0,.08);
+  padding:0 5%;height:var(--nav-h);
+  transition:box-shadow .3s;
+}
+nav.main-nav.scrolled{
+  box-shadow:0 2px 24px rgba(0,0,0,.07);
+}
+.nav-inner{
+  max-width:var(--container);margin:0 auto;height:100%;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-logo-img{height:38px;width:auto;display:flex;align-items:center;}
+.nav-logo-img img{height:38px;width:auto;object-fit:contain;border-radius:6px;}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.nav-logo-text .brand-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.3px;
+}
+.nav-logo-text .brand-tag{
+  font-size:9px;color:var(--text3);
+  letter-spacing:2px;text-transform:uppercase;margin-top:1px;
+}
+
+/* Liens nav — style minimaliste */
+.nav-links{
+  display:flex;align-items:center;gap:0;
+  flex:1;justify-content:center;
+}
+.nav-links a{
+  font-size:13px;font-weight:500;color:var(--text2);
+  padding:8px 12px;
+  transition:color .2s;white-space:nowrap;
+  position:relative;
+  display:inline-flex;align-items:center;gap:5px;
+  letter-spacing:.1px;
+}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:600;}
+/* Soulignement fin au hover et active — style Sculpted */
+.nav-links a::after{
+  content:'';position:absolute;
+  bottom:0;left:12px;right:12px;
+  height:1.5px;background:var(--navy);
+  transform:scaleX(0);transition:transform .25s ease;
+  border-radius:2px;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{transform:scaleX(1);}
+/* Promo — même style, icône verte */
+.nav-links a.nav-promo i{font-size:13px;color:var(--green);}
+.promo-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--green);display:inline-block;
+  animation:pulseBadge 2s infinite;flex-shrink:0;
+}
+
+/* Actions nav */
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.nav-wa-btn{
+  display:flex;align-items:center;gap:7px;
+  background:var(--green);color:#fff;
+  padding:10px 22px;border-radius:var(--radius-pill);
+  font-size:13px;font-weight:600;
+  transition:all .2s;white-space:nowrap;
+  box-shadow:0 2px 12px rgba(45,158,53,.28);
+}
+.nav-wa-btn:hover{background:var(--green-dark);transform:translateY(-1px);}
+.nav-wa-btn i{font-size:16px;}
+
+/* Hamburger */
+.hamburger{
+  display:none;width:40px;height:40px;
+  border-radius:var(--radius-sm);
+  background:transparent;border:none;
+  flex-direction:column;align-items:center;
+  justify-content:center;gap:5px;
+  cursor:pointer;padding:0;transition:background .2s;
+  flex-shrink:0;
+}
+.hamburger:hover{background:rgba(13,26,94,.05);}
+.hamburger span{
+  display:block;width:22px;height:1.5px;
+  background:var(--navy);border-radius:2px;
+  transition:transform .32s cubic-bezier(.23,1,.32,1),opacity .2s,width .2s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;width:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* ============================================================
+   MENU MOBILE — conservé tel quel (il marche bien)
+============================================================ */
+.nav-mobile-menu{
+  display:none;position:fixed;
+  top:0;left:0;right:0;bottom:0;z-index:998;
+  flex-direction:column;background:var(--navy-dark);overflow:hidden;
+}
+.nav-mobile-menu.open{display:flex;}
+.mobile-menu-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 20px;height:var(--nav-h);
+  border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;
+}
+.mobile-menu-logo{display:flex;align-items:center;gap:8px;}
+.mobile-menu-logo img{height:34px;width:auto;object-fit:contain;border-radius:6px;}
+.mobile-menu-logo-text{display:flex;flex-direction:column;line-height:1.1;}
+.mobile-menu-logo-text .m-brand{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:#fff;}
+.mobile-menu-logo-text .m-tag{font-size:8px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;}
+.mobile-menu-close{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s;flex-shrink:0;pointer-events:auto;
+}
+.mobile-menu-close:hover{background:rgba(255,255,255,.16);}
+.mobile-menu-close *{pointer-events:none;}
+.mobile-menu-body{flex:1;padding:16px 0;overflow-y:auto;}
+.mobile-nav-item{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 24px;font-size:16px;font-weight:500;
+  color:rgba(255,255,255,.75);text-decoration:none;
+  border-left:3px solid transparent;transition:all .2s;
+}
+.mobile-nav-item:hover{color:#fff;background:rgba(255,255,255,.05);border-left-color:var(--green);}
+.mobile-nav-item.active{color:#fff;font-weight:600;background:rgba(45,158,53,.12);border-left-color:var(--green);}
+.mobile-nav-item-left{display:flex;align-items:center;gap:14px;}
+.mobile-nav-icon{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;}
+.mobile-nav-item:hover .mobile-nav-icon,.mobile-nav-item.active .mobile-nav-icon{background:rgba(45,158,53,.2);}
+.mobile-nav-icon i{font-size:17px;color:rgba(255,255,255,.6);}
+.mobile-nav-item:hover .mobile-nav-icon i,.mobile-nav-item.active .mobile-nav-icon i{color:var(--green-mid);}
+.mobile-nav-label{display:flex;flex-direction:column;gap:2px;}
+.mobile-nav-label span{display:block;}
+.mobile-nav-label .nav-label-main{font-size:15px;color:inherit;}
+.mobile-nav-label .nav-label-sub{font-size:11px;color:rgba(255,255,255,.35);font-weight:400;}
+.mobile-nav-arrow{font-size:16px;color:rgba(255,255,255,.25);}
+.mobile-nav-item:hover .mobile-nav-arrow,.mobile-nav-item.active .mobile-nav-arrow{color:rgba(255,255,255,.5);}
+.mobile-promo-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(201,146,10,.25);border:1px solid rgba(201,146,10,.4);color:var(--gold-mid);padding:2px 9px;border-radius:var(--radius-pill);font-size:10px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;}
+.mobile-menu-sep{height:1px;background:rgba(255,255,255,.06);margin:8px 24px;}
+.mobile-menu-footer{padding:20px 20px max(20px,env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.07);flex-shrink:0;}
+.mobile-wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:linear-gradient(135deg,#25D366,#1EB85A);color:#fff;border-radius:var(--radius-pill);font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .2s,box-shadow .2s;}
+.mobile-wa-btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(37,211,102,.45);}
+.mobile-wa-btn i{font-size:20px;}
+.mobile-menu-social{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:16px;}
+.mobile-social-link{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s;text-decoration:none;}
+.mobile-social-link:hover{background:rgba(255,255,255,.14);}
+.mobile-social-link i{font-size:17px;color:rgba(255,255,255,.65);}
+.nav-mobile-menu.open .mobile-nav-item{animation:menuItemIn .3s ease both;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(1){animation-delay:.05s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(2){animation-delay:.08s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(3){animation-delay:.11s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(4){animation-delay:.14s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(5){animation-delay:.17s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(6){animation-delay:.20s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(7){animation-delay:.23s;}
+.nav-mobile-menu.open .mobile-nav-item:nth-child(8){animation-delay:.26s;}
+
+/* ============================================================
+   PAGE HERO INTÉRIEURE — inspiré Sculpted
+   Fond crème/blanc au lieu de navy systématique
+   Titre en navy foncé, aéré, propre
+============================================================ */
+.page-hero{
+  background:var(--cream);
+  padding:80px 5% 72px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+/* Accent décoratif très subtil */
+.page-hero::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--green),var(--navy),var(--gold));
+  opacity:.25;
+}
+.page-hero-content{position:relative;z-index:1;max-width:640px;margin:0 auto;}
+.page-hero-eyebrow{
+  display:inline-block;
+  font-size:11px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--green);
+  margin-bottom:18px;
+}
+.page-hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,4.5vw,60px);font-weight:700;
+  color:var(--navy);line-height:1.06;
+  margin-bottom:16px;letter-spacing:-1px;
+}
+.page-hero-sub{
+  font-size:16px;color:var(--text2);
+  max-width:480px;margin:0 auto;line-height:1.78;
+}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq-item{border:1px solid rgba(0,0,0,.07);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;background:#fff;border:none;cursor:pointer;text-align:left;font-size:15px;font-weight:600;color:var(--navy);font-family:'DM Sans',sans-serif;transition:background .2s;}
+.faq-question:hover{background:var(--cream);}
+.faq-question i{font-size:22px;color:var(--text3);transition:transform .3s;flex-shrink:0;}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:15px;color:var(--text2);line-height:1.75;}
+.faq-answer-inner{padding:4px 22px 20px;}
+.faq-item.open .faq-question{background:var(--cream);}
+.faq-item.open .faq-question i{transform:rotate(45deg);color:var(--green);}
+.faq-item.open .faq-answer{max-height:300px;}
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+.empty-state{text-align:center;padding:80px 20px;color:var(--text3);font-size:15px;}
+.empty-state i{font-size:54px;display:block;margin-bottom:16px;opacity:.2;}
+
+/* ============================================================
+   RESPONSIVE GLOBAL
+============================================================ */
+@media(max-width:1100px){
+  .nav-links a{font-size:12px;padding:8px 9px;}
+}
+@media(max-width:1024px){
+  :root{--section-py:80px;}
+  .nav-wa-btn{padding:9px 16px;font-size:12px;}
+}
+@media(max-width:768px){
+  :root{--section-py:64px;--nav-h:64px;--ticker-h:32px;}
+  .nav-links,.nav-wa-btn{display:none;}
+  .hamburger{display:flex;}
+  .wa-float{bottom:24px;right:20px;}
+  .wa-float-btn{width:52px;height:52px;}
+  .wa-float-btn i{font-size:24px;}
+  .wa-float-label{display:none;}
+  .section{padding:var(--section-py) clamp(16px,4%,40px);}
+  .container{padding:0 clamp(16px,4%,40px);}
+  .section-header{margin-bottom:44px;}
+  .section-h2{font-size:clamp(26px,7vw,36px);}
+  .page-hero{padding:60px 4% 52px;}
+  .page-hero-title{font-size:clamp(28px,8vw,44px);}
+  .page-hero-sub{font-size:15px;}
+  .ticker-item{font-size:10px;padding:0 24px;}
+}
+@media(max-width:480px){
+  :root{--section-py:52px;}
+  .nav-logo-text .brand-name{font-size:14px;}
+  .nav-logo-text .brand-tag{font-size:8px;letter-spacing:1.2px;}
+  .nav-logo-img img{height:30px;}
+  nav.main-nav{padding:0 4%;}
+  .section{padding:var(--section-py) 16px;}
+  .container{padding:0 16px;}
+  .section-h2{font-size:clamp(24px,8vw,32px);}
+  .page-hero{padding:52px 4% 44px;}
+  .page-hero-title{font-size:clamp(26px,9vw,36px);}
+  .ticker-item span:not(.ticker-sep){display:none;}
+  .ticker-item i{display:none;}
+}
+@media(max-width:360px){
+  .section-h2{font-size:24px;}
+  .page-hero-title{font-size:26px;}
+  .mobile-nav-item{padding:12px 16px;}
+  .mobile-nav-label .nav-label-sub{display:none;}
+}
+</style>
+<link rel="stylesheet" href="/assets/accessibility.css"><noscript><style>#skeletonLoader{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript><script src="/assets/forms.js" defer></script><script type="module" src="/assets/public.js"></script></head>
 <body>
 
 <!-- SKELETON LOADER -->
@@ -152,7 +726,6 @@
     <div class="nav-links">
       <a href="/index.html" class="">Accueil</a>
       <a href="/produits.html" class="">Produits</a>
-      
       <a href="/histoire.html" class="">Notre histoire</a>
       <a href="/temoignages.html" class="">Témoignages</a>
       <a href="/egeries.html" class="active">Égéries</a>
@@ -161,7 +734,7 @@
     </div>
 
     <div class="nav-actions">
-      <a href="https://wa.me/22901695300?text=Bonjour%2C%20je%20veux%20commander%20!"
+      <a href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
          class="nav-wa-btn" target="_blank" rel="noopener">
         <i class="ri-whatsapp-line"></i>Commander
       </a>
@@ -213,8 +786,6 @@
       </div>
       <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
     </a>
-    
-
     <a href="/histoire.html" class="mobile-nav-item " onclick="menuClose()">
   <div class="mobile-nav-item-left">
     <div class="mobile-nav-icon"><i class="ri-history-line"></i></div>
@@ -279,13 +850,13 @@
   </div>
 
   <div class="mobile-menu-footer">
-    <a href="https://wa.me/22901695300?text=Bonjour%2C%20je%20veux%20commander%20!"
+    <a href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
        class="mobile-wa-btn" target="_blank" rel="noopener" onclick="menuClose()">
       <i class="ri-whatsapp-line"></i>Commander sur WhatsApp
     </a>
     <div class="mobile-menu-social">
       
-      <a href="https://wa.me/22901695300" class="mobile-social-link" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/2290169156300" class="mobile-social-link" target="_blank" rel="noopener noreferrer">
         <i class="ri-whatsapp-line"></i>
       </a>
       
@@ -294,7 +865,104 @@
   </div>
 </div>
 
-<script src="/assets/generated/5b96e733635b8aea.js" defer></script>
+<script>
+/* ============================================================
+   MENU BURGER — VERSION PRO CORRIGÉE
+============================================================ */
+
+// Toggle (ouvre + ferme avec le même bouton)
+window.toggleMenu = function(){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  menu.classList.toggle('open');
+  burger.classList.toggle('open');
+
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+};
+
+// Fermeture forcée
+window.menuClose = function(){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  menu.classList.remove('open');
+  burger.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+// Fermer avec ESC
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') menuClose();
+});
+
+// Fermer en cliquant à l’extérieur
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('mobileMenu');
+  const burger = document.getElementById('hamburger');
+
+  if(
+    menu.classList.contains('open') &&
+    !menu.contains(e.target) &&
+    !burger.contains(e.target)
+  ){
+    menuClose();
+  }
+});
+
+// Effet scroll nav + fermeture menu
+window.addEventListener('scroll', function(){
+  const nav = document.getElementById('mainNav');
+  if(nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+
+  const menu = document.getElementById('mobileMenu');
+  if(menu.classList.contains('open')){
+    menuClose();
+  }
+});
+
+/* ============================================================
+   SKELETON LOADER (inchangé)
+============================================================ */
+(function(){
+  var body   = document.getElementById('skBody');
+  var loader = document.getElementById('skeletonLoader');
+  var path   = window.location.pathname;
+  var isHome = path.indexOf('index.html') !== -1 || path.endsWith('/') || path.endsWith('/iboukoun/');
+
+  function skProduct(){
+    return '<div class="sk-product-card"><div class="sk-box sk-product-img"></div><div class="sk-product-body"><div class="sk-box sk-product-cat"></div><div class="sk-box sk-product-name"></div><div class="sk-box sk-product-desc1"></div><div class="sk-box sk-product-desc2"></div><div class="sk-product-footer"><div class="sk-box sk-product-price"></div><div class="sk-box sk-product-btn"></div></div></div></div>';
+  }
+
+  function skTemo(){
+    return '<div class="sk-temo-card"><div class="sk-temo-stars"><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div></div><div class="sk-box sk-temo-text1"></div><div class="sk-box sk-temo-text2"></div><div class="sk-box sk-temo-text3"></div><div class="sk-temo-author"><div class="sk-box sk-temo-avatar"></div><div class="sk-temo-info"><div class="sk-box sk-temo-name"></div><div class="sk-box sk-temo-city"></div></div></div></div>';
+  }
+
+  function skSectionHeader(){
+    return '<div class="sk-section-header"><div class="sk-box sk-section-eyebrow"></div><div class="sk-box sk-section-title"></div><div class="sk-box sk-section-sub"></div></div>';
+  }
+
+  var html = '';
+
+  if(isHome){
+    html += '<div class="sk-hero"><div class="sk-hero-content"><div class="sk-hero-badge"></div><div class="sk-hero-h1-1"></div><div class="sk-hero-h1-2"></div><div class="sk-hero-sub"></div><div class="sk-hero-sub2"></div><div class="sk-hero-btns"><div class="sk-hero-btn1"></div><div class="sk-hero-btn2"></div></div></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+skTemo()+'</div></div>';
+  } else {
+    html += '<div class="sk-page-hero"><div class="sk-box sk-page-hero-badge"></div><div class="sk-box sk-page-hero-title"></div><div class="sk-box sk-page-hero-sub"></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+'</div></div>';
+  }
+
+  if(body) body.innerHTML = html;
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 600);
+  });
+
+  setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 2000);
+})();
+</script>
 
 <!-- HERO BIO -->
 <section class="bio-hero">
@@ -307,9 +975,9 @@
       <div class="bio-hero-img-col">
         <div class="bio-hero-img-wrap">
           
-          <div class="bio-hero-img-placeholder">
-            <i class="ri-user-line"></i>
-          </div>
+          <img src="/uploads/equipe/fondateur.jpg"
+               alt="Fidèle BARRA"
+               class="bio-hero-img">
           
           <!-- Badge PDG -->
           <div class="bio-pdg-badge">
@@ -336,7 +1004,7 @@
           </div>
           <div class="bqf-item">
             <i class="ri-whatsapp-line"></i>
-            <a href="https://wa.me/22901695300?text=Bonjour%20Fid%C3%A8le%2C%20j'ai%20d%C3%A9couvert%20Iboukoun%20Cosmetics%20et%20j'aimerais%20en%20savoir%20plus."
+            <a href="https://wa.me/2290169156300?text=Bonjour%20Fid%C3%A8le%2C%20j'ai%20d%C3%A9couvert%20Iboukoun%20Cosmetics%20et%20j'aimerais%20en%20savoir%20plus."
                target="_blank" rel="noopener noreferrer">Contacter sur WhatsApp</a>
           </div>
         </div>
@@ -521,7 +1189,7 @@
         </div>
 
         <!-- CTA WhatsApp -->
-        <a href="https://wa.me/22901695300?text=Bonjour%20Iboukoun%20Cosmetics%2C%20je%20veux%20en%20savoir%20plus%20sur%20vos%20produits%20!"
+        <a href="https://wa.me/2290169156300?text=Bonjour%20Iboukoun%20Cosmetics%2C%20je%20veux%20en%20savoir%20plus%20sur%20vos%20produits%20!"
            class="bsc-wa-btn" target="_blank" rel="noopener noreferrer">
           <i class="ri-whatsapp-line"></i>
           Contacter sur WhatsApp
@@ -552,7 +1220,7 @@
           </p>
           <div class="social-row">
             
-            <a class="social-icon" href="https://wa.me/22901695300" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a class="social-icon" href="https://wa.me/2290169156300" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <i class="ri-whatsapp-line"></i>
             </a>
             
@@ -571,7 +1239,6 @@
       <i class="ri-arrow-right-s-line"></i>Savon gommant</a></li>
     <li><a href="/produits.html?cat=visage" title="Sérum anti-tache visage naturel Bénin">
       <i class="ri-arrow-right-s-line"></i>Sérum visage</a></li>
-    
     <li><a href="/temoignages.html" title="Avis clients Iboukoun Cosmetics Bénin">
       <i class="ri-arrow-right-s-line"></i>Témoignages</a></li>
     <li><a href="/egeries.html" title="Ambassadeurs Iboukoun Cosmetics">
@@ -598,7 +1265,7 @@
           <div class="footer-contact-items">
             <div class="footer-contact-item">
               <i class="ri-whatsapp-line"></i>
-              <a href="https://wa.me/22901695300" target="_blank" rel="noopener noreferrer">+22901695300</a>
+              <a href="https://wa.me/2290169156300" target="_blank" rel="noopener noreferrer">+2290169156300</a>
             </div>
             
             <div class="footer-contact-item">
@@ -640,7 +1307,7 @@
 <div class="wa-float">
   <div class="wa-float-label">Commander sur WhatsApp</div>
   <a class="wa-float-btn"
-     href="https://wa.me/22901695300?text=Bonjour%2C%20je%20veux%20commander%20!"
+     href="https://wa.me/2290169156300?text=Bonjour%2C%20je%20veux%20commander%20!"
      target="_blank" rel="noopener"
      onclick="logWA('','bouton_flottant')">
     <i class="ri-whatsapp-line"></i>
@@ -648,16 +1315,235 @@
   </a>
 </div>
 
-<script src="/assets/generated/4f9f70ee18a920a3.js" defer></script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!els.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1});
+  els.forEach(function(el){obs.observe(el);});
+})();
+
+function logWA(produit,source){
+  fetch('/api/log_whatsapp',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({nom_client:'',produit:produit||'',source:source||'inconnu'})
+  }).catch(function(){});
+}
+
+function orderWA(produitNom,source){
+  logWA(produitNom,source||'fiche_produit');
+  var msg='Bonjour, je souhaite commander : *'+produitNom+'* 🌿';
+  window.open('https://wa.me/2290169156300?text='+encodeURIComponent(msg),'_blank');
+}
+
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen)item.classList.add('open');
+  });
+});
+</script>
+
+<style>
+footer.main-footer{background:var(--navy-dark);}
+.footer-top{padding:72px 0 56px;}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;
+  gap:56px;
+}
+.footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px;text-decoration:none;}
+.footer-logo img{height:46px;width:auto;object-fit:contain;border-radius:8px;}
+.footer-logo-text{display:flex;flex-direction:column;line-height:1.2;}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;}
+.footer-brand-tag{font-size:9px;color:rgba(255,255,255,.4);letter-spacing:1.8px;text-transform:uppercase;}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:24px;max-width:260px;}
+.social-row{display:flex;gap:10px;}
+.social-icon{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.social-icon:hover{background:var(--green);border-color:var(--green);transform:translateY(-2px);}
+.social-icon i{font-size:17px;color:#fff;}
+.footer-col h4{
+  font-size:11px;font-weight:600;letter-spacing:1.2px;
+  text-transform:uppercase;color:rgba(255,255,255,.5);
+  margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:11px;}
+.footer-col ul li a{
+  font-size:14px;color:rgba(255,255,255,.6);
+  display:flex;align-items:center;gap:5px;transition:color .2s;
+}
+.footer-col ul li a i{font-size:13px;transition:transform .2s;}
+.footer-col ul li a:hover{color:var(--green-mid);}
+.footer-col ul li a:hover i{transform:translateX(3px);}
+.footer-contact-items{display:flex;flex-direction:column;gap:12px;}
+.footer-contact-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:13px;color:rgba(255,255,255,.6);
+}
+.footer-contact-item i{font-size:16px;color:var(--green-mid);flex-shrink:0;margin-top:1px;}
+.footer-contact-item a{color:rgba(255,255,255,.6);transition:color .2s;}
+.footer-contact-item a:hover{color:var(--green-mid);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:22px 0;
+}
+.footer-bottom-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-bottom-inner p{font-size:12px;color:rgba(255,255,255,.3);}
+.footer-legal{display:flex;gap:24px;}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s;}
+.footer-legal a:hover{color:rgba(255,255,255,.7);}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;gap:24px;}.footer-tagline{max-width:100%;}}
+</style>
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Iboukoun Cosmetics","url":"https://www.iboukouncosmetics.com","logo":"https://www.iboukouncosmetics.com/assets/images/logo.jpg","contactPoint":{"@type":"ContactPoint","telephone":"+2290169156300","contactType":"customer service","availableLanguage":"French"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Iboukoun Cosmetics","url":"https://www.iboukouncosmetics.com","image":"https://www.iboukouncosmetics.com/assets/images/hero.jpg","telephone":"+2290169156300","address":{"@type":"PostalAddress","addressLocality":"Parakou","addressCountry":"BJ"}}</script>
 
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Iboukoun Cosmetics","url":"https://iboukouncosmetics.com","logo":"https://iboukouncosmetics.com/assets/images/logo.jpg","contactPoint":{"@type":"ContactPoint","telephone":"+22901695300","contactType":"customer service","availableLanguage":"French"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HealthAndBeautyBusiness","name":"Iboukoun Cosmetics","url":"https://iboukouncosmetics.com","image":"https://iboukouncosmetics.com/assets/images/hero.jpg","telephone":"+22901695300","address":{"@type":"PostalAddress","addressLocality":"Parakou","addressCountry":"BJ"}}</script>
+<style>
+/* ============================================================
+   BIO PDG — Styles
+============================================================ */
 
+/* HERO */
+.bio-hero{
+  background:linear-gradient(135deg,#050E2E 0%,#0D1A5E 55%,#0f2070 100%);
+  padding:100px 5% 80px;color:#fff;
+  position:relative;overflow:hidden;
+}
+.bio-hero-deco-1{position:absolute;width:500px;height:500px;top:-180px;right:-100px;border-radius:50%;background:radial-gradient(circle,rgba(45,158,53,.1) 0%,transparent 70%);pointer-events:none;}
+.bio-hero-deco-2{position:absolute;width:300px;height:300px;bottom:-80px;left:-60px;border-radius:50%;background:radial-gradient(circle,rgba(201,146,10,.08) 0%,transparent 70%);pointer-events:none;}
+.bio-hero-inner{max-width:var(--container);margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:72px;align-items:start;position:relative;z-index:1;}
 
+/* Photo */
+.bio-hero-img-wrap{position:relative;border-radius:var(--radius-xl);overflow:hidden;background:var(--cream-dark);margin-bottom:20px;}
+.bio-hero-img{width:100%;aspect-ratio:3/4;object-fit:contain;object-position:center;display:block;}
+.bio-hero-img-placeholder{width:100%;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;}
+.bio-hero-img-placeholder i{font-size:80px;color:rgba(255,255,255,.15);}
+.bio-pdg-badge{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(transparent,rgba(5,14,46,.95));
+  padding:24px 18px 18px;
+  display:flex;align-items:center;gap:10px;
+}
+.bio-pdg-badge i{font-size:24px;color:var(--gold-mid);}
+.bio-pdg-badge-title{display:block;font-size:13px;font-weight:700;color:#fff;}
+.bio-pdg-badge-since{display:block;font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;}
+/* Quick facts */
+.bio-quick-facts{display:flex;flex-direction:column;gap:10px;}
+.bqf-item{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(255,255,255,.7);}
+.bqf-item i{font-size:16px;color:var(--green-mid);flex-shrink:0;}
+.bqf-item a{color:var(--green-mid);font-weight:600;text-decoration:none;}
+.bqf-item a:hover{text-decoration:underline;}
 
+/* Texte héro */
+.bio-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(45,158,53,.15);border:1px solid rgba(45,158,53,.3);color:var(--green-mid);padding:7px 16px;border-radius:var(--radius-pill);font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:24px;}
+.bio-eyebrow i{font-size:13px;}
+.bio-hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,80px);font-weight:700;color:#fff;line-height:1;margin-bottom:8px;letter-spacing:-2px;}
+.bio-hero-name-accent{background:linear-gradient(90deg,var(--gold-mid),#FFC44D);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.bio-hero-role{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:28px;letter-spacing:.5px;}
+.bio-hero-quote{
+  background:rgba(255,255,255,.07);border-left:3px solid var(--green-mid);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:18px 20px;margin-bottom:24px;
+  font-size:16px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.65;
+}
+.bio-hero-quote cite{display:block;font-size:12px;color:rgba(255,255,255,.4);font-style:normal;margin-top:8px;}
+.bio-hero-intro{font-size:15px;color:rgba(255,255,255,.65);line-height:1.78;margin-bottom:32px;}
+.bio-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.bio-btn-histoire{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:15px 26px;border-radius:var(--radius-pill);font-size:14px;font-weight:600;text-decoration:none;transition:all .25s;}
+.bio-btn-histoire:hover{background:rgba(255,255,255,.15);}
+.bio-btn-histoire i{font-size:17px;}
 
+/* CONTENU */
+.bio-content-section{background:var(--white);}
+.bio-content-layout{display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:start;max-width:var(--container);margin:0 auto;}
 
+/* Article */
+.bio-article{}
+.bio-section-block{display:grid;grid-template-columns:52px 1fr;gap:20px;margin-bottom:44px;align-items:start;}
+.bio-section-icon{width:52px;height:52px;border-radius:14px;background:var(--green-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px;}
+.bio-section-icon i{font-size:22px;color:var(--green);}
+.bio-section-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--navy);margin-bottom:14px;line-height:1.15;}
+.bio-section-body p{font-size:15px;color:var(--text2);line-height:1.78;margin-bottom:14px;}
+.bio-section-body p:last-child{margin-bottom:0;}
+.bio-quote-block{grid-template-columns:1fr;}
+.bio-full-quote{
+  background:var(--cream);border-left:4px solid var(--navy);
+  border-radius:0 var(--radius-xl) var(--radius-xl) 0;
+  padding:28px 32px;
+  font-size:18px;font-style:italic;color:var(--navy);line-height:1.65;
+  position:relative;
+}
+.bio-full-quote i{font-size:32px;color:rgba(13,26,94,.12);position:absolute;top:16px;left:16px;}
+.bio-full-quote cite{display:block;font-size:12px;color:var(--text3);font-style:normal;margin-top:12px;font-weight:600;}
+.bio-vision-quote{
+  background:linear-gradient(135deg,var(--navy),var(--navy-mid));
+  color:#fff;border-radius:var(--radius-xl);
+  padding:20px 24px;font-size:15px;font-style:italic;
+  line-height:1.65;margin-top:16px;
+}
+
+/* Sidebar */
+.bio-sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:calc(var(--nav-h) + 20px);}
+.bio-sidebar-card{background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:var(--radius-xl);padding:24px;}
+.bsc-header{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(0,0,0,.07);}
+.bsc-header i{font-size:18px;color:var(--green);}
+.bsc-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05);}
+.bsc-item:last-child{border-bottom:none;}
+.bsc-label{font-size:12px;color:var(--text3);}
+.bsc-val{font-size:13px;font-weight:600;color:var(--navy);}
+.bsc-link{display:flex;align-items:center;gap:10px;padding:10px 4px;font-size:13px;color:var(--text2);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.05);transition:.2s;}
+.bsc-link:last-child{border-bottom:none;}
+.bsc-link:hover{color:var(--navy);}
+.bsc-link i{font-size:16px;color:var(--green);flex-shrink:0;}
+.bsc-wa-btn{display:flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,#25D366,#1EB85A);color:#fff;padding:16px;border-radius:var(--radius-pill);font-size:14px;font-weight:700;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.35);transition:all .25s;}
+.bsc-wa-btn:hover{transform:translateY(-2px);}
+.bsc-wa-btn i{font-size:20px;}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .bio-hero-inner{grid-template-columns:280px 1fr;gap:48px;}
+  .bio-content-layout{grid-template-columns:1fr;}
+  .bio-sidebar{position:static;}
+}
+@media(max-width:768px){
+  .bio-hero{padding:72px 5% 60px;}
+  .bio-hero-inner{grid-template-columns:1fr;gap:36px;}
+  .bio-hero-img-col{max-width:280px;margin:0 auto;width:100%;}
+  .bio-hero-name{font-size:clamp(44px,12vw,64px);}
+  .bio-hero-actions{flex-direction:column;}
+  .bio-hero-actions .btn-primary,.bio-btn-histoire{width:100%;justify-content:center;}
+  .bio-section-block{grid-template-columns:1fr;}
+  .bio-section-icon{display:none;}
+  .bio-full-quote{padding:20px 20px 20px 24px;}
+  .bio-full-quote i{display:none;}
+}
+@media(max-width:480px){
+  .bio-hero{padding:60px 5% 48px;}
+  .bio-hero-name{font-size:clamp(38px,11vw,52px);}
+  .bio-full-quote{font-size:15px;}
+}
+</style>
 </body></html>

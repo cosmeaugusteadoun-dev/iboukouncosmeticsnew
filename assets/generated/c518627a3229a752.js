@@ -1,7 +1,7 @@
-
+﻿
 var FP_PRIX     = 3500;
 var FP_NOM      = 'Savon Gommant';
-var FP_WA_NUM   = '22901695300';
+var FP_WA_NUM   = '2290169156300';
 
 /* ---- Quantité & Total ---- */
 function changeQty(delta){
@@ -74,7 +74,7 @@ function submitCommande(){
   fetch('/api/commande_submit', {method:'POST', body:data})
   .then(function(r){ return r.json(); })
   .then(function(res){
-    if(res.success){
+    if(res.success && res.commande_id){
       // Fermer recap
       closeRecap();
       // Remplir page succès
@@ -91,7 +91,7 @@ function submitCommande(){
       var msg = document.getElementById('fpOrderMsg');
       msg.style.display = 'block';
       msg.className = 'fp-form-result error';
-      msg.textContent = res.message;
+      msg.textContent = res.message || 'Commande non confirmée. Réessayez.';
     }
   })
   .catch(function(){
@@ -141,5 +141,4 @@ document.addEventListener('keydown', function(e){
 var s = document.createElement('style');
 s.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
 document.head.appendChild(s);
-
 
