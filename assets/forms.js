@@ -39,9 +39,17 @@
         const retryResponse=await nativeFetch(config.supabaseUrl+'/rest/v1/rpc/submit_public_order',{method:'POST',headers:{'Content-Type':'application/json',apikey:config.supabasePublicKey},body:JSON.stringify({order_data:payload}),signal:AbortSignal.timeout(20000),credentials:'omit'});
         if(retryResponse.ok)return retryResponse;
         response=retryResponse;
+        } else {
+         // Produit pack non présent dans Supabase : envoyer la commande avec le prix soumis tel quel
+         const clientTotal=payload.prix_total;
+         const formatNote=(payload.produit_nom?'Format/Produit: '+payload.produit_nom:'')+(clientTotal?' | Total affiché: '+clientTotal+' FCFA':'');
+         payload.notes=[formatNote,payload.notes].filter(Boolean).join(' | ');
+         const retryResponse=await nativeFetch(config.supabaseUrl+'/rest/v1/rpc/submit_public_order',{method:'POST',headers:{'Content-Type':'application/json',apikey:config.supabasePublicKey},body:JSON.stringify({order_data:payload}),signal:AbortSignal.timeout(20000),credentials:'omit'});
+         if(retryResponse.ok)return retryResponse;
+         response=retryResponse;
+        }
        }
-      }
-     }catch{}
+      }catch{}
     }
     let message='La commande n’a pas pu être enregistrée. Réessayez.';
     try{const finalDetail=await response.json();if(typeof finalDetail.message==='string')message=finalDetail.message;}catch{}

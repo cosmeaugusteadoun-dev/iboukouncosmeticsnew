@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /app/
-Sitemap: https://iboukouncosmetics.kesug.com/sitemap.xml
+Sitemap: https://iboukouncosmetics.com/sitemap.xml

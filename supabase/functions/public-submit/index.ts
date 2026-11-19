@@ -116,13 +116,21 @@ async function submitOrder(payload: Record<string, unknown>) {
     `produits?select=id,nom,slug,prix,actif&id=eq.${productId}&limit=1`,
   ) as Array<{ id: number; nom: string; slug: string; prix: number; actif: boolean }>;
   const product = products[0];
-  if (!product || !product.actif || !Number.isSafeInteger(product.prix) || product.prix <= 0) {
+  if (product && (!product.actif || !Number.isSafeInteger(product.prix) || product.prix <= 0)) {
     return { status: 404, body: { success: false, message: "Ce produit n'est plus disponible. Actualisez la page." } };
   }
 
-  let unitPrice = product.prix;
-  if (product.slug === "savon-gommant" && /petit pot/i.test(productName)) {
-    unitPrice = 3000;
+  let unitPrice: number;
+  let priceVerified = false;
+  if (product) {
+    unitPrice = product.prix;
+    if (product.slug === "savon-gommant" && /petit pot/i.test(productName)) {
+      unitPrice = 3000;
+    }
+    priceVerified = true;
+  } else {
+    // Produit pack non présent dans Supabase : accepter le prix soumis tel quel
+    unitPrice = submittedTotal / quantity;
   }
 
   const promotions = await supabaseRequest(
@@ -141,7 +149,7 @@ async function submitOrder(payload: Record<string, unknown>) {
   }
 
   const total = unitPrice * quantity;
-  if (submittedTotal !== total) {
+  if (priceVerified && submittedTotal !== total) {
     return {
       status: 409,
       body: { success: false, message: "Le prix a changé. Actualisez la page puis vérifiez votre commande." },
@@ -156,11 +164,11 @@ async function submitOrder(payload: Record<string, unknown>) {
       telephone_appel: phone,
       ville: city,
       quartier: district,
-      produit_id: product.id,
+      produit_id: productId,
       quantite: quantity,
       prix_unitaire: unitPrice,
       prix_total: total,
-      notes: productName && productName !== product.nom ? productName : null,
+      notes: productName && (!product || productName !== product.nom) ? productName : null,
     }),
   }) as Array<{ id: number }>;
   if (!rows[0]?.id) throw new Error("Supabase did not return the saved order");

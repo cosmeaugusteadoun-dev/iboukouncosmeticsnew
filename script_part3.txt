@@ -1,0 +1,2 @@
+  setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 10000);
+})();

@@ -1,0 +1,15 @@
+<!-- SKELETON LOADER (inchangé) -->
+============================================================ */
+(function(){
+  var body   = document.getElementById('skBody');
+  var loader = document.getElementById('skeletonLoader');
+  var path   = window.location.pathname;
+  var isHome = path.indexOf('index.html') !== -1 || path.endsWith('/') || path.endsWith('/iboukoun/');
+
+  function skProduct(){
+    return '<div class="sk-product-card"><div class="sk-box sk-product-img"></div><div class="sk-product-body"><div class="sk-box sk-product-cat"></div><div class="sk-box sk-product-name"></div><div class="sk-box sk-product-desc1"></div><div class="sk-box sk-product-desc2"></div><div class="sk-product-footer"><div class="sk-box sk-product-price"></div><div class="sk-box sk-product-btn"></div></div></div></div>';
+  }
+
+  function skTemo(){
+    return '<div class="sk-temo-card"><div class="sk-temo-stars"><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div><div class="sk-box sk-temo-star"></div></div><div class="sk-box sk-temo-text1"></div><div class="sk-box sk-temo-text2"></div><div class="sk-box sk-temo-text3"></div><div class="sk-temo-author"><div class="sk-box sk-temo-avatar"></div><div class="sk-temo-info"><div class="sk-box sk-temo-name"></div><div class="sk-box sk-temo-city"></div></div></div></div>';
+  }

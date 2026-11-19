@@ -1,0 +1,17 @@
+  function skSectionHeader(){
+    return '<div class="sk-section-header"><div class="sk-box sk-section-eyebrow"></div><div class="sk-box sk-section-title"></div><div class="sk-box sk-section-sub"></div></div>';
+  }
+
+  var html = '';
+
+  if(isHome){
+    html += '<div class="sk-hero"><div class="sk-hero-content"><div class="sk-hero-badge"></div><div class="sk-hero-h1-1"></div><div class="sk-hero-h1-2"></div><div class="sk-hero-sub"></div><div class="sk-hero-sub2"></div><div class="sk-hero-btns"><div class="sk-hero-btn1"></div><div class="sk-hero-btn2"></div></div></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+skTemo()+'</div></div>';
+  } else {
+    html += '<div class="sk-page-hero"><div class="sk-box sk-page-hero-badge"></div><div class="sk-box sk-page-hero-title"></div><div class="sk-box sk-page-hero-sub"></div></div>';
+    html += '<div class="sk-section">'+skSectionHeader()+'<div class="sk-products">'+skProduct()+skProduct()+skProduct()+skProduct()+'</div></div>';
+    html += '<div class="sk-section" style="background:var(--cream);">'+skSectionHeader()+'<div class="sk-temos">'+skTemo()+skTemo()+'</div></div>';
+  }
+
+  if(body) body.innerHTML = html;

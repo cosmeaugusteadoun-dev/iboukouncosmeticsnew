@@ -133,7 +133,9 @@ out += "\" onclick=\"menuClose()\">\n      <div class=\"mobile-nav-item-left\">\
 out += (BASE_URL) ?? "";
 out += "videos.php\" class=\"mobile-nav-item ";
 out += (nav_active("videos",page_active)) ?? "";
+if (!empty(videos)) {
 out += "\" onclick=\"menuClose()\">\n      <div class=\"mobile-nav-item-left\">\n        <div class=\"mobile-nav-icon\"><i class=\"ri-video-line\"></i></div>\n        <div class=\"mobile-nav-label\">\n          <span class=\"nav-label-main\">Vidéos</span>\n          <span class=\"nav-label-sub\">Nos contenus</span>\n        </div>\n      </div>\n      <i class=\"ri-arrow-right-s-line mobile-nav-arrow\"></i>\n    </a>\n    <div class=\"mobile-menu-sep\"></div>\n    <a href=\"";
+}
 out += (BASE_URL) ?? "";
 out += "revendeurs.php\" class=\"mobile-nav-item ";
 out += (nav_active("revendeurs",page_active)) ?? "";

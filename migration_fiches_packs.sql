@@ -151,11 +151,17 @@ begin
   select * into v_product
   from public.produits
   where id = v_product_id and actif = true;
-  if not found or v_product.prix < 1 then
-    return jsonb_build_object('success', false, 'message', 'Ce produit n’est plus disponible.');
+
+  -- Si le produit n'existe pas en base (cas des packs), accepter avec le prix soumis
+  if not found then
+    v_unit_price := v_submitted_total / v_quantity;
+  else
+    if v_product.prix < 1 then
+      return jsonb_build_object('success', false, 'message', 'Ce produit n’est plus disponible.');
+    end if;
+    v_unit_price := v_product.prix;
   end if;
 
-  v_unit_price := v_product.prix;
   if v_product.slug = 'savon-gommant' and v_product_name ilike '%petit pot%' then
     v_unit_price := 3000;
   end if;
@@ -171,7 +177,8 @@ begin
     and promotion.prix_promo < v_unit_price;
   v_unit_price := coalesce(v_promo_price, v_unit_price);
 
-  if v_submitted_total <> v_unit_price::bigint * v_quantity
+  -- Vérification du prix seulement si le produit existe en base
+  if v_product is not null and v_submitted_total <> v_unit_price::bigint * v_quantity
      or v_submitted_total > 2147483647 then
     return jsonb_build_object('success', false, 'message', 'Le prix affiché a changé. Actualisez la page puis vérifiez votre commande.');
   end if;
@@ -181,7 +188,8 @@ begin
      quantite, prix_unitaire, prix_total, notes)
   values
     (v_name, v_whatsapp, v_phone, v_city, v_district, v_product_id,
-     v_quantity, v_unit_price, v_submitted_total, 'Fiche : ' || v_product.nom)
+     v_quantity, v_unit_price, v_submitted_total, 
+     case when v_product is not null then 'Fiche : ' || v_product.nom else v_product_name end)
   returning id into v_order_id;
 
   return jsonb_build_object(

@@ -222,7 +222,23 @@ if (!window.iboukounPublic) {
         console.warn('Impossible d’enregistrer la visite de cette page.', error);
       }
 
-      const hasActivePromo = (live.promotions || []).some(p => p.actif === true || p.actif === 1);
+      
+      // Afficher le lien "Vidéos" dans le menu burger seulement s'il y a des vidéos
+      const hasVideos = (live.videos || []).some(v => v.actif === true || v.actif === 1);
+      const videoLinks = document.querySelectorAll('a[href="/videos.html"], a[href="videos.html"]');
+      videoLinks.forEach(link => {
+        if (hasVideos) {
+          link.removeAttribute('hidden');
+        }
+        const sep = link.nextElementSibling;
+        if (sep && sep.classList.contains('mobile-menu-sep')) {
+          if (hasVideos) {
+            sep.removeAttribute('hidden');
+          }
+        }
+      });
+
+const hasActivePromo = (live.promotions || []).some(p => p.actif === true || p.actif === 1);
       if (!hasActivePromo) document.querySelectorAll('a[href*="promotions"]').forEach(a => { a.style.display = 'none'; });
     }
 
@@ -240,6 +256,8 @@ if (!window.iboukounPublic) {
     }));
   } catch (error) {
     console.error('Erreur lors du chargement des éléments publics du site.', error);
+    const skeleton = document.getElementById('skeletonLoader');
+    if (skeleton) skeleton.classList.add('hidden');
     const loader = document.getElementById('productLoader');
     if (loader) {
       loader.setAttribute('aria-busy', 'false');
