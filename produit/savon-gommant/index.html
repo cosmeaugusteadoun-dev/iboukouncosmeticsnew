@@ -2031,18 +2031,27 @@ function submitCommande(){
 /* ---- Ouvrir WhatsApp avec dÃ©tails de la commande ---- */
 function ouvrirWACommande(e){
   if(e) e.preventDefault();
-  var c = window.__iboukounCmd || {};
-  var nom   = c.nom || 'Client';
-  var tel   = c.tel || '';
-  var ville = c.ville || '';
-  var quart = c.quart || '';
-  var prod  = c.prod || '';
-  var qty   = c.qty || '1';
-  var total = c.total || '0';
-  var msg = 'Salut Iboukoun Cosmetics, je viens de passer une commande : *'+prod+'* Ã— '+qty+' = *'+total+' FCFA*.\\n';
-  msg += 'Client : '+nom+'.\\n';
-  msg += 'TÃ©lÃ©phone : '+tel+'.\\n';
-  msg += 'Ville : '+ville+', Quartier : '+quart+'.\\n';
+  var nomEl   = document.getElementById('fNom');
+  var telEl   = document.getElementById('fWa');
+  var villeEl = document.getElementById('fVille');
+  var quartEl = document.getElementById('fQuartier');
+  var prodEl  = document.getElementById('fpFormNom');
+  var qtyEl   = document.getElementById('fpFormQty');
+  var totalEl = document.getElementById('fpFormTotal');
+  var nom   = nomEl   ? nomEl.value.trim()   : 'Client';
+  var tel   = telEl   ? telEl.value.trim()   : '';
+  var ville = villeEl ? villeEl.value.trim() : '';
+  var quart = quartEl ? quartEl.value.trim() : '';
+  var prod  = prodEl  ? prodEl.value.trim()  : '';
+  var qty   = qtyEl   ? qtyEl.value.trim()   : '1';
+  var total = totalEl ? totalEl.value.trim() : '0';
+    var msg = 'Salut Iboukoun Cosmetics, je viens de passer une commande :\n\n';
+  msg += 'Produit : '+prod+'\n';
+  msg += 'Quantite : '+qty+'\n';
+  msg += 'Total : '+total+' FCFA\n\n';
+  msg += 'Client : '+nom+'\n';
+  msg += 'Telephone : '+tel+'\n';
+  msg += 'Ville : '+ville+', Quartier : '+quart+'\n\n';
   msg += 'Merci de confirmer ma commande et la livraison.';
   window.open('https://wa.me/2290169156300?text='+encodeURIComponent(msg),'_blank');
 }

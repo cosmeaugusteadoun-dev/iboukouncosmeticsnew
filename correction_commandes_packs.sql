@@ -1,12 +1,17 @@
 -- ============================================================
--- CORRECTION : Fonction submit_public_order pour accepter les packs
--- qui ne sont pas encore dans la table produits de Supabase
+-- CORRECTION : Fonction submit_public_order + suppression FK
+-- pour accepter les packs qui ne sont pas encore dans produits
 --
 -- À exécuter dans l'éditeur SQL de votre dashboard Supabase.
--- Ce fichier ne modifie aucune table, il ne fait que mettre à jour
--- la fonction existante submit_public_order.
+-- Ce fichier ne modifie aucune donnée existante.
 -- ============================================================
 
+-- 1) Supprimer la contrainte de clé étrangère sur produit_id
+--    pour permettre les commandes de packs non encore en base produits
+alter table public.commandes_formulaire
+  drop constraint if exists commandes_formulaire_produit_id_fkey;
+
+-- 2) Recréer la fonction submit_public_order corrigée
 create or replace function public.submit_public_order(order_data jsonb)
 returns jsonb
 language plpgsql
@@ -50,7 +55,7 @@ begin
      or length(v_phone_digits) not between 8 and 15
      or length(regexp_replace(v_phone, '[^0-9]', '', 'g')) not between 8 and 15
      or length(v_product_name) > 160 then
-    return jsonb_build_object('success', false, 'message', 'Vérifiez vos coordonnées et les informations de commande.');
+    return jsonb_build_object('success', false, 'message', 'Verifiez vos coordonnees et les informations de commande.');
   end if;
 
   -- Anti-doublon rapide
@@ -59,10 +64,10 @@ begin
   where regexp_replace(coalesce(orders.telephone, ''), '[^0-9]', '', 'g') = v_phone_digits
     and orders.created_at > now() - interval '1 minute';
   if v_recent_orders >= 3 then
-    return jsonb_build_object('success', false, 'message', 'Plusieurs commandes viennent d’être envoyées avec ce numéro. Réessayez dans une minute.');
+    return jsonb_build_object('success', false, 'message', 'Plusieurs commandes viennent d’etre envoyees avec ce numero. Reessayez dans une minute.');
   end if;
 
-  -- Récupération du produit (peut être null pour les packs non présents en base)
+  -- Recuperation du produit (peut etre null pour les packs non presents en base)
   select * into v_product
   from public.produits
   where id = v_product_id and actif = true;
@@ -94,10 +99,10 @@ begin
     and promotion.prix_promo < v_unit_price;
   v_unit_price := coalesce(v_promo_price, v_unit_price);
 
-  -- Vérification du prix seulement si le produit existe en base
+  -- Verification du prix seulement si le produit existe en base
   if v_product is not null and v_submitted_total <> v_unit_price::bigint * v_quantity
      or v_submitted_total > 2147483647 then
-    return jsonb_build_object('success', false, 'message', 'Le prix affiché a changé. Actualisez la page puis vérifiez votre commande.');
+    return jsonb_build_object('success', false, 'message', 'Le prix affiche a change. Actualisez la page puis verifiez votre commande.');
   end if;
 
   -- Insertion de la commande
@@ -113,7 +118,7 @@ begin
   return jsonb_build_object(
     'success', true,
     'commande_id', v_order_id,
-    'message', 'Votre commande a bien été enregistrée.'
+    'message', 'Votre commande a bien ete enregistree.'
   );
 end;
 $$;
