@@ -1,4 +1,4 @@
-﻿
+
 var FP_PRIX     = 2000;
 var FP_NOM      = 'Aisselles Chic';
 var FP_WA_NUM   = '2290169156300';

@@ -1,766 +1,753 @@
-﻿{
-    "accueil_sections":  [
-                         {
-                             "id":  16,
-                             "section":  "packs",
-                             "item_type":  "pack",
-                             "titre":  "Duo Éclaircissant+",
-                             "description":  "Le duo de soins éclaircissants Iboukoun Cosmetics.",
-                             "produit_id":  8,
-                             "image":  "duo-eclat.png",
-                             "ordre":  1,
-                             "actif":  true
-                         },
-                         {
-                             "id":  17,
-                             "section":  "packs",
-                             "item_type":  "pack",
-                             "titre":  "Savon Antiseptique + Crème de Visage",
-                             "description":  "Un soin antiseptique associé à la Crème de Visage Iboukoun.",
-                             "produit_id":  11,
-                             "image":  "savon-antiseptique-creme.png",
-                             "ordre":  2,
-                             "actif":  true
-                         },
-                         {
-                             "id":  18,
-                             "section":  "packs",
-                             "item_type":  "pack",
-                             "titre":  "Savon Gommant + Crème de Visage",
-                             "description":  "Le Savon Gommant associé à la Crème de Visage Iboukoun.",
-                             "produit_id":  12,
-                             "image":  "offre-special-gommant-creme.png",
-                             "ordre":  3,
-                             "actif":  true
-                         },
-                         {
-                             "id":  19,
-                             "section":  "mission",
-                             "item_type":  "texte",
-                             "titre":  "Notre mission",
-                             "description":  "Chez Iboukoun Cosmetics, nous croyons qu’une belle peau commence par des soins adaptés, nourrissants et inspirés par la nature. Nos formules sont pensées pour accompagner chaque peau dans sa routine beauté.",
-                             "surtitre":  "Nous avons à cÅ“ur",
-                             "texte_final":  "Iboukoun Cosmetics, prendre soin de votre peau naturellement.",
-                             "ordre":  1,
-                             "actif":  true
-                         },
-                         {
-                             "id":  20,
-                             "section":  "mission",
-                             "item_type":  "image",
-                             "titre":  "Image de mission 1",
-                             "image":  "equipe-iboukoun-cosmetics.png",
-                             "ordre":  1,
-                             "actif":  true
-                         },
-                         {
-                             "id":  21,
-                             "section":  "mission",
-                             "item_type":  "image",
-                             "titre":  "Image de mission 2",
-                             "image":  "aiselle-chic-application.png",
-                             "ordre":  2,
-                             "actif":  true
-                         },
-                         {
-                             "id":  22,
-                             "section":  "mission",
-                             "item_type":  "image",
-                             "titre":  "Image de mission 3",
-                             "image":  "resultat-sérums-clatants.png",
-                             "ordre":  3,
-                             "actif":  true
-                         },
-                         {
-                             "id":  23,
-                             "section":  "resultats",
-                             "item_type":  "texte",
-                             "titre":  "Nos résultats parlent d’eux-mêmes",
-                             "description":  "Découvrez les images et les expériences partagées par notre communauté.",
-                             "ordre":  1,
-                             "actif":  true
-                         },
-                         {
-                             "id":  1,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 1",
-                             "image":  "temoignage.webp",
-                             "ordre":  1,
-                             "actif":  true
-                         },
-                         {
-                             "id":  2,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 2",
-                             "image":  "temoignage1.webp",
-                             "ordre":  2,
-                             "actif":  true
-                         },
-                         {
-                             "id":  3,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 3",
-                             "image":  "temoignage2.webp",
-                             "ordre":  3,
-                             "actif":  true
-                         },
-                         {
-                             "id":  4,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 4",
-                             "image":  "temoignage3.webp",
-                             "ordre":  4,
-                             "actif":  true
-                         },
-                         {
-                             "id":  5,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 5",
-                             "image":  "temoignage4.webp",
-                             "ordre":  5,
-                             "actif":  true
-                         },
-                         {
-                             "id":  6,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 6",
-                             "image":  "temoignage5.webp",
-                             "ordre":  6,
-                             "actif":  true
-                         },
-                         {
-                             "id":  7,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 7",
-                             "image":  "temoignage6.webp",
-                             "ordre":  7,
-                             "actif":  true
-                         },
-                         {
-                             "id":  8,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 8",
-                             "image":  "temoignage7.webp",
-                             "ordre":  8,
-                             "actif":  true
-                         },
-                         {
-                             "id":  9,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 9",
-                             "image":  "temoignage8.webp",
-                             "ordre":  9,
-                             "actif":  true
-                         },
-                         {
-                             "id":  10,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 10",
-                             "image":  "temoignage9.webp",
-                             "ordre":  10,
-                             "actif":  true
-                         },
-                         {
-                             "id":  11,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 11",
-                             "image":  "temoignage10.webp",
-                             "ordre":  11,
-                             "actif":  true
-                         },
-                         {
-                             "id":  12,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 12",
-                             "image":  "temoignage11.webp",
-                             "ordre":  12,
-                             "actif":  true
-                         },
-                         {
-                             "id":  13,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 13",
-                             "image":  "temoignage12.webp",
-                             "ordre":  13,
-                             "actif":  true
-                         },
-                         {
-                             "id":  14,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 14",
-                             "image":  "temoignage13.webp",
-                             "ordre":  14,
-                             "actif":  true
-                         },
-                         {
-                             "id":  15,
-                             "section":  "resultats",
-                             "item_type":  "image",
-                             "titre":  "Témoignage visuel 15",
-                             "image":  "temoignage14.webp",
-                             "ordre":  15,
-                             "actif":  true
-                         }
-                         ],
-    "categories":  [
-                       {
-                           "slug":  "corps",
-                           "nom":  "Soin corps",
-                           "id":  1
-                       },
-                       {
-                           "slug":  "visage",
-                           "nom":  "Soin visage",
-                           "id":  2
-                       },
-                       {
-                           "slug":  "deodorant",
-                           "nom":  "Déodorant naturel",
-                           "id":  3
-                       }
-                   ],
-    "produits":  [
-                     {
-                         "categorie_id":  3,
-                         "nom":  "Aisselles Chic",
-                         "slug":  "aisselles-chic",
-                         "description":  "Déodorant naturel combat les odeurs, réduit la transpiration. Sans parfum ni sels d\u0027aluminium.",
-                         "prix":  2000,
-                         "stock":  100,
-                         "id":  1,
-                         "actif":  1,
-                         "image":  "aiselle-chic.png",
-                         "benefices":  "100% naturel\nSans sels d\u0027aluminium\nEfficacité 24h"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Savon Gommant",
-                         "slug":  "savon-gommant",
-                         "description":  "Débarrasse la peau des cellules mortes et ravive le teint sans le décaper. Présenté en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).",
-                         "prix":  6000,
-                         "stock":  80,
-                         "id":  2,
-                         "actif":  1,
-                         "image":  "savon-gommant.png",
-                         "benefices":  "Exfoliation naturelle douce\nÉlimine les cellules mortes\nRavive le teint sans décaper\nDeux formats : Grand pot \u0026 Petit pot"
-                     },
-                     {
-                         "categorie_id":  2,
-                         "nom":  "Sérum Anti-taches \u0026 Éclat",
-                         "slug":  "serum-anti-tache",
-                         "description":  "Sérum unifiant, formulé pour réduire les taches pigmentaires et prévenir l\u0027hyperpigmentation.",
-                         "prix":  5000,
-                         "stock":  50,
-                         "id":  3,
-                         "actif":  1,
-                         "image":  "serum-anti-tache.png",
-                         "benefices":  "Réduit les taches pigmentaires\nUniformise le grain de peau\nTexture légère et fluide\nPénétration rapide"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Huile Éclat",
-                         "slug":  "huile-eclat",
-                         "description":  "Huile précieuse pour nourrir et illuminer la peau. Absorption rapide.",
-                         "prix":  4500,
-                         "stock":  60,
-                         "id":  4,
-                         "actif":  1,
-                         "image":  "huile-eclat.png",
-                         "benefices":  "Nutrition intense\nFini satiné non gras\nIllumine le teint"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Savon Gommant Premium",
-                         "slug":  "savon-gommant-premium",
-                         "description":  "Donne de l\u0027éclat et uniformise votre teint. Formule enrichie au collagène, miel et huile d\u0027amande douce.",
-                         "prix":  7000,
-                         "stock":  50,
-                         "id":  5,
-                         "actif":  1,
-                         "image":  "savon-gommant-premium.png",
-                         "benefices":  "Formule enrichie au collagène\nDonne de l\u0027éclat et uniformise\nAdoucit et hydrate en profondeur"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Gel Clarifiant +",
-                         "slug":  "gel-clarifiant-plus",
-                         "description":  "Clarifie et uniformise le teint en lui redonnant son éclat normal.",
-                         "prix":  5000,
-                         "stock":  50,
-                         "id":  6,
-                         "actif":  1,
-                         "image":  "gel-clarifiant+.png",
-                         "benefices":  "Clarifie et uniformise\nRedonne l\u0027éclat naturel\nNettoyage doux pour le bain"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Savon Antiseptique",
-                         "slug":  "savon-antiseptique",
-                         "description":  "Fait à base de racines et de plantes. Traite les démangeaisons, teignes, acnés, bourbouilles et dartres.",
-                         "prix":  3000,
-                         "stock":  50,
-                         "id":  7,
-                         "actif":  1,
-                         "image":  "savon-antiseptique.png",
-                         "benefices":  "Base de racines et plantes médicinales\nTraite démangeaisons et dartres\nLutte contre acnés et bourbouilles"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Duo Éclaircissant+",
-                         "slug":  "duo-eclat",
-                         "description":  "Le duo de soins éclaircissants Iboukoun Cosmetics.",
-                         "prix":  11000,
-                         "stock":  30,
-                         "id":  8,
-                         "actif":  1,
-                         "image":  "duo-eclat.png",
-                         "benefices":  "Deux soins complémentaires\nRoutine éclaircissante\nFormat économique"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Lotion Anti Quinto",
-                         "slug":  "lotion-anti-quinto",
-                         "description":  "Solution ciblée pour estomper les quintos, phalanges sombres, jointures, coudes et genoux rebelles.",
-                         "prix":  3000,
-                         "stock":  50,
-                         "id":  9,
-                         "actif":  1,
-                         "image":  "lotion-anti-quinto.png",
-                         "benefices":  "Éclaircit les jointures sombres\nAction ciblée anti-quintos\nApplication locale facile"
-                     },
-                     {
-                         "categorie_id":  2,
-                         "nom":  "Crème de Visage",
-                         "slug":  "creme-visage",
-                         "description":  "Soin hydratant, nourrissant et unifiant spécialement formulé pour la peau délicate du visage.",
-                         "prix":  4000,
-                         "stock":  50,
-                         "id":  10,
-                         "actif":  1,
-                         "image":  "creme-visage.png",
-                         "benefices":  "Hydratation quotidienne intense\nProtège la peau délicate du visage\nIllumine et unifie le teint"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Savon Antiseptique + Crème de Visage",
-                         "slug":  "pack-savon-antiseptique-creme-visage",
-                         "description":  "Un soin antiseptique associé à la Crème de Visage Iboukoun.",
-                         "prix":  4000,
-                         "stock":  50,
-                         "id":  11,
-                         "actif":  1,
-                         "image":  "savon-antiseptique-creme.png",
-                         "benefices":  "Savon antiseptique et Crème de Visage\nDeux soins complémentaires\nRoutine complète"
-                     },
-                     {
-                         "categorie_id":  1,
-                         "nom":  "Savon Gommant + Crème de Visage",
-                         "slug":  "pack-savon-gommant-premium-creme-visage",
-                         "description":  "Le Savon Gommant associé à la Crème de Visage Iboukoun.",
-                         "prix":  10000,
-                         "stock":  50,
-                         "id":  12,
-                         "actif":  1,
-                         "image":  "offre-special-gommant-creme.png",
-                         "benefices":  "Savon gommant et Crème de Visage\nDeux soins complémentaires\nRoutine corps et visage"
-                     }
-                 ],
-    "promotions":  [
-
-                   ],
-    "temoignages":  [
-                        {
-                            "id":  101,
-                            "nom_client":  "Leonardo ALLAVO",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  4,
-                            "message":  "IBOUKOUN COSMÉTICS m\u0027a été recommandé par une amie à moi et aujourd\u0027hui je peux vous dire que c\u0027était la meilleure recommandation qu\u0027on m\u0027a faites jusqu\u0027à là. Non seulement ils ont d\u0027excellents produits mais aussi ils sont professionnels !!! Je recommande vraiment",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  1,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  102,
-                            "nom_client":  "Grace Nyg",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "La référence qu\u0027il vous faut pour tout ce qui concerne votre peau 🥰🥰🥰",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  2,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  103,
-                            "nom_client":  "Kora Dafia",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Les produits IBOUKOUN COSMETICS sont une adaptés à tous types de peau et de teint . Moi j\u0027en utilise et je peux vous assurer que je suis satisfait des résultats jusqu\u0027à présent.",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  3,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  104,
-                            "nom_client":  "Reno Samani",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Accueil chaleureux, accompagnement adéquat, produit de qualité. La référence en terme dd produit cosmétique au Bénin",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  4,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  105,
-                            "nom_client":  "Mélodie Yokossi",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  1,
-                            "message":  "Iboukoun cosmétiques c\u0027est la meilleure recommandation que je puisse faire à mon entourage pour finir avec les imperfections corporelles 😍 😍 et aujourd\u0027hui j\u0027ai un joli teint sans aucune imperfections 🥰 😍 😘 c\u0027est la référence aufaite ❤ï¸ ❤ï¸",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  5,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  106,
-                            "nom_client":  "Juliana ADELOUI",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Ces produits sont les meilleurs que j\u0027ai eu à utiliser sans être déçu et je recommande vivement surtout le savon gommant 😍 ❤ï¸",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  6,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  107,
-                            "nom_client":  "Juste Honorat Zannou",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Tout simplement les meilleurs dans leur domaine 🎊🚀",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  7,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  108,
-                            "nom_client":  "Saja Gnon Chimène GUEGOU BATA",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "En matière de cosmétiques naturels corporelle, Iboukoun est la meilleure 🥰 ❤ï¸",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  8,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  109,
-                            "nom_client":  "Fleur Dagui",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Je recommande Iboukoun Cosmétiques pour vos soins naturels cosmétiques : l\u0027une des meilleures. 🥰",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  9,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  110,
-                            "nom_client":  "Grâce",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "J’ai testé les produits IBOUKOUN et j’ai vraiment aimé le résultat sur ma peau. Mon teint est plus propre, plus doux et lumineux. C’est tout simplement waoh❤ï¸",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  10,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  111,
-                            "nom_client":  "Linus Anagonou",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Le leader de la cosmétique dans le septentrion.",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  11,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  112,
-                            "nom_client":  "Jude Avognon",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "Iboukoun cosmétiques fait les meilleurs produits de soins de visage et corporel que j\u0027ai eu à utiliser. Je recommande vivement",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  12,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  113,
-                            "nom_client":  "Diane Sasse",
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  5,
-                            "message":  "IBOUKOUN COSMÉTICS c’est la meilleure marque . Je l’utilise depuis quelques années et je vous la recommande vivement 🥰",
-                            "type":  "texte",
-                            "screenshot":  null,
-                            "visible":  true,
-                            "ordre":  13,
-                            "created_at":  "2026-04-27T16:01:07.5444201Z"
-                        },
-                        {
-                            "id":  114,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage15.webp",
-                            "visible":  true,
-                            "ordre":  14
-                        },
-                        {
-                            "id":  115,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage16.webp",
-                            "visible":  true,
-                            "ordre":  15
-                        },
-                        {
-                            "id":  116,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage17.webp",
-                            "visible":  true,
-                            "ordre":  16
-                        },
-                        {
-                            "id":  117,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage18.webp",
-                            "visible":  true,
-                            "ordre":  17
-                        },
-                        {
-                            "id":  118,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage19.webp",
-                            "visible":  true,
-                            "ordre":  18
-                        },
-                        {
-                            "id":  119,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage20.webp",
-                            "visible":  true,
-                            "ordre":  19
-                        },
-                        {
-                            "id":  120,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage21.webp",
-                            "visible":  true,
-                            "ordre":  20
-                        },
-                        {
-                            "id":  121,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage22.webp",
-                            "visible":  true,
-                            "ordre":  21
-                        },
-                        {
-                            "id":  122,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage23.webp",
-                            "visible":  true,
-                            "ordre":  22
-                        },
-                        {
-                            "id":  123,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage24.webp",
-                            "visible":  true,
-                            "ordre":  23
-                        },
-                        {
-                            "id":  124,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage25.webp",
-                            "visible":  true,
-                            "ordre":  24
-                        },
-                        {
-                            "id":  125,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage26.webp",
-                            "visible":  true,
-                            "ordre":  25
-                        },
-                        {
-                            "id":  126,
-                            "nom_client":  null,
-                            "ville":  null,
-                            "produit_id":  null,
-                            "note":  null,
-                            "message":  null,
-                            "type":  "screenshot",
-                            "screenshot":  "temoignage27.webp",
-                            "visible":  true,
-                            "ordre":  26
-                        }
-                    ],
-    "parametres":  [
-                       {
-                           "cle":  "whatsapp_number",
-                           "valeur":  "2290169156300"
-                       },
-                       {
-                           "cle":  "facebook_url",
-                           "valeur":  ""
-                       },
-                       {
-                           "cle":  "instagram_url",
-                           "valeur":  ""
-                       },
-                       {
-                           "cle":  "tiktok_url",
-                           "valeur":  ""
-                       },
-                       {
-                           "cle":  "adresse",
-                           "valeur":  "Parakou, Bénin"
-                       },
-                       {
-                           "cle":  "email_contact",
-                           "valeur":  ""
-                       },
-                       {
-                           "cle":  "horaires",
-                           "valeur":  "Lun–Sam : 8h–20h"
-                       },
-                       {
-                           "cle":  "site_nom",
-                           "valeur":  "Iboukoun Cosmetics"
-                       },
-                       {
-                           "cle":  "site_slogan",
-                           "valeur":  "Naturellement vous"
-                       }
-                   ],
-    "equipe":  [
-
-               ],
-    "pages_contenu":  [
-
-                      ],
-    "produit_photos":  [
-
-                       ],
-    "egeries":  [
-
-                ],
-    "videos":  [
-
-               ]
+{
+  "accueil_sections": [
+    {
+      "id": 16,
+      "section": "packs",
+      "item_type": "pack",
+      "titre": "Duo Éclaircissant+",
+      "description": "Le duo de soins éclaircissants Iboukoun Cosmetics.",
+      "produit_id": 8,
+      "image": "duo-eclat.png",
+      "ordre": 1,
+      "actif": true
+    },
+    {
+      "id": 17,
+      "section": "packs",
+      "item_type": "pack",
+      "titre": "Savon Antiseptique + Crème de Visage",
+      "description": "Un soin antiseptique associé à la Crème de Visage Iboukoun.",
+      "produit_id": 11,
+      "image": "savon-antiseptique-creme.png",
+      "ordre": 2,
+      "actif": true
+    },
+    {
+      "id": 18,
+      "section": "packs",
+      "item_type": "pack",
+      "titre": "Savon Gommant + Crème de Visage",
+      "description": "Le Savon Gommant associé à la Crème de Visage Iboukoun.",
+      "produit_id": 12,
+      "image": "offre-special-gommant-creme.png",
+      "ordre": 3,
+      "actif": true
+    },
+    {
+      "id": 19,
+      "section": "mission",
+      "item_type": "texte",
+      "titre": "Notre mission",
+      "description": "Chez Iboukoun Cosmetics, nous croyons qu’une belle peau commence par des soins adaptés, nourrissants et inspirés par la nature. Nos formules sont pensées pour accompagner chaque peau dans sa routine beauté.",
+      "surtitre": "Nous avons à cÅ“ur",
+      "texte_final": "Iboukoun Cosmetics, prendre soin de votre peau naturellement.",
+      "ordre": 1,
+      "actif": true
+    },
+    {
+      "id": 20,
+      "section": "mission",
+      "item_type": "image",
+      "titre": "Image de mission 1",
+      "image": "equipe-iboukoun-cosmetics.png",
+      "ordre": 1,
+      "actif": true
+    },
+    {
+      "id": 21,
+      "section": "mission",
+      "item_type": "image",
+      "titre": "Image de mission 2",
+      "image": "aiselle-chic-application.png",
+      "ordre": 2,
+      "actif": true
+    },
+    {
+      "id": 22,
+      "section": "mission",
+      "item_type": "image",
+      "titre": "Image de mission 3",
+      "image": "resultat-sérums-clatants.png",
+      "ordre": 3,
+      "actif": true
+    },
+    {
+      "id": 23,
+      "section": "resultats",
+      "item_type": "texte",
+      "titre": "Nos résultats parlent d’eux-mêmes",
+      "description": "Découvrez les images et les expériences partagées par notre communauté.",
+      "ordre": 1,
+      "actif": true
+    },
+    {
+      "id": 1,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 1",
+      "image": "temoignage.webp",
+      "ordre": 1,
+      "actif": true
+    },
+    {
+      "id": 2,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 2",
+      "image": "temoignage1.webp",
+      "ordre": 2,
+      "actif": true
+    },
+    {
+      "id": 3,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 3",
+      "image": "temoignage2.webp",
+      "ordre": 3,
+      "actif": true
+    },
+    {
+      "id": 4,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 4",
+      "image": "temoignage3.webp",
+      "ordre": 4,
+      "actif": true
+    },
+    {
+      "id": 5,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 5",
+      "image": "temoignage4.webp",
+      "ordre": 5,
+      "actif": true
+    },
+    {
+      "id": 6,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 6",
+      "image": "temoignage5.webp",
+      "ordre": 6,
+      "actif": true
+    },
+    {
+      "id": 7,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 7",
+      "image": "temoignage6.webp",
+      "ordre": 7,
+      "actif": true
+    },
+    {
+      "id": 8,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 8",
+      "image": "temoignage7.webp",
+      "ordre": 8,
+      "actif": true
+    },
+    {
+      "id": 9,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 9",
+      "image": "temoignage8.webp",
+      "ordre": 9,
+      "actif": true
+    },
+    {
+      "id": 10,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 10",
+      "image": "temoignage9.webp",
+      "ordre": 10,
+      "actif": true
+    },
+    {
+      "id": 11,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 11",
+      "image": "temoignage10.webp",
+      "ordre": 11,
+      "actif": true
+    },
+    {
+      "id": 12,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 12",
+      "image": "temoignage11.webp",
+      "ordre": 12,
+      "actif": true
+    },
+    {
+      "id": 13,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 13",
+      "image": "temoignage12.webp",
+      "ordre": 13,
+      "actif": true
+    },
+    {
+      "id": 14,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 14",
+      "image": "temoignage13.webp",
+      "ordre": 14,
+      "actif": true
+    },
+    {
+      "id": 15,
+      "section": "resultats",
+      "item_type": "image",
+      "titre": "Témoignage visuel 15",
+      "image": "temoignage14.webp",
+      "ordre": 15,
+      "actif": true
+    }
+  ],
+  "categories": [
+    {
+      "slug": "corps",
+      "nom": "Soin corps",
+      "id": 1
+    },
+    {
+      "slug": "visage",
+      "nom": "Soin visage",
+      "id": 2
+    },
+    {
+      "slug": "deodorant",
+      "nom": "Déodorant naturel",
+      "id": 3
+    }
+  ],
+  "produits": [
+    {
+      "id": 1,
+      "slug": "aisselles-chic",
+      "nom": "Aisselles Chic",
+      "prix": 2000,
+      "description": "Découvrez notre Déodorant AISSELLES CHICS, notre solution naturelle spécialement conçue pour les aisselles. \nIl combat durablement les mauvaises odeurs, aide à réduire l'excès de transpiration .Formule sans parfum. \nLe résultat ? Des aisselles chics, saines, et une sensation de fraîcheur qui dure plus de 24H.",
+      "benefices": "Combat les mauvaises odeurs\nRéduit l'excès de transpiration\nFormule 100% naturelle sans parfum\nFraîcheur garantie plus de 24H",
+      "categorie_id": 3,
+      "stock": 100,
+      "actif": 1,
+      "image": "aiselle-chic.png"
+    },
+    {
+      "id": 2,
+      "slug": "savon-gommant",
+      "nom": "Savon Gommant",
+      "prix": 6000,
+      "description": "Votre peau manque d'éclat ? Il est peut-être temps de revoir votre routine de soin. \nLe Savon Gommant IBOUKOUN COSMETICS aide à exfolier la peau et à éliminer les cellules mortes qui s'accumulent à sa surface. Il contribue ainsi à rendre la peau plus douce, plus nette et à révéler son éclat naturel. \nUn soin idéal pour intégrer l'exfoliation à votre routine et prendre soin de votre peau sans chercher à changer votre teint. \nDurée d'utilisation estimée : Jusqu'à 1 mois et demi. \nPrésenté en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).",
+      "benefices": "Exfolie et élimine les cellules mortes\nRévèle l'éclat naturel de la peau\nPeau douce, lisse et nette\n2 formats : Grand pot et Petit pot",
+      "categorie_id": 1,
+      "stock": 80,
+      "actif": 1,
+      "image": "savon-gommant.png"
+    },
+    {
+      "id": 3,
+      "slug": "serum-anti-tache",
+      "nom": "Sérum Anti-taches & Éclat",
+      "prix": 7000,
+      "description": "Tu veux dire adieu aux boutons et aux taches sur ton visage? Ce sérum est la solution. Il est là pour nettoyer, lisser et redonner à ta peau son flow naturel, sans l’agresser. \nEt le meilleur? Il est ultra doux, agit en profondeur et les peaux sensibles peuvent l'utiliser sans stress.",
+      "benefices": "Réduit visiblement boutons et taches\nNettoie et lisse le grain de peau\nRedonne le flow naturel sans agresser\nUltra doux, adapté aux peaux sensibles",
+      "categorie_id": 2,
+      "stock": 50,
+      "actif": 1,
+      "image": "serum-anti-tache.png"
+    },
+    {
+      "id": 4,
+      "slug": "huile-eclat",
+      "nom": "Huile Éclat",
+      "prix": 3000,
+      "description": "Obtenez une peau lumineuse et rayonnante avec notre Huile éclat ! Elle : \n- Réveille l'éclat naturel de ta peau \n- Nourrit en profondeur \n- Unifie le teint tout en douceur. \nConvient à tous les types de peau, visage et corps.",
+      "benefices": "Réveille l'éclat naturel de la peau\nNourrit la peau en profondeur\nUnifie le teint tout en douceur\nConvient à tous types de peau (visage et corps)",
+      "categorie_id": 1,
+      "stock": 60,
+      "actif": 1,
+      "image": "huile-eclat.png"
+    },
+    {
+      "id": 5,
+      "slug": "savon-gommant-premium",
+      "nom": "Savon Gommant Premium",
+      "prix": 10000,
+      "description": "Les boutons reviennent, les taches persistent et votre teint manque d'uniformité? Votre peau a besoin de soins adaptés et réguliers. \nLe savon Gommant Premium IBOUKOUN COSMETICS est un savon noir réparateur conçu poue accompagner votre routine de soin. Il aide à prendre soin des peaux sujettes aux boutons, aux taches et au manque d'uniformité. \nAvec une utilisation régulière et une routine adaptée, accordez à votre peau toute l'attention qu'elle mérite. \nContenance: 1kg \nDurée d'utilisation: Jusqu'à 3 mois.",
+      "benefices": "Savon noir réparateur d'exception\nAide contre boutons et taches tenaces\nUniformise le teint en profondeur\nGrand format 1kg (jusqu'à 3 mois d'utilisation)",
+      "categorie_id": 1,
+      "stock": 40,
+      "actif": 1,
+      "image": "savon-gommant-premium.png"
+    },
+    {
+      "id": 6,
+      "slug": "gel-clarifiant-plus",
+      "nom": "Gel Clarifiant +",
+      "prix": 5000,
+      "description": "Prendre soin de sa peau n'a pas de genre ! \nLe Gel Clarifiant IBOUKOUN COSMETICS est destiné aussi bien aux hommes qu'aux femmes qui souhaitent prendre soin de leur peau et retrouver un teint lumineux et harmonieux. \nIl accompagne votre routine de soin pour aider à révéler l'éclat naturel de votre peau. \nParce qu'une belle peau, c'est avant tout une peau dont on prend soin régulièrement.",
+      "benefices": "Convient aux hommes et aux femmes\nTeint lumineux et harmonieux\nRévèle l'éclat naturel de la peau\nTexture gel agréable et rafraîchissante",
+      "categorie_id": 1,
+      "stock": 50,
+      "actif": 1,
+      "image": "gel-clarifiant+.png"
+    },
+    {
+      "id": 7,
+      "slug": "savon-antiseptique",
+      "nom": "Savon Antiseptique",
+      "prix": 2000,
+      "description": "Une bonne hygiène de la peau commence par un nettoyage adapté. \nLe Savon Antiseptique IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour nettoyer votre peau et prendre soin de votre hygiène corporelle. \nUn geste simple au quotidien pour garder une peau propre et bien entretenue.",
+      "benefices": "Nettoyage et hygiène adaptés\nFormule naturelle aux plantes et racines\nGarde une peau saine et propre\nIdéal pour la toilette quotidienne",
+      "categorie_id": 1,
+      "stock": 70,
+      "actif": 1,
+      "image": "savon-antiseptique.png"
+    },
+    {
+      "id": 8,
+      "slug": "duo-eclat",
+      "nom": "Duo Éclaircissant+",
+      "prix": 11000,
+      "description": "Offrez à votre peau une routine de soin qui lui fait du bien ! \nLe Duo Éclat IBOUKOUN COSMETICS est conçu pour accompagner votre peau au quotidien. Cette routine aide à nettoyer la peau, à révéler l'éclat naturel du teint et à l'uniformiser progressivement. \nQue vous ayez le teint clair, mat ou foncé, ce duo est adapté à tous les teints. \nPrenez soin de votre peau et accordez-lui l'attention qu'elle mérite avec le Duo Éclat.",
+      "benefices": "Routine complète de soins éclat\nNettoie et uniformise progressivement\nAdapté à tous les teints (clair, mat, foncé)\nAction synergique visage et corps",
+      "categorie_id": 1,
+      "stock": 35,
+      "actif": 1,
+      "image": "duo-eclat.png"
+    },
+    {
+      "id": 9,
+      "slug": "lotion-anti-quinto",
+      "nom": "Lotion Anti Quinto",
+      "prix": 3000,
+      "description": "Si vous avez des problèmes de tâches sur vos doigts, vos pieds et d'autres parties de votre corps, parfois causé par certains produits cosmétiques inadaptés, Cette Lotion est faite pour vous. Elle va redonner à ces parties sombres leur éclat.",
+      "benefices": "Cible les taches sur les doigts et articulations\nEstompe les quintos et zones sombres rebelles\nRedonne de l'éclat aux zones traitées\nApplication locale précise",
+      "categorie_id": 1,
+      "stock": 45,
+      "actif": 1,
+      "image": "lotion-anti-quinto.png"
+    },
+    {
+      "id": 10,
+      "slug": "creme-visage",
+      "nom": "Crème de Visage",
+      "prix": 2000,
+      "description": "Un visage doux, nourri et éclatant, ça commence par le bon soin ! \n\nNotre crème visage aide à nourrir la peau, à préserver sa douceur et à lui redonner un bel éclat naturel en la rendant lisse. \nOffrez à votre visage le confort et l’éclat qu’elle mérite avec notre crème visage.",
+      "benefices": "Nourrit la peau en profondeur\nPréserve la douceur et lisse le grain\nBel éclat naturel sans effet gras\nConfort quotidien pour le visage",
+      "categorie_id": 2,
+      "stock": 50,
+      "actif": 1,
+      "image": "creme-visage.png"
+    },
+    {
+      "id": 11,
+      "slug": "pack-savon-antiseptique-creme-visage",
+      "nom": "Savon Antiseptique + Crème de Visage",
+      "prix": 4000,
+      "description": "Le Kit Visage IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour prendre soin de votre peau. \nComposé d'un savon et d'une crème, il aide à nettoyer la peau en profondeur, à l'hydrater et à réduire l'apparence des boutons et des anciennes taches. \nDeux essentiels pour prendre soin de votre visage et lui redonner tout son éclat.",
+      "benefices": "Kit 2-en-1 : Savon Antiseptique + Crème Visage\nNettoyage en profondeur et hydratation\nAide à réduire boutons et anciennes taches\nRoutine quotidienne simple et efficace",
+      "categorie_id": 1,
+      "stock": 30,
+      "actif": 1,
+      "image": "savon-antiseptique-creme.png"
+    },
+    {
+      "id": 12,
+      "slug": "pack-savon-gommant-premium-creme-visage",
+      "nom": "Savon Gommant + Crème de Visage",
+      "prix": 12000,
+      "description": "Votre peau mérite une routine complète pour retrouver douceur et éclat ! \nLe Duo Savon Gommant Premium + Crème Visage IBOUKOUN COSMETICS associe deux soins complémentaires pour prendre soin de votre visage au quotidien. \nLe Savon Gommant Premium aide à exfolier la peau et à éliminer les cellules mortes qui s'accumulent à sa surface. Il contribue à rendre la peau plus douce, plus nette et à révéler son éclat naturel. \nLa Crème Visage complète cette routine en hydratant la peau et en aidant à réduire l'apparence des boutons et des anciennes taches. \nDeux soins pour une peau mieux entretenue, plus douce et lumineuse. Parce qu'une belle peau commence par une bonne routine ! \n1 Savon Gommant Premium \n\n1 Crème Visage",
+      "benefices": "Duo Premium : Savon Gommant 1kg + Crème Visage\nExfolie, élimine cellules mortes et hydrate\nAtténue boutons et taches anciennes\nSoin complet longue durée (jusqu'à 3 mois)",
+      "categorie_id": 1,
+      "stock": 25,
+      "actif": 1,
+      "image": "offre-special-gommant-creme.png"
+    }
+  ],
+  "promotions": [],
+  "temoignages": [
+    {
+      "id": 101,
+      "nom_client": "Leonardo ALLAVO",
+      "ville": null,
+      "produit_id": null,
+      "note": 4,
+      "message": "IBOUKOUN COSMÉTICS m'a été recommandé par une amie à moi et aujourd'hui je peux vous dire que c'était la meilleure recommandation qu'on m'a faites jusqu'à là. Non seulement ils ont d'excellents produits mais aussi ils sont professionnels !!! Je recommande vraiment",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 1,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 102,
+      "nom_client": "Grace Nyg",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "La référence qu'il vous faut pour tout ce qui concerne votre peau 🥰🥰🥰",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 2,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 103,
+      "nom_client": "Kora Dafia",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Les produits IBOUKOUN COSMETICS sont une adaptés à tous types de peau et de teint . Moi j'en utilise et je peux vous assurer que je suis satisfait des résultats jusqu'à présent.",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 3,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 104,
+      "nom_client": "Reno Samani",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Accueil chaleureux, accompagnement adéquat, produit de qualité. La référence en terme dd produit cosmétique au Bénin",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 4,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 105,
+      "nom_client": "Mélodie Yokossi",
+      "ville": null,
+      "produit_id": null,
+      "note": 1,
+      "message": "Iboukoun cosmétiques c'est la meilleure recommandation que je puisse faire à mon entourage pour finir avec les imperfections corporelles 😍 😍 et aujourd'hui j'ai un joli teint sans aucune imperfections 🥰 😍 😘 c'est la référence aufaite ❤ï¸ ❤ï¸",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 5,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 106,
+      "nom_client": "Juliana ADELOUI",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Ces produits sont les meilleurs que j'ai eu à utiliser sans être déçu et je recommande vivement surtout le savon gommant 😍 ❤ï¸",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 6,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 107,
+      "nom_client": "Juste Honorat Zannou",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Tout simplement les meilleurs dans leur domaine 🎊🚀",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 7,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 108,
+      "nom_client": "Saja Gnon Chimène GUEGOU BATA",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "En matière de cosmétiques naturels corporelle, Iboukoun est la meilleure 🥰 ❤ï¸",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 8,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 109,
+      "nom_client": "Fleur Dagui",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Je recommande Iboukoun Cosmétiques pour vos soins naturels cosmétiques : l'une des meilleures. 🥰",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 9,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 110,
+      "nom_client": "Grâce",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "J’ai testé les produits IBOUKOUN et j’ai vraiment aimé le résultat sur ma peau. Mon teint est plus propre, plus doux et lumineux. C’est tout simplement waoh❤ï¸",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 10,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 111,
+      "nom_client": "Linus Anagonou",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Le leader de la cosmétique dans le septentrion.",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 11,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 112,
+      "nom_client": "Jude Avognon",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "Iboukoun cosmétiques fait les meilleurs produits de soins de visage et corporel que j'ai eu à utiliser. Je recommande vivement",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 12,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 113,
+      "nom_client": "Diane Sasse",
+      "ville": null,
+      "produit_id": null,
+      "note": 5,
+      "message": "IBOUKOUN COSMÉTICS c’est la meilleure marque . Je l’utilise depuis quelques années et je vous la recommande vivement 🥰",
+      "type": "texte",
+      "screenshot": null,
+      "visible": true,
+      "ordre": 13,
+      "created_at": "2026-04-27T16:01:07.5444201Z"
+    },
+    {
+      "id": 114,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage15.webp",
+      "visible": true,
+      "ordre": 14
+    },
+    {
+      "id": 115,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage16.webp",
+      "visible": true,
+      "ordre": 15
+    },
+    {
+      "id": 116,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage17.webp",
+      "visible": true,
+      "ordre": 16
+    },
+    {
+      "id": 117,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage18.webp",
+      "visible": true,
+      "ordre": 17
+    },
+    {
+      "id": 118,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage19.webp",
+      "visible": true,
+      "ordre": 18
+    },
+    {
+      "id": 119,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage20.webp",
+      "visible": true,
+      "ordre": 19
+    },
+    {
+      "id": 120,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage21.webp",
+      "visible": true,
+      "ordre": 20
+    },
+    {
+      "id": 121,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage22.webp",
+      "visible": true,
+      "ordre": 21
+    },
+    {
+      "id": 122,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage23.webp",
+      "visible": true,
+      "ordre": 22
+    },
+    {
+      "id": 123,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage24.webp",
+      "visible": true,
+      "ordre": 23
+    },
+    {
+      "id": 124,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage25.webp",
+      "visible": true,
+      "ordre": 24
+    },
+    {
+      "id": 125,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage26.webp",
+      "visible": true,
+      "ordre": 25
+    },
+    {
+      "id": 126,
+      "nom_client": null,
+      "ville": null,
+      "produit_id": null,
+      "note": null,
+      "message": null,
+      "type": "screenshot",
+      "screenshot": "temoignage27.webp",
+      "visible": true,
+      "ordre": 26
+    }
+  ],
+  "parametres": [
+    {
+      "cle": "whatsapp_number",
+      "valeur": "2290169156300"
+    },
+    {
+      "cle": "facebook_url",
+      "valeur": ""
+    },
+    {
+      "cle": "instagram_url",
+      "valeur": ""
+    },
+    {
+      "cle": "tiktok_url",
+      "valeur": ""
+    },
+    {
+      "cle": "adresse",
+      "valeur": "Parakou, Bénin"
+    },
+    {
+      "cle": "email_contact",
+      "valeur": ""
+    },
+    {
+      "cle": "horaires",
+      "valeur": "Lun–Sam : 8h–20h"
+    },
+    {
+      "cle": "site_nom",
+      "valeur": "Iboukoun Cosmetics"
+    },
+    {
+      "cle": "site_slogan",
+      "valeur": "Naturellement vous"
+    }
+  ],
+  "equipe": [],
+  "pages_contenu": [],
+  "produit_photos": [],
+  "egeries": [],
+  "videos": []
 }
-

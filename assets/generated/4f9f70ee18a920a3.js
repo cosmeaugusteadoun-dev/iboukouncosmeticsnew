@@ -1,4 +1,4 @@
-﻿
+
 (function(){
   var els=document.querySelectorAll('.reveal');
   if(!els.length)return;

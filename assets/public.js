@@ -119,7 +119,7 @@ if (!window.iboukounPublic) {
 
     if (config.supabaseUrl && config.supabasePublicKey && route) {
       const tables = ['categories', 'produits', 'promotions', 'temoignages', 'egeries', 'equipe', 'pages_contenu', 'videos', 'parametres', 'produit_photos', 'accueil_sections'];
-      const entries = await Promise.all(tables.map(async table => {
+      const settled = await Promise.allSettled(tables.map(async table => {
         const rows = [];
         let offset = 0;
         while (true) {
@@ -128,8 +128,8 @@ if (!window.iboukounPublic) {
             signal: AbortSignal.timeout(15000)
           });
           if (!response.ok) {
-            if (table === 'accueil_sections') return [table, snapshot.accueil_sections || []];
-            throw new Error('Données indisponibles');
+            console.warn(`Supabase ${table} indisponible, utilisation des données statiques`);
+            return [table, snapshot[table] || []];
           }
           const batch = await response.json();
           rows.push(...batch);
@@ -138,11 +138,24 @@ if (!window.iboukounPublic) {
         }
         return [table, rows];
       }));
+      const entries = settled
+        .filter(r => r.status === 'fulfilled')
+        .map(r => r.value);
       const live = Object.fromEntries(entries);
+      // S'assurer que toute table manquante utilise la donnée statique
+      for (const t of tables) {
+        if (!(t in live)) live[t] = snapshot[t] || [];
+      }
 
       if (route.name === 'produit' && (requestedProductSlug || path.startsWith('/produit/'))) {
         const productSlug = requestedProductSlug || decodeURIComponent(path.split('/').filter(Boolean).pop() || '');
-        const matched = live.produits.find(p => p.slug === productSlug);
+        const matched = live.produits.find(p => p.slug === productSlug)
+          || (productSlug === 'serum-anti-tache' ? live.produits.find(p => p.slug === 'serum-eclat' || p.id === 3) : null)
+          || (productSlug === 'serum-eclat' ? live.produits.find(p => p.slug === 'serum-anti-tache' || p.id === 3) : null)
+          || (productSlug === 'savon-gommant-premium' ? live.produits.find(p => p.slug === 'savont-gommant-premium' || p.id === 5) : null)
+          || (productSlug === 'duo-eclat' ? live.produits.find(p => p.slug === 'duo-eclaircissant-plus' || p.id === 8) : null)
+          || (productSlug === 'duo-eclaircissant-plus' ? live.produits.find(p => p.slug === 'duo-eclat' || p.id === 8) : null)
+          || (route?.id ? live.produits.find(p => p.id === route.id) : null);
         if (matched) route = { ...route, id: matched.id };
       }
 
