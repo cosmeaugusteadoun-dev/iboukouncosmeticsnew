@@ -812,7 +812,7 @@ nav.main-nav.scrolled{
       </div>
       <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
     </a>
-    <a href="/videos.html" class="mobile-nav-item " onclick="menuClose()">
+    <a href="/videos.html" hidden class="mobile-nav-item " onclick="menuClose()">
       <div class="mobile-nav-item-left">
         <div class="mobile-nav-icon"><i class="ri-video-line"></i></div>
         <div class="mobile-nav-label">
@@ -985,267 +985,7 @@ window.addEventListener('scroll', function(){
     
     <div class="products-grid-page">
       
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--citron"
-               data-cat="deodorant"
-               onclick="window.location='/produit/aisselles-chic/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#FFF8E1,#FFE082)">
-            
-              <img src="/produit/aiselle-chic.png"
-                 alt="Aisselles Chic — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Aisselles Chic | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-flask-line"></i>
-            Déodorant naturel
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Aisselles Chic</h2>
-          <p class="pcp-desc">Découvrez notre Déodorant AISSELLES CHICS, notre solution naturelle spécialement conçue pour les aisselles. <br> Il combat durablement les mauvaises odeurs, aide à réduire l'excès de transpiration .Formule sans parfum. <br> Le résultat ? Des aisselles chics, saines, et une sensation de fraîcheur qui dure plus de 24H.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">2.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/aisselles-chic/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--ciel"
-               data-cat="corps"
-               onclick="window.location='/produit/savon-gommant/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/savon-gommant.png"
-                 alt="Savon Gommant — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Savon Gommant | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Savon Gommant</h2>
-          <p class="pcp-desc">Votre peau manque d'éclat ? Il est peut-être temps de revoir votre routine de soin. <br> Le Savon Gommant IBOUKOUN COSMETICS aide à exfolier la peau et à éliminer les cellules mortes qui s'accumulent à sa surface. Il contribue ainsi à rendre la peau plus douce, plus nette et à révéler son éclat naturel. <br> Un soin idéal pour intégrer l'exfoliation à votre routine et prendre soin de votre peau sans chercher à changer votre teint. <br>
-Durée d'utilisation estimée : Jusqu'à 1 mois et demi. <br>Présenté en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">6.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/savon-gommant/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--marron"
-               data-cat="visage"
-               onclick="window.location='/produit/serum-anti-tache/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8EAF6,#C5CAE9)">
-            
-              <img src="/produit/serum-anti-tache.png"
-                 alt="Sérum Anti-taches &amp; Éclat — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Sérum Anti-taches &amp; Éclat | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-magic-line"></i>
-            Soin visage
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Sérum Anti-taches &amp; Éclat</h2>
-          <p class="pcp-desc">Tu veux dire adieu aux boutons et aux taches sur ton visage? Ce sérum est la solution. Il est là pour nettoyer, lisser et redonner à ta peau son flow naturel, sans l’agresser. <br> Et le meilleur? Il est ultra doux, agit en profondeur et les peaux sensibles peuvent l'utiliser sans stress.</p>
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">7.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/serum-anti-tache/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--navy"
-               data-cat="corps"
-               onclick="window.location='/produit/huile-eclat/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/huile-eclat.png"
-                 alt="Huile Éclat — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Huile Éclat | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Huile Éclat</h2>
-          <p class="pcp-desc">Obtenez une peau lumineuse et rayonnante avec notre Huile éclat ! Elle : <br> - Réveille l'éclat naturel de ta peau <br> - Nourrit en profondeur <br> - Unifie le teint tout en douceur. <br> Convient à tous les types de peau, visage et corps.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">3.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/huile-eclat/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
       <article class="product-card-page reveal product-card-page--citron"
                data-cat="corps"
                onclick="window.location='/produit/savon-gommant-premium/'"
@@ -1310,8 +1050,141 @@ Durée d'utilisation estimée : Jusqu'à 1 mois et demi. <br>Présenté en 2 for
 
       </article>
       
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
       <article class="product-card-page reveal product-card-page--ciel"
+               data-cat="corps"
+               onclick="window.location='/produit/pack-savon-antiseptique-creme-visage/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/savon-antiseptique-creme.png"
+                 alt="Savon Antiseptique + Crème de Visage — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Savon Antiseptique + Crème de Visage | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Savon Antiseptique + Crème de Visage</h2>
+          <p class="pcp-desc">Le Kit Visage IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour prendre soin de votre peau. <br>
+Composé d'un savon et d'une crème, il aide à nettoyer la peau en profondeur, à l'hydrater et à réduire l'apparence des boutons et des anciennes taches. <br>
+Deux essentiels pour prendre soin de votre visage et lui redonner tout son éclat. <br></p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">4.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/pack-savon-antiseptique-creme-visage/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--marron"
+               data-cat="corps"
+               onclick="window.location='/produit/savon-gommant/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/savon-gommant.png"
+                 alt="Savon Gommant — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Savon Gommant | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Savon Gommant</h2>
+          <p class="pcp-desc">Votre peau manque d'éclat ? Il est peut-être temps de revoir votre routine de soin. <br> Le Savon Gommant IBOUKOUN COSMETICS aide à exfolier la peau et à éliminer les cellules mortes qui s'accumulent à sa surface. Il contribue ainsi à rendre la peau plus douce, plus nette et à révéler son éclat naturel. <br> Un soin idéal pour intégrer l'exfoliation à votre routine et prendre soin de votre peau sans chercher à changer votre teint. <br>
+Durée d'utilisation estimée : Jusqu'à 1 mois et demi. <br>Présenté en 2 formats : Grand pot (6 000 F) et Petit pot (3 000 F).</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">6.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/savon-gommant/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--navy"
                data-cat="corps"
                onclick="window.location='/produit/gel-clarifiant-plus/'"
                style="cursor:pointer;">
@@ -1378,343 +1251,8 @@ Parce qu'une belle peau, c'est avant tout une peau dont on prend soin régulièr
 
       </article>
       
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--marron"
-               data-cat="corps"
-               onclick="window.location='/produit/savon-antiseptique/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/savon-antiseptique.png"
-                 alt="Savon Antiseptique — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Savon Antiseptique | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Savon Antiseptique</h2>
-          <p class="pcp-desc">Une bonne hygiène de la peau commence par un nettoyage adapté. <br>
-Le Savon Antiseptique IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour nettoyer votre peau et prendre soin de votre hygiène corporelle. <br>
-Un geste simple au quotidien pour garder une peau propre et bien entretenue.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">2.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/savon-antiseptique/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--navy"
-               data-cat="corps"
-               onclick="window.location='/produit/duo-eclat/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/duo-eclat.png"
-                 alt="Duo Éclaircissant+ — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Duo Éclaircissant+ | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Duo Éclaircissant+</h2>
-          <p class="pcp-desc">Offrez à votre peau une routine de soin qui lui fait du bien ! <br>
-Le Duo Éclat IBOUKOUN COSMETICS est conçu pour accompagner votre peau au quotidien. Cette routine aide à nettoyer la peau, à révéler l'éclat naturel du teint et à l'uniformiser progressivement. <br>
-Que vous ayez le teint clair, mat ou foncé, ce duo est adapté à tous les teints. <br>
-Prenez soin de votre peau et accordez-lui l'attention qu'elle mérite avec le Duo Éclat.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">11.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/duo-eclat/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
       <article class="product-card-page reveal product-card-page--citron"
-               data-cat="corps"
-               onclick="window.location='/produit/lotion-anti-quinto/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/lotion-anti-quinto.png"
-                 alt="Lotion Anti Quinto — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Lotion Anti Quinto | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Lotion Anti Quinto</h2>
-          <p class="pcp-desc">Si vous avez des problèmes de tâches sur vos doigts, vos pieds et d'autres parties de votre corps, parfois causé par certains produits cosmétiques inadaptés, Cette Lotion est faite pour vous. Elle va redonner à ces parties sombres leur éclat.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">3.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/lotion-anti-quinto/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--ciel"
-               data-cat="visage"
-               onclick="window.location='/produit/creme-visage/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8EAF6,#C5CAE9)">
-            
-              <img src="/produit/creme-visage.png"
-                 alt="Crème de Visage — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Crème de Visage | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-magic-line"></i>
-            Soin visage
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Crème de Visage</h2>
-          <p class="pcp-desc">Un visage doux, nourri et éclatant, ça commence par le bon soin ! <br>
-
-Notre crème visage aide à nourrir la peau, à préserver sa douceur et à lui redonner un bel éclat naturel en la rendant lisse. <br>
-Offrez à votre visage le confort et l’éclat qu’elle mérite avec notre crème visage.</p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">2.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/creme-visage/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--marron"
-               data-cat="corps"
-               onclick="window.location='/produit/pack-savon-antiseptique-creme-visage/'"
-               style="cursor:pointer;">
-
-        <!-- Image -->
-        <div class="pcp-img-wrap">
-          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
-            
-              <img src="/produit/savon-antiseptique-creme.png"
-                 alt="Savon Antiseptique + Crème de Visage — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
-                 title="Savon Antiseptique + Crème de Visage | Iboukoun Cosmetics"
-                 width="600"
-                 height="600"
-                 loading="lazy">
-            
-          </div>
-
-          <div class="pcp-tags">
-            
-          </div>
-
-          <div class="pcp-cat-pill">
-            <i class="ri-drop-line"></i>
-            Soin corps
-          </div>
-
-          <!-- MODIFICATION : overlay → voir le produit -->
-          <div class="pcp-overlay">
-            <div class="pcp-overlay-btn">
-              <i class="ri-eye-line"></i>Voir le produit
-            </div>
-          </div>
-        </div>
-
-        <!-- Corps -->
-        <div class="pcp-body">
-          <h2 class="pcp-name">Savon Antiseptique + Crème de Visage</h2>
-          <p class="pcp-desc">Le Kit Visage IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour prendre soin de votre peau. <br>
-Composé d'un savon et d'une crème, il aide à nettoyer la peau en profondeur, à l'hydrater et à réduire l'apparence des boutons et des anciennes taches. <br>
-Deux essentiels pour prendre soin de votre visage et lui redonner tout son éclat. <br></p>
-
-          <div class="pcp-benefits">
-            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
-            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
-            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
-          </div>
-
-          <div class="pcp-footer">
-            <div class="pcp-price-group">
-              
-                <span class="pcp-price-current">4.000 f</span>
-              
-            </div>
-            <!-- MODIFICATION : lien voir fiche produit -->
-            <a href="/produit/pack-savon-antiseptique-creme-visage/"
-               class="pcp-btn-voir"
-               onclick="event.stopPropagation()">
-              <i class="ri-eye-line"></i>
-              <span>Voir</span>
-            </a>
-          </div>
-        </div>
-
-      </article>
-      
-      <!-- MODIFICATION : carte entière cliquable → fiche produit -->
-      <article class="product-card-page reveal product-card-page--navy"
                data-cat="corps"
                onclick="window.location='/produit/pack-savon-gommant-premium-creme-visage/'"
                style="cursor:pointer;">
@@ -1785,10 +1323,468 @@ Deux soins pour une peau mieux entretenue, plus douce et lumineuse. Parce qu'une
 
       </article>
       
-    </div>
-    
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--ciel"
+               data-cat="corps"
+               onclick="window.location='/produit/duo-eclat/'"
+               style="cursor:pointer;">
 
-  </div>
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/duo-eclat.png"
+                 alt="Duo Éclaircissant+ — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Duo Éclaircissant+ | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Duo Éclaircissant+</h2>
+          <p class="pcp-desc">Offrez à votre peau une routine de soin qui lui fait du bien ! <br>
+Le Duo Éclat IBOUKOUN COSMETICS est conçu pour accompagner votre peau au quotidien. Cette routine aide à nettoyer la peau, à révéler l'éclat naturel du teint et à l'uniformiser progressivement. <br>
+Que vous ayez le teint clair, mat ou foncé, ce duo est adapté à tous les teints. <br>
+Prenez soin de votre peau et accordez-lui l'attention qu'elle mérite avec le Duo Éclat.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">11.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/duo-eclat/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--marron"
+               data-cat="visage"
+               onclick="window.location='/produit/serum-anti-tache/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8EAF6,#C5CAE9)">
+            
+              <img src="/produit/serum-anti-tache.png"
+                 alt="Sérum Anti-taches &amp; Éclat — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Sérum Anti-taches &amp; Éclat | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-magic-line"></i>
+            Soin visage
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Sérum Anti-taches &amp; Éclat</h2>
+          <p class="pcp-desc">Tu veux dire adieu aux boutons et aux taches sur ton visage? Ce sérum est la solution. Il est là pour nettoyer, lisser et redonner à ta peau son flow naturel, sans l’agresser. <br> Et le meilleur? Il est ultra doux, agit en profondeur et les peaux sensibles peuvent l'utiliser sans stress.</p>
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">7.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/serum-anti-tache/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--navy"
+               data-cat="corps"
+               onclick="window.location='/produit/savon-antiseptique/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/savon-antiseptique.png"
+                 alt="Savon Antiseptique — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Savon Antiseptique | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Savon Antiseptique</h2>
+          <p class="pcp-desc">Une bonne hygiène de la peau commence par un nettoyage adapté. <br>
+Le Savon Antiseptique IBOUKOUN COSMETICS vous accompagne dans votre routine quotidienne pour nettoyer votre peau et prendre soin de votre hygiène corporelle. <br>
+Un geste simple au quotidien pour garder une peau propre et bien entretenue.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">2.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/savon-antiseptique/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--citron"
+               data-cat="corps"
+               onclick="window.location='/produit/huile-eclat/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/huile-eclat.png"
+                 alt="Huile Éclat — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Huile Éclat | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Huile Éclat</h2>
+          <p class="pcp-desc">Obtenez une peau lumineuse et rayonnante avec notre Huile éclat ! Elle : <br> - Réveille l'éclat naturel de ta peau <br> - Nourrit en profondeur <br> - Unifie le teint tout en douceur. <br> Convient à tous les types de peau, visage et corps.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">3.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/huile-eclat/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--ciel"
+               data-cat="corps"
+               onclick="window.location='/produit/lotion-anti-quinto/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8F5E9,#C8E6C9)">
+            
+              <img src="/produit/lotion-anti-quinto.png"
+                 alt="Lotion Anti Quinto — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Lotion Anti Quinto | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-drop-line"></i>
+            Soin corps
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Lotion Anti Quinto</h2>
+          <p class="pcp-desc">Si vous avez des problèmes de tâches sur vos doigts, vos pieds et d'autres parties de votre corps, parfois causé par certains produits cosmétiques inadaptés, Cette Lotion est faite pour vous. Elle va redonner à ces parties sombres leur éclat.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">3.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/lotion-anti-quinto/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--marron"
+               data-cat="visage"
+               onclick="window.location='/produit/creme-visage/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#E8EAF6,#C5CAE9)">
+            
+              <img src="/produit/creme-visage.png"
+                 alt="Crème de Visage — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Crème de Visage | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-magic-line"></i>
+            Soin visage
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Crème de Visage</h2>
+          <p class="pcp-desc">Un visage doux, nourri et éclatant, ça commence par le bon soin ! <br>
+
+Notre crème visage aide à nourrir la peau, à préserver sa douceur et à lui redonner un bel éclat naturel en la rendant lisse. <br>
+Offrez à votre visage le confort et l’éclat qu’elle mérite avec notre crème visage.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">2.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/creme-visage/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      
+<!-- MODIFICATION : carte entière cliquable → fiche produit -->
+      <article class="product-card-page reveal product-card-page--navy"
+               data-cat="deodorant"
+               onclick="window.location='/produit/aisselles-chic/'"
+               style="cursor:pointer;">
+
+        <!-- Image -->
+        <div class="pcp-img-wrap">
+          <div class="pcp-img" style="background:linear-gradient(160deg,#FFF8E1,#FFE082)">
+            
+              <img src="/produit/aiselle-chic.png"
+                 alt="Aisselles Chic — Soin naturel Iboukoun Cosmetics, Parakou Bénin"
+                 title="Aisselles Chic | Iboukoun Cosmetics"
+                 width="600"
+                 height="600"
+                 loading="lazy">
+            
+          </div>
+
+          <div class="pcp-tags">
+            
+          </div>
+
+          <div class="pcp-cat-pill">
+            <i class="ri-flask-line"></i>
+            Déodorant naturel
+          </div>
+
+          <!-- MODIFICATION : overlay → voir le produit -->
+          <div class="pcp-overlay">
+            <div class="pcp-overlay-btn">
+              <i class="ri-eye-line"></i>Voir le produit
+            </div>
+          </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="pcp-body">
+          <h2 class="pcp-name">Aisselles Chic</h2>
+          <p class="pcp-desc">Découvrez notre Déodorant AISSELLES CHICS, notre solution naturelle spécialement conçue pour les aisselles. <br> Il combat durablement les mauvaises odeurs, aide à réduire l'excès de transpiration .Formule sans parfum. <br> Le résultat ? Des aisselles chics, saines, et une sensation de fraîcheur qui dure plus de 24H.</p>
+
+          <div class="pcp-benefits">
+            <div class="pcp-benefit"><i class="ri-leaf-line"></i><span>100% naturel</span></div>
+            <div class="pcp-benefit"><i class="ri-shield-check-line"></i><span>Testé</span></div>
+            <div class="pcp-benefit"><i class="ri-map-pin-line"></i><span>Fait au Bénin</span></div>
+          </div>
+
+          <div class="pcp-footer">
+            <div class="pcp-price-group">
+              
+                <span class="pcp-price-current">2.000 f</span>
+              
+            </div>
+            <!-- MODIFICATION : lien voir fiche produit -->
+            <a href="/produit/aisselles-chic/"
+               class="pcp-btn-voir"
+               onclick="event.stopPropagation()">
+              <i class="ri-eye-line"></i>
+              <span>Voir</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+      </div>
 </section>
 
 <!-- CTA REVENDEUR -->

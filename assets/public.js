@@ -123,7 +123,8 @@ if (!window.iboukounPublic) {
         const rows = [];
         let offset = 0;
         while (true) {
-          const response = await fetch(config.supabaseUrl + '/rest/v1/' + table + '?select=*&order=' + (table === 'parametres' ? 'cle' : table === 'pages_contenu' ? 'slug' : 'id'), {
+          const orderParam = table === 'parametres' ? 'cle' : table === 'pages_contenu' ? 'slug' : table === 'produits' ? 'ordre.asc,id.asc' : 'id';
+          const response = await fetch(config.supabaseUrl + '/rest/v1/' + table + '?select=*&order=' + orderParam, {
             headers: { apikey: config.supabasePublicKey, Range: `${offset}-${offset + 999}` },
             signal: AbortSignal.timeout(15000)
           });
@@ -236,23 +237,49 @@ if (!window.iboukounPublic) {
       }
 
       
-      // Afficher le lien "Vidéos" dans le menu burger seulement s'il y a des vidéos
+      // Gestion dynamique de la visibilité des menus Vidéos et Promotions
       const hasVideos = (live.videos || []).some(v => v.actif === true || v.actif === 1);
-      const videoLinks = document.querySelectorAll('a[href="/videos.html"], a[href="videos.html"]');
-      videoLinks.forEach(link => {
+      const hasActivePromo = (live.promotions || []).some(p => p.actif === true || p.actif === 1);
+
+      // Liens Vidéos (desktop nav et burger mobile)
+      document.querySelectorAll('a[href*="videos"]').forEach(link => {
         if (hasVideos) {
           link.removeAttribute('hidden');
+          link.style.display = '';
+        } else {
+          link.setAttribute('hidden', '');
+          link.style.display = 'none';
         }
         const sep = link.nextElementSibling;
         if (sep && sep.classList.contains('mobile-menu-sep')) {
           if (hasVideos) {
             sep.removeAttribute('hidden');
+            sep.style.display = '';
+          } else {
+            sep.setAttribute('hidden', '');
+            sep.style.display = 'none';
           }
         }
       });
 
-const hasActivePromo = (live.promotions || []).some(p => p.actif === true || p.actif === 1);
-      if (!hasActivePromo) document.querySelectorAll('a[href*="promotions"]').forEach(a => { a.style.display = 'none'; });
+      // Liens Promotions (desktop nav et burger mobile)
+      document.querySelectorAll('a[href*="promotions"]').forEach(link => {
+        if (hasActivePromo) {
+          link.removeAttribute('hidden');
+          link.style.display = '';
+        } else {
+          link.setAttribute('hidden', '');
+          link.style.display = 'none';
+        }
+      });
+
+      // Redirections si accès direct à une page inactive
+      if (!hasVideos && /(?:^|\/)videos(?:\.html|\.php)?$/i.test(location.pathname)) {
+        location.replace('/index.html');
+      }
+      if (!hasActivePromo && /(?:^|\/)promotions(?:\.html|\.php)?$/i.test(location.pathname)) {
+        location.replace('/produits.html');
+      }
     }
 
     const selected = new URLSearchParams(location.search).get('cat') || 'all';

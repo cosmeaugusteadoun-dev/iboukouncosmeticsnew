@@ -822,7 +822,17 @@ nav.main-nav.scrolled{
       </div>
       <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
     </a>
-    <a href="/videos.html" class="mobile-nav-item /revendeurs.html" class="mobile-nav-item " onclick="menuClose()">
+    <a href="/videos.html" hidden class="mobile-nav-item " onclick="menuClose()">
+      <div class="mobile-nav-item-left">
+        <div class="mobile-nav-icon"><i class="ri-video-line"></i></div>
+        <div class="mobile-nav-label">
+          <span class="nav-label-main">Vidéos</span>
+          <span class="nav-label-sub">Nos contenus</span>
+        </div>
+      </div>
+      <i class="ri-arrow-right-s-line mobile-nav-arrow"></i>
+    </a>
+    <a href="/revendeurs.html" class="mobile-nav-item " onclick="menuClose()">
       <div class="mobile-nav-item-left">
         <div class="mobile-nav-icon"><i class="ri-store-2-line"></i></div>
         <div class="mobile-nav-label">
@@ -2020,9 +2030,7 @@ function showRecap(e){
   document.getElementById('rTotal').textContent   = total.toLocaleString('fr-FR') + ' FCFA';
   // Ouvrir
   document.getElementById('recapOverlay').classList.add('open');
-  document.body.style.overflow = 'hidden';document.body.style.overflow = 'hidden';
-      // Ouvrir WhatsApp automatiquement avec le message de commande
-      ouvrirWACommande();
+  document.body.style.overflow = 'hidden';
 }
 function closeRecap(){
   document.getElementById('recapOverlay').classList.remove('open');
@@ -2050,8 +2058,19 @@ function submitCommande(){
       // Afficher succès
       document.getElementById('succesOverlay').style.display = 'flex';
       document.body.style.overflow = 'hidden';
-      // Réinitialiser form
-      window.__iboukounCmd = {nom: document.getElementById('fNom').value.trim(),tel: document.getElementById('fWa').value.trim(),ville: document.getElementById('fVille').value.trim(),quart: document.getElementById('fQuartier').value.trim(),prod: document.getElementById('fpFormNom').value.trim(),qty: document.getElementById('fpFormQty').value.trim(),total: document.getElementById('fpFormTotal').value.trim()};
+      // Enregistrer commande
+      window.__iboukounCmd = {
+        nom: document.getElementById('fNom').value.trim(),
+        tel: document.getElementById('fWa').value.trim(),
+        ville: document.getElementById('fVille').value.trim(),
+        quart: document.getElementById('fQuartier').value.trim(),
+        prod: document.getElementById('fpFormNom').value.trim(),
+        qty: document.getElementById('fpFormQty').value.trim(),
+        total: document.getElementById('fpFormTotal').value.trim(),
+        commande_id: res.commande_id
+      };
+      // Ouvrir WhatsApp automatiquement avec le message de commande validée
+      ouvrirWACommande();
       // Réinitialiser form
       form.reset();
       updateTotal();
@@ -2078,7 +2097,8 @@ function submitCommande(){
 
 /* ---- Ouvrir WhatsApp avec détails de la commande ---- */
 function ouvrirWACommande(e){
-  if(e) e.preventDefault();
+  if(e && e.preventDefault) e.preventDefault();
+  var c = window.__iboukounCmd || {};
   var nomEl = document.getElementById('fNom');
   var telEl = document.getElementById('fWa');
   var villeEl = document.getElementById('fVille');
@@ -2086,14 +2106,15 @@ function ouvrirWACommande(e){
   var prodEl = document.getElementById('fpFormNom');
   var qtyEl = document.getElementById('fpFormQty');
   var totalEl = document.getElementById('fpFormTotal');
-  var nom = nomEl ? nomEl.value.trim() : 'Client';
-  var tel = telEl ? telEl.value.trim() : '';
-  var ville = villeEl ? villeEl.value.trim() : '';
-  var quart = quartEl ? quartEl.value.trim() : '';
-  var prod = prodEl ? prodEl.value.trim() : '';
-  var qty = qtyEl ? qtyEl.value.trim() : '1';
-  var total = totalEl ? totalEl.value.trim() : '0';
+  var nom = c.nom || (nomEl ? nomEl.value.trim() : '') || 'Client';
+  var tel = c.tel || (telEl ? telEl.value.trim() : '');
+  var ville = c.ville || (villeEl ? villeEl.value.trim() : '');
+  var quart = c.quart || (quartEl ? quartEl.value.trim() : '');
+  var prod = c.prod || (prodEl ? prodEl.value.trim() : '');
+  var qty = c.qty || (qtyEl ? qtyEl.value.trim() : '1');
+  var total = c.total || (totalEl ? totalEl.value.trim() : '0');
   var msg = 'Salut Iboukoun Cosmetics, je viens de passer une commande :\n\n';
+  if(c.commande_id) msg += 'Commande : #' + c.commande_id + '\n';
   msg += 'Produit : '+prod+'\n';
   msg += 'Quantite : '+qty+'\n';
   msg += 'Total : '+total+' FCFA\n\n';

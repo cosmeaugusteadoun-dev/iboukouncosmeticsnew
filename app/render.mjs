@@ -58,8 +58,11 @@ export function prepare(data, config, name, meta, productId) {
     7:'savon-antiseptique.png',
     8:'duo-eclat.png',
     9:'lotion-anti-quinto.png',
-    10:'creme-visage.png'
+    10:'creme-visage.png',
+    11:'savon-antiseptique-creme.png',
+    12:'offre-special-gommant-creme.png'
   };
+  const productOrder={5:1,11:2,2:3,6:4,12:5,8:6,3:7,7:8,4:9,9:10,10:11,1:12};
   const produits=(data.produits||[]).filter(active).map(p=>{
     const canonicalImage=productImages[p.id];
     const suppliedImage=typeof p.image==='string'?p.image.replace(/^.*[\\/]/,''):null;
@@ -68,9 +71,10 @@ export function prepare(data, config, name, meta, productId) {
       slug:canonicalSlugs[p.slug]||p.slug,
       image:suppliedImage&&/\.png$/i.test(suppliedImage)&&suppliedImage!==canonicalImage?suppliedImage:canonicalImage||suppliedImage||null,
       categorie_nom:fixMojibake(categories.find(c=>c.id===p.categorie_id)?.nom||''),
-      categorie_slug:categories.find(c=>c.id===p.categorie_id)?.slug||''
+      categorie_slug:categories.find(c=>c.id===p.categorie_id)?.slug||'',
+      ordre:typeof p.ordre==='number'&&p.ordre>0?p.ordre:(productOrder[p.id]||999)
     };
-  });
+  }).sort((a,b)=>(a.ordre||999)-(b.ordre||999));
   for(const p of produits){
     const source=(data.produits||[]).find(row=>row.id===p.id);
     if(source?.image)p.image=source.image;
